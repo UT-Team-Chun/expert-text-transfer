@@ -1,0 +1,113 @@
+{
+  "config": {
+    "leak_proof_per_fold_pca": true,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "pca_dim": 64,
+    "baseline": [
+      "depth_from_surface",
+      "ground_level",
+      "latitude_deg",
+      "longitude_deg"
+    ],
+    "n_regions": 5
+  },
+  "no_text": {
+    "mean_rmse": 18.529,
+    "std_across_regions": 1.582
+  },
+  "text": {
+    "mean_rmse": 14.641,
+    "std_across_regions": 1.534,
+    "per_region": {
+      "midlands": 17.117,
+      "north_england": 12.273,
+      "scotland": 14.515,
+      "south_england": 14.705,
+      "wales_west": 14.597
+    }
+  },
+  "shuffled": {
+    "mean_rmse": 18.034,
+    "std_across_regions": 1.998,
+    "per_region": {
+      "midlands": 19.61,
+      "north_england": 15.382,
+      "scotland": 17.477,
+      "south_england": 16.752,
+      "wales_west": 20.948
+    }
+  },
+  "per_region_content_pct": {
+    "midlands": -12.7,
+    "north_england": -20.2,
+    "scotland": -17.0,
+    "south_england": -12.2,
+    "wales_west": -30.3
+  },
+  "per_region_n_spt": {
+    "midlands": 5524,
+    "north_england": 4278,
+    "scotland": 3104,
+    "south_england": 4053,
+    "wales_west": 1198
+  },
+  "per_region_seed_std": {
+    "midlands": {
+      "no_text": 0.157,
+      "text": 0.119,
+      "shuffled": 0.15
+    },
+    "north_england": {
+      "no_text": 0.256,
+      "text": 0.044,
+      "shuffled": 0.095
+    },
+    "scotland": {
+      "no_text": 0.194,
+      "text": 0.103,
+      "shuffled": 0.224
+    },
+    "south_england": {
+      "no_text": 0.321,
+      "text": 0.103,
+      "shuffled": 0.173
+    },
+    "wales_west": {
+      "no_text": 0.474,
+      "text": 0.187,
+      "shuffled": 0.532
+    }
+  },
+  "deltas": {
+    "text_vs_notext_pct": -21.0,
+    "shuffled_vs_notext_pct": -2.7,
+    "content_text_vs_shuffled_pct": -18.8
+  },
+  "content_significance": {
+    "n_regions_negative": "5/5",
+    "sign_test_p_one_sided": 0.0312,
+    "wilcoxon_p_one_sided": 0.0312
+  },
+  "_provenance": {
+    "dataset": "UK BGS AGS4 full GB fetch (18,748 SPT rows / 2,604 boreholes)",
+    "method": "HGB, leave-region-out, multilingual-e5-base embeddings",
+    "leak_proof": "per-fold PCA-64 fit on TRAIN regions only (held-out region excluded from basis)",
+    "null": "shuffled = per-fold embeddings permuted within train and within test (content destroyed, capacity+dim+PCA-structure preserved)",
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "uncertainty": "across-region std + per-region seed std",
+    "supersedes": "2026-06-20_uk_transfer_full.json (-17.3%, which used a global PCA fit incl. held-out regions)",
+    "note": "Leak fix STRENGTHENED the content effect (-17.3% -> -18.8%); 5/5 regions negative; sign/Wilcoxon p=0.031."
+  }
+}

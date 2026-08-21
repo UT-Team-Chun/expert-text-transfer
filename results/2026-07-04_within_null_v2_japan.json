@@ -1,0 +1,295 @@
+{
+  "n_regions": 8,
+  "per_region": {
+    "chubu": {
+      "n_test": 5272,
+      "n_train": 35874,
+      "no_text": 12.160041983843314,
+      "text": 9.993342846206222,
+      "text_sd": 0.04867337366600329,
+      "nulls": {
+        "global": {
+          "mean": 11.753567161905615,
+          "sd": 0.029779557587862552,
+          "content_pct": -14.98,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 11.74092606737551,
+          "sd": 0.028444458160381055,
+          "content_pct": -14.88,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 10.821687066139614,
+          "sd": 0.030662624709022483,
+          "content_pct": -7.65,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "chugoku": {
+      "n_test": 4436,
+      "n_train": 36710,
+      "no_text": 12.160815209169856,
+      "text": 9.492285940016462,
+      "text_sd": 0.011805359787900087,
+      "nulls": {
+        "global": {
+          "mean": 11.383888231139084,
+          "sd": 0.032287294012400616,
+          "content_pct": -16.62,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 11.374724364206688,
+          "sd": 0.030517392198727056,
+          "content_pct": -16.55,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 10.373073931276824,
+          "sd": 0.04051220425427592,
+          "content_pct": -8.49,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "hokkaido": {
+      "n_test": 4618,
+      "n_train": 36528,
+      "no_text": 13.523196949269773,
+      "text": 9.653700090730153,
+      "text_sd": 0.1069276963419769,
+      "nulls": {
+        "global": {
+          "mean": 12.391278833598125,
+          "sd": 0.1293384262372185,
+          "content_pct": -22.09,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 12.369014034648638,
+          "sd": 0.12127311041259393,
+          "content_pct": -21.95,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 11.204744027698919,
+          "sd": 0.17150282859347868,
+          "content_pct": -13.84,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "kansai": {
+      "n_test": 5823,
+      "n_train": 35323,
+      "no_text": 11.76859606567726,
+      "text": 9.307982338461732,
+      "text_sd": 0.02112872679248022,
+      "nulls": {
+        "global": {
+          "mean": 11.154660286128971,
+          "sd": 0.0256402323771955,
+          "content_pct": -16.56,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 11.144618724198597,
+          "sd": 0.02897929386440691,
+          "content_pct": -16.48,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 10.204873280456008,
+          "sd": 0.029924436480626416,
+          "content_pct": -8.79,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "kanto": {
+      "n_test": 8112,
+      "n_train": 33034,
+      "no_text": 14.423760692518442,
+      "text": 9.594131447129223,
+      "text_sd": 0.02528467132806511,
+      "nulls": {
+        "global": {
+          "mean": 12.747606594079627,
+          "sd": 0.07402322164069838,
+          "content_pct": -24.74,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 12.719160884040605,
+          "sd": 0.07612799994515732,
+          "content_pct": -24.57,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 10.647282463463396,
+          "sd": 0.06454191785460983,
+          "content_pct": -9.89,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "kyushu_okinawa": {
+      "n_test": 5292,
+      "n_train": 35854,
+      "no_text": 15.463063406058891,
+      "text": 9.708010433400547,
+      "text_sd": 0.028397355989468423,
+      "nulls": {
+        "global": {
+          "mean": 12.68011076010512,
+          "sd": 0.18506555213799114,
+          "content_pct": -23.44,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 12.660342931547502,
+          "sd": 0.1958316715188074,
+          "content_pct": -23.32,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 11.722086130514654,
+          "sd": 0.15703002135603003,
+          "content_pct": -17.18,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "shikoku": {
+      "n_test": 2778,
+      "n_train": 38368,
+      "no_text": 12.018455970021463,
+      "text": 9.69738489419745,
+      "text_sd": 0.02340600194794033,
+      "nulls": {
+        "global": {
+          "mean": 11.741032074746153,
+          "sd": 0.06380215389476661,
+          "content_pct": -17.41,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 11.711768578038866,
+          "sd": 0.06269508074472226,
+          "content_pct": -17.2,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 11.124136275034493,
+          "sd": 0.05975646730766515,
+          "content_pct": -12.83,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "tohoku": {
+      "n_test": 4815,
+      "n_train": 36331,
+      "no_text": 11.86613285426949,
+      "text": 9.07683362876214,
+      "text_sd": 0.03350177960286847,
+      "nulls": {
+        "global": {
+          "mean": 11.438229720586353,
+          "sd": 0.03270006505384382,
+          "content_pct": -20.64,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 11.428580903750577,
+          "sd": 0.032761671198751834,
+          "content_pct": -20.58,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 10.23417844449943,
+          "sd": 0.04017865609651388,
+          "content_pct": -11.31,
+          "perm_p": 0.0
+        }
+      }
+    }
+  },
+  "summary": {
+    "global": {
+      "mean_content_pct": -19.56,
+      "regions_negative": "8/8",
+      "per_region_content_pct": {
+        "chubu": -14.98,
+        "chugoku": -16.62,
+        "hokkaido": -22.09,
+        "kansai": -16.56,
+        "kanto": -24.74,
+        "kyushu_okinawa": -23.44,
+        "shikoku": -17.41,
+        "tohoku": -20.64
+      },
+      "mean_perm_p": 0.0
+    },
+    "within_region": {
+      "mean_content_pct": -19.44,
+      "regions_negative": "8/8",
+      "per_region_content_pct": {
+        "chubu": -14.88,
+        "chugoku": -16.55,
+        "hokkaido": -21.95,
+        "kansai": -16.48,
+        "kanto": -24.57,
+        "kyushu_okinawa": -23.32,
+        "shikoku": -17.2,
+        "tohoku": -20.58
+      },
+      "mean_perm_p": 0.0
+    },
+    "within_class": {
+      "mean_content_pct": -11.25,
+      "regions_negative": "8/8",
+      "per_region_content_pct": {
+        "chubu": -7.65,
+        "chugoku": -8.49,
+        "hokkaido": -13.84,
+        "kansai": -8.79,
+        "kanto": -9.89,
+        "kyushu_okinawa": -17.18,
+        "shikoku": -12.83,
+        "tohoku": -11.31
+      },
+      "mean_perm_p": 0.0
+    }
+  },
+  "config": {
+    "domain": "japan",
+    "representation": "lithology_only",
+    "n_rows": 41146,
+    "n_perm": 100,
+    "text_seeds": [
+      42,
+      43,
+      44
+    ],
+    "base": [
+      "depth_from_surface",
+      "latitude_deg",
+      "longitude_deg"
+    ],
+    "class_strata": [
+      "clay",
+      "gravel",
+      "loam",
+      "mud",
+      "organic",
+      "other",
+      "rock",
+      "sand",
+      "silt"
+    ]
+  }
+}

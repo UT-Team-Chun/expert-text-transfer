@@ -1,0 +1,27 @@
+{
+  "config": {
+    "k": 10,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "note": "KNN prior train-side only; own borehole excluded for training rows; ladder rungs plus_knn / plus_all"
+  },
+  "plus_knn": {
+    "baseline_rmse": 13.123,
+    "text_rmse": 9.666,
+    "shuffled_rmse": 12.128,
+    "content_pct": -20.3,
+    "regions_negative": "8/8"
+  },
+  "plus_all": {
+    "baseline_rmse": 10.465,
+    "text_rmse": 9.562,
+    "shuffled_rmse": 10.055,
+    "content_pct": -4.9,
+    "regions_negative": "8/8"
+  }
+}

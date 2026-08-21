@@ -1,0 +1,104 @@
+{
+  "japan": {
+    "n_texts": 41146,
+    "audit": {
+      "numeral": {
+        "rate": 0.0,
+        "n": 0
+      },
+      "n_value_cue": {
+        "rate": 0.0006,
+        "n": 24
+      },
+      "strength_cue": {
+        "rate": 0.262,
+        "n": 10782
+      },
+      "any_strength_or_N_cue": {
+        "rate": 0.2624,
+        "n": 10795
+      }
+    },
+    "examples_flagged": [
+      "φ mm以下の円礫主体。\\n 〜 m間に半固結状のシルト挟在。\\n m以深は礫径大きく、φ mm以下の 礫に漸移。\\n最大礫径φ mm。\\n m以深は粘土分含み、褐色に色調変化する。\\n全体に中位に締まる。",
+      "礫はφ 〜 mm程度の暗灰色及び白色の流紋岩礫からなり、 %以上混入する。 稀にコア長 cm程度の玉石を混入。 暗灰色の礫は非常に 、白色の礫は風化して、やや なものが多い。 基質は粒径の不均一な砂よりなるが、部分的に細粒分を多く含む。 礫",
+      "礫φ 〜 mm程度主体で、φ 〜 mm程度を混入する。\\n最大φ mm程度の礫が点在する。\\nマトリックスは、粗砂程度を主体とし、全体的に粘土を混入する。\\n風化した礫を少量混入する。\\n含水中位〜大位。\\n\\nGL- m付近まで、マトリッ",
+      "全体的に不均質な層である\\n\\nローム主体の粘性土にφ 〜 mm程度の礫が混入する\\n\\n m、 m付近細砂を混入する\\n\\n m以深シルトを狭在する\\n\\n含水中位、粘性中位",
+      "φ 〜 mm程度の礫を主体。\\n含水中位。\\n砂は細〜中砂。\\n全体に粘土を多く含む。",
+      "道路盛土で、土質は砂礫を主体とする。\\n\\n礫は、径 〜 mmの角礫〜亜角礫を主体とする。\\n最大礫径は、径 mmの玉石。\\n\\n礫間は、シルト混じり粗中砂で充填され、粒子は比較的均一である。\\n\\n含水低位〜中位。\\n\\n 〜 m間旧表土",
+      "含水、粘性共に中位。\\n層相変化は少なく、概ね均質である。\\n全体に貝殻片や木片等腐食物を混入し、部分的に有機質である。\\n上層部、下層部で、少量の細砂薄層を挟在する。",
+      "含水やや低位 粘性中位\\n全体に多量の腐植物が混入",
+      "含水比の低い、均質な固結シルト層。\\n強い指圧でわずかにへこむ。",
+      "均質なシルトである\\n\\n全体に腐植物を含み、 〜 m\\n間は非常に多く含む\\n\\n全体に細砂分を、少量混入する"
+    ],
+    "per_keyword_breakdown_v1_stripped": {
+      "note": "counts of residual cue keywords in texts stripped with the ORIGINAL v1 vocabulary (the audit target); romanised in the manuscript as chui/koketsu/shimari etc.",
+      "n_texts": 41146,
+      "中位": {
+        "n": 6858,
+        "rate": 0.1667
+      },
+      "固結": {
+        "n": 2496,
+        "rate": 0.0607
+      },
+      "締": {
+        "n": 1164,
+        "rate": 0.0283
+      },
+      "硬": {
+        "n": 880,
+        "rate": 0.0214
+      },
+      "非常に": {
+        "n": 1456,
+        "rate": 0.0354
+      },
+      "密実": {
+        "n": 71,
+        "rate": 0.0017
+      },
+      "緩": {
+        "n": 52,
+        "rate": 0.0013
+      },
+      "溶結": {
+        "n": 467,
+        "rate": 0.0113
+      }
+    }
+  },
+  "uk": {
+    "n_texts": 18157,
+    "audit": {
+      "numeral": {
+        "rate": 0.0,
+        "n": 0
+      },
+      "n_value_cue": {
+        "rate": 0.0029,
+        "n": 52
+      },
+      "strength_cue": {
+        "rate": 0.016,
+        "n": 290
+      },
+      "any_strength_or_N_cue": {
+        "rate": 0.0188,
+        "n": 342
+      }
+    },
+    "examples_flagged": [
+      "  friable reddish brown locally mottled greenish grey slightly sandy slightly gravelly CLAY. Sand is fine to coarse. Gra",
+      "MADE GROUND: Black shaley mudstone fragments with grey friable clay and some coal",
+      "MADE GROUND:   locally friable grey mottled orangish/yellowish brown sandy very gravelly CLAY. Gravel is angular to sub-",
+      "Fissured friable grey CLAY.",
+      "NO CORE RECOVERY. (DISTURBANCE ENHANCED BY SPT, POSSIBLY STRUCTURED CHALK)",
+      "  to   friable light greyish brown slightly silty gravelly CLAY. Gravel is angular to subangular fine to coarse mudstone",
+      "Recovery is of stronger materials, weaker materials not recovered. Recovered core comprises   reddish brown slightly san",
+      "  red brown clayey MARL with veins of green grey silty marl and occasional layers of much harder red brown claystone",
+      "Slightly dry and friable   greyish brown mottled orangish brown slightly sandy slightly gravelly CLAY with occasional ro",
+      " , becoming  , friable reddish brown mottled grey and purple slightly gravelly silty CLAY tending to   MUDSTONE. Gravel "
+    ]
+  }
+}

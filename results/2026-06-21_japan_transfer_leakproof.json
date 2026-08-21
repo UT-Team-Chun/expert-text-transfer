@@ -1,0 +1,96 @@
+{
+  "config": {
+    "domain": "Japan KuniJiban boreholes (local reconstruction)",
+    "target": "SPT N-value",
+    "split": "leave-region-out (8 Japanese blocks)",
+    "embedder": "intfloat/multilingual-e5-base (uniform with UK/storm)",
+    "leak_proof_per_fold_pca": true,
+    "text_bearing_only": true,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "baseline": [
+      "depth_from_surface",
+      "latitude_deg",
+      "longitude_deg"
+    ],
+    "n_regions": 8,
+    "n_rows": 41146,
+    "per_region_files": 500
+  },
+  "no_text": {
+    "mean_rmse": 12.936,
+    "std_across_regions": 1.344
+  },
+  "text": {
+    "mean_rmse": 9.393,
+    "std_across_regions": 0.317,
+    "per_region": {
+      "chubu": 9.806,
+      "chugoku": 9.316,
+      "hokkaido": 9.229,
+      "kansai": 9.339,
+      "kanto": 9.227,
+      "kyushu_okinawa": 9.743,
+      "shikoku": 9.69,
+      "tohoku": 8.794
+    }
+  },
+  "shuffled": {
+    "mean_rmse": 11.922,
+    "std_across_regions": 0.548,
+    "per_region": {
+      "chubu": 11.783,
+      "chugoku": 11.541,
+      "hokkaido": 12.328,
+      "kansai": 11.14,
+      "kanto": 12.834,
+      "kyushu_okinawa": 12.545,
+      "shikoku": 11.754,
+      "tohoku": 11.455
+    }
+  },
+  "per_region_content_pct": {
+    "chubu": -16.8,
+    "chugoku": -19.3,
+    "hokkaido": -25.1,
+    "kansai": -16.2,
+    "kanto": -28.1,
+    "kyushu_okinawa": -22.3,
+    "shikoku": -17.6,
+    "tohoku": -23.2
+  },
+  "per_region_n": {
+    "chubu": 5272,
+    "chugoku": 4436,
+    "hokkaido": 4618,
+    "kansai": 5823,
+    "kanto": 8112,
+    "kyushu_okinawa": 5292,
+    "shikoku": 2778,
+    "tohoku": 4815
+  },
+  "deltas": {
+    "text_vs_notext_pct": -27.4,
+    "shuffled_vs_notext_pct": -7.8,
+    "content_text_vs_shuffled_pct": -21.2
+  },
+  "content_significance": {
+    "n_regions_negative": "8/8",
+    "sign_test_p_one_sided": 0.00391,
+    "wilcoxon_p_one_sided": 0.00391
+  },
+  "_provenance": {
+    "purpose": "Bring Japan to the same leak-proof per-fold + multi-seed + significance bar as UK/storm (capstone review item 3).",
+    "reconstruction": "text<->SPT join rebuilt locally: soil_text_layers.csv (text+coords+depth) + SPT-N re-parsed from KuniJiban XML by file_path + depth-interval. No cluster artefacts.",
+    "embedder": "intfloat/multilingual-e5-base (UNIFORM with UK/storm)",
+    "baseline": "depth + lat + lon (thin coordinate baseline, uniform spirit with UK/storm)",
+    "text_bearing_only": true,
+    "result": "content (text vs shuffled) -21.2%, 8/8 regions negative, sign/Wilcoxon p=0.0039, per-fold PCA, 5 seeds.",
+    "relation_to_original": "The original -7.3% is the MORE CONSERVATIVE estimate: full corpus (incl. no-text rows), AIST regime baseline, has_text-provenance-controlled, Sarashina + global PCA. This -21.2% is the uniform cross-domain protocol on text-bearing rows. Both honest; they measure different things. The gap (~-7% -> -21%) is the AIST-regime-baseline redundancy + has_text dilution, consistent with the provenance-confound story."
+  }
+}

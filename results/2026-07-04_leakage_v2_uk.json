@@ -1,0 +1,115 @@
+{
+  "config": {
+    "domain": "uk",
+    "n_rows": 18157,
+    "n_regions": 5,
+    "base": [
+      "depth_from_surface",
+      "ground_level",
+      "latitude_deg",
+      "longitude_deg"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "variants": {
+    "lm_full": {
+      "no_text": 18.529,
+      "shuffled": 18.034,
+      "text": 14.641,
+      "content_pct": -18.8,
+      "per_region_content": {
+        "midlands": -12.7,
+        "north_england": -20.2,
+        "scotland": -17.0,
+        "south_england": -12.2,
+        "wales_west": -30.3
+      },
+      "n_neg": "5/5",
+      "sign_p": 0.03125,
+      "mean_frac_chars_removed": 0.0
+    },
+    "lm_lithology_only": {
+      "no_text": 18.529,
+      "shuffled": 18.034,
+      "text": 16.139,
+      "content_pct": -10.5,
+      "per_region_content": {
+        "midlands": -5.0,
+        "north_england": -11.5,
+        "scotland": -9.3,
+        "south_england": -6.3,
+        "wales_west": -19.4
+      },
+      "n_neg": "5/5",
+      "sign_p": 0.03125,
+      "mean_frac_chars_removed": 0.062
+    },
+    "lm_hardness_only": {
+      "no_text": 18.529,
+      "shuffled": 18.052,
+      "text": 14.951,
+      "content_pct": -17.2,
+      "per_region_content": {
+        "midlands": -9.4,
+        "north_england": -19.3,
+        "scotland": -16.3,
+        "south_england": -11.1,
+        "wales_west": -28.5
+      },
+      "n_neg": "5/5",
+      "sign_p": 0.03125,
+      "mean_frac_chars_removed": 0.051
+    },
+    "dictionary_onehot": {
+      "no_text": 18.529,
+      "shuffled": 18.317,
+      "text": 17.705,
+      "content_pct": -3.3,
+      "per_region_content": {
+        "midlands": -0.3,
+        "north_england": -5.4,
+        "scotland": 2.0,
+        "south_england": -4.6,
+        "wales_west": -8.0
+      },
+      "n_neg": "4/5",
+      "sign_p": 0.1875
+    },
+    "tfidf_char": {
+      "no_text": 18.529,
+      "shuffled": 18.011,
+      "text": 15.458,
+      "content_pct": -14.2,
+      "per_region_content": {
+        "midlands": -10.4,
+        "north_england": -16.9,
+        "scotland": -13.0,
+        "south_england": -9.0,
+        "wales_west": -20.8
+      },
+      "n_neg": "5/5",
+      "sign_p": 0.03125
+    },
+    "structured_litho": {
+      "no_text": 18.529,
+      "shuffled": 18.095,
+      "text": 16.436,
+      "content_pct": -9.2,
+      "per_region_content": {
+        "midlands": -4.1,
+        "north_england": -11.1,
+        "scotland": -8.9,
+        "south_england": -5.5,
+        "wales_west": -15.7
+      },
+      "n_neg": "5/5",
+      "sign_p": 0.03125
+    }
+  }
+}

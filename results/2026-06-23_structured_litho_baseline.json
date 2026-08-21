@@ -1,0 +1,39 @@
+{
+  "uk": {
+    "no_text": 18.529,
+    "shuffled": 18.095,
+    "text": 16.436,
+    "content_pct": -9.2,
+    "per_region_content": {
+      "midlands": -4.1,
+      "north_england": -11.1,
+      "scotland": -8.9,
+      "south_england": -5.5,
+      "wales_west": -15.7
+    },
+    "n_neg": "5/5",
+    "sign_p": 0.03125,
+    "dim": 62,
+    "n_rows": 18157
+  },
+  "japan": {
+    "no_text": 12.936,
+    "shuffled": 12.104,
+    "text": 10.14,
+    "content_pct": -16.2,
+    "per_region_content": {
+      "chubu": -12.8,
+      "chugoku": -16.5,
+      "hokkaido": -18.3,
+      "kansai": -12.9,
+      "kanto": -22.1,
+      "kyushu_okinawa": -14.3,
+      "shikoku": -13.9,
+      "tohoku": -18.5
+    },
+    "n_neg": "8/8",
+    "sign_p": 0.00391,
+    "dim": 61,
+    "n_rows": 41146
+  }
+}

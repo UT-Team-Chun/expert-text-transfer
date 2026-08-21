@@ -1,0 +1,70 @@
+{
+  "families": {
+    "project": {
+      "fold_col": "project_key",
+      "per_fold": {
+        "斐伊川下流堤防浸透調査検討業務": {
+          "no_text": [
+            5.877286958237388,
+            0.010949085619981761
+          ],
+          "text": [
+            5.341061137052175,
+            0.019851392484041046
+          ],
+          "block_null_mean": 5.6168025540160285,
+          "block_null_std": 0.013551744837382982,
+          "row_null_mean": 5.8734539002936055,
+          "row_null_std": 0.014231991823973555,
+          "content_pct_block": -4.909,
+          "content_pct_row": -9.064,
+          "perm_p_block": 0.09090909090909091,
+          "perm_p_row": 0.09090909090909091,
+          "n_te": 1992,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 10,
+            "frac_block_matched_mean": 0.99546,
+            "frac_rank_fallback_mean": 0.0045,
+            "frac_self_retained_mean": 4e-05
+          }
+        }
+      },
+      "fold_p_block": [
+        0.09090909090909091
+      ],
+      "fold_p_row": [
+        0.09090909090909091
+      ]
+    }
+  },
+  "config": {
+    "per_region_files": 0,
+    "sample_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_perm_block": 10,
+    "n_perm_row": 10,
+    "top_n": 8,
+    "min_fold_rows": 300,
+    "families_filter": [
+      "project"
+    ],
+    "fold_labels_filter": [
+      "斐伊川下流堤防浸透調査検討業務"
+    ],
+    "strip": "lithology_only v2",
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T4"
+  },
+  "_provenance": {
+    "purpose": "P-T4 provenance-transfer folds (leave-contractor/client/year/DTD/project-out)",
+    "metadata": "data/features/derived/kunijiban_metadata.parquet (national header pass)",
+    "script": "backend/scripts/nc_provenance_folds.py"
+  }
+}

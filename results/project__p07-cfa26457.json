@@ -1,0 +1,70 @@
+{
+  "families": {
+    "project": {
+      "fold_col": "project_key",
+      "per_fold": {
+        "石狩川上流美瑛川外堤防質的整備詳細点検業務": {
+          "no_text": [
+            9.839384285579134,
+            0.018913210887421414
+          ],
+          "text": [
+            9.261745440989506,
+            0.02498121391513363
+          ],
+          "block_null_mean": 9.880435663744262,
+          "block_null_std": 0.03208750456978528,
+          "row_null_mean": 9.856565666912948,
+          "row_null_std": 0.028594008077636693,
+          "content_pct_block": -6.262,
+          "content_pct_row": -6.035,
+          "perm_p_block": 0.09090909090909091,
+          "perm_p_row": 0.09090909090909091,
+          "n_te": 800,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 10,
+            "frac_block_matched_mean": 0.99546,
+            "frac_rank_fallback_mean": 0.0045,
+            "frac_self_retained_mean": 4e-05
+          }
+        }
+      },
+      "fold_p_block": [
+        0.09090909090909091
+      ],
+      "fold_p_row": [
+        0.09090909090909091
+      ]
+    }
+  },
+  "config": {
+    "per_region_files": 0,
+    "sample_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_perm_block": 10,
+    "n_perm_row": 10,
+    "top_n": 8,
+    "min_fold_rows": 300,
+    "families_filter": [
+      "project"
+    ],
+    "fold_labels_filter": [
+      "石狩川上流美瑛川外堤防質的整備詳細点検業務"
+    ],
+    "strip": "lithology_only v2",
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T4"
+  },
+  "_provenance": {
+    "purpose": "P-T4 provenance-transfer folds (leave-contractor/client/year/DTD/project-out)",
+    "metadata": "data/features/derived/kunijiban_metadata.parquet (national header pass)",
+    "script": "backend/scripts/nc_provenance_folds.py"
+  }
+}

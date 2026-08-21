@@ -1,0 +1,53 @@
+{
+  "_provenance": {
+    "purpose": "NC pre-review P0-6: quantify the rounded-coordinate text-join defect and the delta to the exact borehole-identity join; basis for switching join_soil_text_to_parquet to --join-key file and for the SI join-audit section.",
+    "inputs": {
+      "v4id": "/Users/okauchiryota/main_desk/UTokyo/from_202604/geo-estimation/data/features/borings_japan_v4id.parquet",
+      "layers_csv": "/Users/okauchiryota/main_desk/UTokyo/from_202604/geo-estimation/data/features/derived/soil_text_layers.csv",
+      "metadata": "/Users/okauchiryota/main_desk/UTokyo/from_202604/geo-estimation/data/features/derived/kunijiban_metadata.parquet"
+    },
+    "script": "backend/scripts/audit_text_join.py",
+    "no_model_trained": true
+  },
+  "corpus_keys": {
+    "n_boreholes": 162459,
+    "n_rounded_keys": 148433,
+    "n_keys_multi_borehole": 11017,
+    "pct_keys_multi_borehole": 7.42,
+    "n_boreholes_under_multi_key": 25043,
+    "pct_boreholes_under_multi_key": 15.41,
+    "n_spt_rows_under_multi_key": 369406,
+    "pct_spt_rows_under_multi_key": 13.87,
+    "n_exact_coord_groups_multi_borehole": 9266,
+    "n_boreholes_sharing_exact_coords": 21168,
+    "pct_boreholes_sharing_exact_coords": 13.03,
+    "max_boreholes_one_key": 28
+  },
+  "collision_mix": {
+    "n_multi_borehole_keys": 11017,
+    "pct_keys_mixing_projects": 11.7,
+    "pct_keys_mixing_contractors": 9.27,
+    "pct_keys_mixing_survey_years": 9.86,
+    "pct_keys_mixing_dtd_versions": 24.19
+  },
+  "join_delta": {
+    "n_rows": 2663955,
+    "coord_join_matched": 1536599,
+    "coord_join_match_rate_pct": 57.68,
+    "file_join_matched": 1619172,
+    "file_join_match_rate_pct": 60.78,
+    "coord_matches_from_other_borehole": 136294,
+    "pct_coord_matches_from_other_borehole": 8.87,
+    "rows_matched_by_both": 1531471,
+    "rows_label_changed_between_joins": 131166,
+    "pct_label_changed_among_both": 8.56,
+    "coord_only_matches": 5128,
+    "file_only_matches": 87701
+  },
+  "boundary_sensitivity": {
+    "n_id_join_matches": 1619172,
+    "pct_within_0.1m_of_boundary": 5.89,
+    "pct_within_0.25m_of_boundary": 18.46,
+    "pct_within_0.5m_of_boundary": 37.64
+  }
+}

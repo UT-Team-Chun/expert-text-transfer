@@ -1,0 +1,5148 @@
+{
+  "purpose": "P-T8 (pre-registered): does grouping the conformal calibration/evaluation split by borehole or by ~500 m site -- instead of by row -- change target-region coverage, interval width or Winkler score? The published figures used a random ROW split of the held-out region, so sibling layers of one borehole land on both sides of the split.",
+  "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8",
+  "bar": "marginal coverage gap at alpha=0.95 <= 0.01 under the grouped split, and mean interval width within +20% of the row split",
+  "verdict": "CONFIRMED -- and an informative negative for the reviewer's concern",
+  "aggregate_over_8_lro_regions": {
+    "alpha_0.5": {
+      "row": {
+        "gap_mean_over_regions": -6e-05,
+        "gap_worst_over_regions": -0.0011,
+        "mean_width_over_regions": 14.552,
+        "winkler_over_regions": 36.24
+      },
+      "borehole": {
+        "gap_mean_over_regions": -0.00026,
+        "gap_worst_over_regions": -0.00463,
+        "mean_width_over_regions": 14.544,
+        "winkler_over_regions": 36.204,
+        "width_pct_vs_row": -0.111,
+        "winkler_pct_vs_row": -0.078
+      },
+      "site": {
+        "gap_mean_over_regions": 0.00264,
+        "gap_worst_over_regions": 0.01652,
+        "mean_width_over_regions": 14.633,
+        "winkler_over_regions": 36.171,
+        "width_pct_vs_row": 0.688,
+        "winkler_pct_vs_row": -0.197
+      }
+    },
+    "alpha_0.8": {
+      "row": {
+        "gap_mean_over_regions": -6e-05,
+        "gap_worst_over_regions": 0.00116,
+        "mean_width_over_regions": 37.581,
+        "winkler_over_regions": 53.42
+      },
+      "borehole": {
+        "gap_mean_over_regions": 0.00038,
+        "gap_worst_over_regions": 0.00565,
+        "mean_width_over_regions": 37.604,
+        "winkler_over_regions": 53.344,
+        "width_pct_vs_row": 0.056,
+        "winkler_pct_vs_row": -0.111
+      },
+      "site": {
+        "gap_mean_over_regions": 0.00066,
+        "gap_worst_over_regions": 0.01258,
+        "mean_width_over_regions": 37.617,
+        "winkler_over_regions": 53.411,
+        "width_pct_vs_row": 0.12,
+        "winkler_pct_vs_row": -0.006
+      }
+    },
+    "alpha_0.95": {
+      "row": {
+        "gap_mean_over_regions": -0.00017,
+        "gap_worst_over_regions": -0.00061,
+        "mean_width_over_regions": 59.89,
+        "winkler_over_regions": 71.036
+      },
+      "borehole": {
+        "gap_mean_over_regions": 0.00044,
+        "gap_worst_over_regions": 0.00341,
+        "mean_width_over_regions": 59.971,
+        "winkler_over_regions": 70.91,
+        "width_pct_vs_row": 0.116,
+        "winkler_pct_vs_row": -0.11
+      },
+      "site": {
+        "gap_mean_over_regions": -0.00069,
+        "gap_worst_over_regions": -0.00527,
+        "mean_width_over_regions": 59.814,
+        "winkler_over_regions": 71.27,
+        "width_pct_vs_row": -0.12,
+        "winkler_pct_vs_row": 0.281
+      }
+    }
+  },
+  "worst_per_regime_coverage_borehole_split_alpha095_seed42": [
+    {
+      "region": "shikoku",
+      "regime": 6,
+      "coverage": 0.90741
+    },
+    {
+      "region": "hokkaido",
+      "regime": 2,
+      "coverage": 0.93894
+    },
+    {
+      "region": "kyushu_okinawa",
+      "regime": 6,
+      "coverage": 0.94043
+    },
+    {
+      "region": "chubu",
+      "regime": 7,
+      "coverage": 0.94226
+    },
+    {
+      "region": "chubu",
+      "regime": 5,
+      "coverage": 0.94309
+    },
+    {
+      "region": "kyushu_okinawa",
+      "regime": 7,
+      "coverage": 0.94345
+    },
+    {
+      "region": "chubu",
+      "regime": 1,
+      "coverage": 0.94381
+    },
+    {
+      "region": "kanto",
+      "regime": 1,
+      "coverage": 0.94469
+    }
+  ],
+  "interpretation": "Across all eight leave-region-out cells (216k-496k held-out rows, 15.7k-30.5k boreholes) the pre-registered bar is met with margin under BOTH grouped split units: the worst single-cell absolute coverage gap at alpha=0.95 is 0.00341 for the borehole split and 0.00527 for the site split, both inside the 0.01 bar, and every cell's mean interval width is within 1% of the row split's (bar: +20%). Sibling-layer dependence therefore does not inflate the reported conformal coverage at this calibration size: the marginal quantile of the conformity score is estimated from >100k residuals either way, so grouping changes its effective sample size but not its value. Two qualifications belong with that claim and are recorded in per_cell_worst_case_vs_row_split. First, the agreement is tightest for the BOREHOLE split; the ~500 m SITE split is looser -- worst single-cell coverage difference 0.0176 and width difference 4.97% (kansai, alpha=0.5) -- so the manuscript should quote the borehole split, which is also the unit the objection was about. Second, the caveat that survives is CONDITIONAL rather than marginal: coverage is uneven across geological regimes, markedly so at alpha=0.5, which is what the Mondrian binning addresses and what the SI reports per regime.",
+  "cells": {
+    "leave_region_out": {
+      "hokkaido": {
+        "run": "dkl_national_lro_hokkaido",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 108346,
+                "n_eval": 108346,
+                "alpha_0.5": {
+                  "coverage": 0.50017,
+                  "gap": 0.00017,
+                  "mean_width": 18.2192,
+                  "winkler": 38.8628,
+                  "per_regime_coverage": {
+                    "0": 0.50116,
+                    "1": 0.49672,
+                    "2": 0.51278,
+                    "3": 0.49426,
+                    "4": 0.49335,
+                    "5": 0.49541,
+                    "7": 0.51818
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80195,
+                  "gap": 0.00195,
+                  "mean_width": 40.6828,
+                  "winkler": 54.7404,
+                  "per_regime_coverage": {
+                    "0": 0.80148,
+                    "1": 0.80456,
+                    "2": 0.82508,
+                    "3": 0.80182,
+                    "4": 0.78827,
+                    "5": 0.78211,
+                    "7": 0.81218
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94936,
+                  "gap": -0.00064,
+                  "mean_width": 61.6025,
+                  "winkler": 69.8586,
+                  "per_regime_coverage": {
+                    "0": 0.94988,
+                    "1": 0.94643,
+                    "2": 0.95927,
+                    "3": 0.94922,
+                    "4": 0.94692,
+                    "5": 0.94954,
+                    "7": 0.95122
+                  }
+                }
+              },
+              {
+                "n_cal": 108346,
+                "n_eval": 108346,
+                "alpha_0.5": {
+                  "coverage": 0.4996,
+                  "gap": -0.0004,
+                  "mean_width": 18.2184,
+                  "winkler": 38.8617,
+                  "per_regime_coverage": {
+                    "0": 0.49905,
+                    "1": 0.50411,
+                    "2": 0.49514,
+                    "3": 0.50103,
+                    "4": 0.4928,
+                    "5": 0.52,
+                    "7": 0.49856
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80091,
+                  "gap": 0.00091,
+                  "mean_width": 40.622,
+                  "winkler": 54.6644,
+                  "per_regime_coverage": {
+                    "0": 0.80076,
+                    "1": 0.80311,
+                    "2": 0.80632,
+                    "3": 0.79775,
+                    "4": 0.80253,
+                    "5": 0.79529,
+                    "7": 0.80398
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95039,
+                  "gap": 0.00039,
+                  "mean_width": 61.7174,
+                  "winkler": 69.7829,
+                  "per_regime_coverage": {
+                    "0": 0.95074,
+                    "1": 0.95017,
+                    "2": 0.94976,
+                    "3": 0.94956,
+                    "4": 0.94725,
+                    "5": 0.93882,
+                    "7": 0.95373
+                  }
+                }
+              },
+              {
+                "n_cal": 108346,
+                "n_eval": 108346,
+                "alpha_0.5": {
+                  "coverage": 0.49941,
+                  "gap": -0.00059,
+                  "mean_width": 18.2244,
+                  "winkler": 38.946,
+                  "per_regime_coverage": {
+                    "0": 0.49885,
+                    "1": 0.49738,
+                    "2": 0.4613,
+                    "3": 0.50372,
+                    "4": 0.498,
+                    "5": 0.50367,
+                    "7": 0.5052
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79845,
+                  "gap": -0.00155,
+                  "mean_width": 40.5257,
+                  "winkler": 54.8263,
+                  "per_regime_coverage": {
+                    "0": 0.79703,
+                    "1": 0.79942,
+                    "2": 0.75997,
+                    "3": 0.80508,
+                    "4": 0.79679,
+                    "5": 0.79951,
+                    "7": 0.80069
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94842,
+                  "gap": -0.00158,
+                  "mean_width": 61.5048,
+                  "winkler": 70.017,
+                  "per_regime_coverage": {
+                    "0": 0.9477,
+                    "1": 0.95044,
+                    "2": 0.93667,
+                    "3": 0.95219,
+                    "4": 0.94493,
+                    "5": 0.93643,
+                    "7": 0.94743
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49973,
+              "gap_mean": -0.00027,
+              "mean_width": 18.2207,
+              "winkler": 38.8902
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80044,
+              "gap_mean": 0.00044,
+              "mean_width": 40.6102,
+              "winkler": 54.7437
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94939,
+              "gap_mean": -0.00061,
+              "mean_width": 61.6082,
+              "winkler": 69.8862
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 108107,
+                "n_eval": 108585,
+                "n_cal_groups": 7845,
+                "alpha_0.5": {
+                  "coverage": 0.50216,
+                  "gap": 0.00216,
+                  "mean_width": 18.2623,
+                  "winkler": 38.9201,
+                  "per_regime_coverage": {
+                    "0": 0.50401,
+                    "1": 0.50921,
+                    "2": 0.43678,
+                    "3": 0.49053,
+                    "4": 0.50051,
+                    "5": 0.64011,
+                    "7": 0.51071
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79895,
+                  "gap": -0.00105,
+                  "mean_width": 40.5734,
+                  "winkler": 54.8438,
+                  "per_regime_coverage": {
+                    "0": 0.80138,
+                    "1": 0.79264,
+                    "2": 0.73348,
+                    "3": 0.78891,
+                    "4": 0.80749,
+                    "5": 0.89835,
+                    "7": 0.81526
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94882,
+                  "gap": -0.00118,
+                  "mean_width": 61.5547,
+                  "winkler": 69.8215,
+                  "per_regime_coverage": {
+                    "0": 0.94852,
+                    "1": 0.94685,
+                    "2": 0.93894,
+                    "3": 0.95152,
+                    "4": 0.94754,
+                    "5": 0.96978,
+                    "7": 0.95017
+                  }
+                }
+              },
+              {
+                "n_cal": 108232,
+                "n_eval": 108460,
+                "n_cal_groups": 7845,
+                "alpha_0.5": {
+                  "coverage": 0.49849,
+                  "gap": -0.00151,
+                  "mean_width": 18.1791,
+                  "winkler": 38.902,
+                  "per_regime_coverage": {
+                    "0": 0.4987,
+                    "1": 0.49638,
+                    "2": 0.48911,
+                    "3": 0.49551,
+                    "4": 0.50649,
+                    "5": 0.53125,
+                    "7": 0.49979
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79542,
+                  "gap": -0.00458,
+                  "mean_width": 40.3481,
+                  "winkler": 54.6513,
+                  "per_regime_coverage": {
+                    "0": 0.79446,
+                    "1": 0.80311,
+                    "2": 0.78811,
+                    "3": 0.78963,
+                    "4": 0.80288,
+                    "5": 0.84896,
+                    "7": 0.79504
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95263,
+                  "gap": 0.00263,
+                  "mean_width": 61.8927,
+                  "winkler": 69.7074,
+                  "per_regime_coverage": {
+                    "0": 0.95282,
+                    "1": 0.95705,
+                    "2": 0.93886,
+                    "3": 0.9472,
+                    "4": 0.95878,
+                    "5": 0.99219,
+                    "7": 0.95039
+                  }
+                }
+              },
+              {
+                "n_cal": 108592,
+                "n_eval": 108100,
+                "n_cal_groups": 7845,
+                "alpha_0.5": {
+                  "coverage": 0.49601,
+                  "gap": -0.00399,
+                  "mean_width": 18.1498,
+                  "winkler": 39.1069,
+                  "per_regime_coverage": {
+                    "0": 0.49435,
+                    "1": 0.50104,
+                    "2": 0.45016,
+                    "3": 0.50403,
+                    "4": 0.47811,
+                    "5": 0.53784,
+                    "7": 0.5043
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79674,
+                  "gap": -0.00326,
+                  "mean_width": 40.502,
+                  "winkler": 54.9844,
+                  "per_regime_coverage": {
+                    "0": 0.79588,
+                    "1": 0.77945,
+                    "2": 0.78268,
+                    "3": 0.80923,
+                    "4": 0.79541,
+                    "5": 0.84324,
+                    "7": 0.80749
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94561,
+                  "gap": -0.00439,
+                  "mean_width": 61.2192,
+                  "winkler": 70.3106,
+                  "per_regime_coverage": {
+                    "0": 0.94515,
+                    "1": 0.93097,
+                    "2": 0.95261,
+                    "3": 0.95525,
+                    "4": 0.94986,
+                    "5": 0.95676,
+                    "7": 0.94704
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49889,
+              "gap_mean": -0.00111,
+              "mean_width": 18.1971,
+              "winkler": 38.9763
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79704,
+              "gap_mean": -0.00296,
+              "mean_width": 40.4745,
+              "winkler": 54.8265
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94902,
+              "gap_mean": -0.00098,
+              "mean_width": 61.5555,
+              "winkler": 69.9465
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 108212,
+                "n_eval": 108480,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.49461,
+                  "gap": -0.00539,
+                  "mean_width": 18.0687,
+                  "winkler": 39.1302,
+                  "per_regime_coverage": {
+                    "0": 0.49935,
+                    "1": 0.48354,
+                    "2": 0.55713,
+                    "3": 0.49032,
+                    "4": 0.48999,
+                    "5": 0.62687,
+                    "7": 0.47412
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79493,
+                  "gap": -0.00507,
+                  "mean_width": 40.3293,
+                  "winkler": 55.0812,
+                  "per_regime_coverage": {
+                    "0": 0.80096,
+                    "1": 0.78195,
+                    "2": 0.82342,
+                    "3": 0.79679,
+                    "4": 0.79019,
+                    "5": 0.8597,
+                    "7": 0.76013
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94581,
+                  "gap": -0.00419,
+                  "mean_width": 61.2524,
+                  "winkler": 70.2376,
+                  "per_regime_coverage": {
+                    "0": 0.94804,
+                    "1": 0.93245,
+                    "2": 0.96412,
+                    "3": 0.95102,
+                    "4": 0.94365,
+                    "5": 0.93731,
+                    "7": 0.93898
+                  }
+                }
+              },
+              {
+                "n_cal": 107260,
+                "n_eval": 109432,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.51023,
+                  "gap": 0.01023,
+                  "mean_width": 18.5632,
+                  "winkler": 38.5554,
+                  "per_regime_coverage": {
+                    "0": 0.51974,
+                    "1": 0.52854,
+                    "2": 0.44817,
+                    "3": 0.50558,
+                    "4": 0.46396,
+                    "5": 0.41298,
+                    "7": 0.46726
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.81006,
+                  "gap": 0.01006,
+                  "mean_width": 41.0848,
+                  "winkler": 54.4929,
+                  "per_regime_coverage": {
+                    "0": 0.81059,
+                    "1": 0.83218,
+                    "2": 0.74402,
+                    "3": 0.81997,
+                    "4": 0.7668,
+                    "5": 0.77434,
+                    "7": 0.79418
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95264,
+                  "gap": 0.00264,
+                  "mean_width": 62.0235,
+                  "winkler": 69.6388,
+                  "per_regime_coverage": {
+                    "0": 0.94969,
+                    "1": 0.96102,
+                    "2": 0.92504,
+                    "3": 0.95938,
+                    "4": 0.94693,
+                    "5": 0.96165,
+                    "7": 0.95407
+                  }
+                }
+              },
+              {
+                "n_cal": 100456,
+                "n_eval": 116236,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50245,
+                  "gap": 0.00245,
+                  "mean_width": 18.265,
+                  "winkler": 38.9407,
+                  "per_regime_coverage": {
+                    "0": 0.50684,
+                    "1": 0.48883,
+                    "2": 0.49864,
+                    "3": 0.49399,
+                    "4": 0.47586,
+                    "5": 0.44389,
+                    "7": 0.54164
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79901,
+                  "gap": -0.00099,
+                  "mean_width": 40.5011,
+                  "winkler": 54.9867,
+                  "per_regime_coverage": {
+                    "0": 0.8063,
+                    "1": 0.78816,
+                    "2": 0.77137,
+                    "3": 0.77617,
+                    "4": 0.7817,
+                    "5": 0.75209,
+                    "7": 0.84245
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94728,
+                  "gap": -0.00272,
+                  "mean_width": 61.2711,
+                  "winkler": 70.1711,
+                  "per_regime_coverage": {
+                    "0": 0.95027,
+                    "1": 0.94394,
+                    "2": 0.92944,
+                    "3": 0.93605,
+                    "4": 0.94735,
+                    "5": 0.98325,
+                    "7": 0.95822
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50243,
+              "gap_mean": 0.00243,
+              "mean_width": 18.299,
+              "winkler": 38.8754
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80133,
+              "gap_mean": 0.00133,
+              "mean_width": 40.6384,
+              "winkler": 54.8536
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94858,
+              "gap_mean": -0.00142,
+              "mean_width": 61.5157,
+              "winkler": 70.0158
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'hokkaido'; regime from parquet (npz regime is train-sized, 2447263 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 216692,
+        "n_boreholes": 15690,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      },
+      "tohoku": {
+        "run": "dkl_national_lro_tohoku",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 143748,
+                "n_eval": 143748,
+                "alpha_0.5": {
+                  "coverage": 0.498,
+                  "gap": -0.002,
+                  "mean_width": 16.6639,
+                  "winkler": 36.2912,
+                  "per_regime_coverage": {
+                    "0": 0.49764,
+                    "1": 0.49537,
+                    "2": 0.50053,
+                    "3": 0.49831,
+                    "4": 0.49663,
+                    "5": 0.54392,
+                    "6": 0.53365,
+                    "7": 0.50297
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80077,
+                  "gap": 0.00077,
+                  "mean_width": 38.6845,
+                  "winkler": 50.6022,
+                  "per_regime_coverage": {
+                    "0": 0.80081,
+                    "1": 0.79947,
+                    "2": 0.81296,
+                    "3": 0.80271,
+                    "4": 0.80113,
+                    "5": 0.78378,
+                    "6": 0.83173,
+                    "7": 0.79715
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95009,
+                  "gap": 9e-05,
+                  "mean_width": 55.9864,
+                  "winkler": 62.975,
+                  "per_regime_coverage": {
+                    "0": 0.9498,
+                    "1": 0.95059,
+                    "2": 0.94474,
+                    "3": 0.95322,
+                    "4": 0.94927,
+                    "5": 0.94595,
+                    "6": 0.97115,
+                    "7": 0.9484
+                  }
+                }
+              },
+              {
+                "n_cal": 143748,
+                "n_eval": 143748,
+                "alpha_0.5": {
+                  "coverage": 0.49942,
+                  "gap": -0.00058,
+                  "mean_width": 16.713,
+                  "winkler": 36.327,
+                  "per_regime_coverage": {
+                    "0": 0.49702,
+                    "1": 0.50401,
+                    "2": 0.53106,
+                    "3": 0.49463,
+                    "4": 0.50141,
+                    "5": 0.54426,
+                    "6": 0.52247,
+                    "7": 0.51154
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80002,
+                  "gap": 2e-05,
+                  "mean_width": 38.6513,
+                  "winkler": 50.6438,
+                  "per_regime_coverage": {
+                    "0": 0.7995,
+                    "1": 0.80035,
+                    "2": 0.81159,
+                    "3": 0.79563,
+                    "4": 0.80389,
+                    "5": 0.81311,
+                    "6": 0.76966,
+                    "7": 0.80287
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.9502,
+                  "gap": 0.0002,
+                  "mean_width": 55.9862,
+                  "winkler": 62.9829,
+                  "per_regime_coverage": {
+                    "0": 0.9496,
+                    "1": 0.95291,
+                    "2": 0.95859,
+                    "3": 0.95003,
+                    "4": 0.95041,
+                    "5": 0.9377,
+                    "6": 0.91573,
+                    "7": 0.9517
+                  }
+                }
+              },
+              {
+                "n_cal": 143748,
+                "n_eval": 143748,
+                "alpha_0.5": {
+                  "coverage": 0.50153,
+                  "gap": 0.00153,
+                  "mean_width": 16.7599,
+                  "winkler": 36.2179,
+                  "per_regime_coverage": {
+                    "0": 0.50155,
+                    "1": 0.50038,
+                    "2": 0.44898,
+                    "3": 0.50272,
+                    "4": 0.50705,
+                    "5": 0.5583,
+                    "6": 0.50249,
+                    "7": 0.49456
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80269,
+                  "gap": 0.00269,
+                  "mean_width": 38.7837,
+                  "winkler": 50.5549,
+                  "per_regime_coverage": {
+                    "0": 0.80358,
+                    "1": 0.78851,
+                    "2": 0.78733,
+                    "3": 0.8041,
+                    "4": 0.80453,
+                    "5": 0.84099,
+                    "6": 0.9005,
+                    "7": 0.80439
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95054,
+                  "gap": 0.00054,
+                  "mean_width": 56.0329,
+                  "winkler": 62.8613,
+                  "per_regime_coverage": {
+                    "0": 0.94926,
+                    "1": 0.94364,
+                    "2": 0.96778,
+                    "3": 0.95374,
+                    "4": 0.95412,
+                    "5": 0.95406,
+                    "6": 0.96517,
+                    "7": 0.95439
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49965,
+              "gap_mean": -0.00035,
+              "mean_width": 16.7123,
+              "winkler": 36.2787
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80116,
+              "gap_mean": 0.00116,
+              "mean_width": 38.7065,
+              "winkler": 50.6003
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95028,
+              "gap_mean": 0.00028,
+              "mean_width": 56.0018,
+              "winkler": 62.9397
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 143694,
+                "n_eval": 143802,
+                "n_cal_groups": 8875,
+                "alpha_0.5": {
+                  "coverage": 0.50108,
+                  "gap": 0.00108,
+                  "mean_width": 16.7671,
+                  "winkler": 36.2109,
+                  "per_regime_coverage": {
+                    "0": 0.49107,
+                    "1": 0.52383,
+                    "2": 0.55499,
+                    "3": 0.5017,
+                    "4": 0.51516,
+                    "5": 0.6378,
+                    "6": 0.52915,
+                    "7": 0.51587
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80193,
+                  "gap": 0.00193,
+                  "mean_width": 38.7589,
+                  "winkler": 50.4946,
+                  "per_regime_coverage": {
+                    "0": 0.79743,
+                    "1": 0.81328,
+                    "2": 0.77195,
+                    "3": 0.79741,
+                    "4": 0.81053,
+                    "5": 0.89764,
+                    "6": 0.89238,
+                    "7": 0.81324
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95209,
+                  "gap": 0.00209,
+                  "mean_width": 56.179,
+                  "winkler": 62.7983,
+                  "per_regime_coverage": {
+                    "0": 0.94884,
+                    "1": 0.95843,
+                    "2": 0.98486,
+                    "3": 0.95596,
+                    "4": 0.95448,
+                    "5": 0.98819,
+                    "6": 0.97758,
+                    "7": 0.95462
+                  }
+                }
+              },
+              {
+                "n_cal": 143971,
+                "n_eval": 143525,
+                "n_cal_groups": 8875,
+                "alpha_0.5": {
+                  "coverage": 0.50431,
+                  "gap": 0.00431,
+                  "mean_width": 16.8296,
+                  "winkler": 35.9652,
+                  "per_regime_coverage": {
+                    "0": 0.50317,
+                    "1": 0.49407,
+                    "2": 0.56476,
+                    "3": 0.51414,
+                    "4": 0.47921,
+                    "5": 0.60227,
+                    "6": 0.63178,
+                    "7": 0.53719
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80999,
+                  "gap": 0.00999,
+                  "mean_width": 39.1025,
+                  "winkler": 50.3418,
+                  "per_regime_coverage": {
+                    "0": 0.8086,
+                    "1": 0.81835,
+                    "2": 0.8949,
+                    "3": 0.81364,
+                    "4": 0.79012,
+                    "5": 0.92045,
+                    "6": 0.74806,
+                    "7": 0.82956
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95376,
+                  "gap": 0.00376,
+                  "mean_width": 56.2697,
+                  "winkler": 62.8434,
+                  "per_regime_coverage": {
+                    "0": 0.95171,
+                    "1": 0.96124,
+                    "2": 0.97134,
+                    "3": 0.95502,
+                    "4": 0.94899,
+                    "5": 0.98106,
+                    "6": 0.98837,
+                    "7": 0.96379
+                  }
+                }
+              },
+              {
+                "n_cal": 143623,
+                "n_eval": 143873,
+                "n_cal_groups": 8875,
+                "alpha_0.5": {
+                  "coverage": 0.50315,
+                  "gap": 0.00315,
+                  "mean_width": 16.7993,
+                  "winkler": 36.1084,
+                  "per_regime_coverage": {
+                    "0": 0.50373,
+                    "1": 0.49879,
+                    "2": 0.45764,
+                    "3": 0.49921,
+                    "4": 0.49913,
+                    "5": 0.50467,
+                    "6": 0.55596,
+                    "7": 0.51869
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80504,
+                  "gap": 0.00504,
+                  "mean_width": 38.8969,
+                  "winkler": 50.4742,
+                  "per_regime_coverage": {
+                    "0": 0.8071,
+                    "1": 0.80571,
+                    "2": 0.68802,
+                    "3": 0.79745,
+                    "4": 0.79982,
+                    "5": 0.80374,
+                    "6": 0.83755,
+                    "7": 0.81871
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95183,
+                  "gap": 0.00183,
+                  "mean_width": 56.1316,
+                  "winkler": 62.9455,
+                  "per_regime_coverage": {
+                    "0": 0.95425,
+                    "1": 0.94908,
+                    "2": 0.85744,
+                    "3": 0.95145,
+                    "4": 0.94494,
+                    "5": 0.95794,
+                    "6": 0.98556,
+                    "7": 0.95591
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50285,
+              "gap_mean": 0.00285,
+              "mean_width": 16.7987,
+              "winkler": 36.0948
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80565,
+              "gap_mean": 0.00565,
+              "mean_width": 38.9194,
+              "winkler": 50.4369
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95256,
+              "gap_mean": 0.00256,
+              "mean_width": 56.1934,
+              "winkler": 62.8624
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 147953,
+                "n_eval": 139543,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.49038,
+                  "gap": -0.00962,
+                  "mean_width": 16.493,
+                  "winkler": 36.627,
+                  "per_regime_coverage": {
+                    "0": 0.4834,
+                    "1": 0.55634,
+                    "2": 0.40325,
+                    "3": 0.46815,
+                    "4": 0.52975,
+                    "5": 0.32107,
+                    "6": 0.50153,
+                    "7": 0.4545
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79089,
+                  "gap": -0.00911,
+                  "mean_width": 38.2293,
+                  "winkler": 50.9739,
+                  "per_regime_coverage": {
+                    "0": 0.7847,
+                    "1": 0.8537,
+                    "2": 0.90416,
+                    "3": 0.77545,
+                    "4": 0.81136,
+                    "5": 0.48495,
+                    "6": 0.80734,
+                    "7": 0.75617
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95047,
+                  "gap": 0.00047,
+                  "mean_width": 55.9992,
+                  "winkler": 63.2287,
+                  "per_regime_coverage": {
+                    "0": 0.95092,
+                    "1": 0.96472,
+                    "2": 0.96926,
+                    "3": 0.94314,
+                    "4": 0.95067,
+                    "5": 0.93645,
+                    "6": 0.99694,
+                    "7": 0.94025
+                  }
+                }
+              },
+              {
+                "n_cal": 146516,
+                "n_eval": 140980,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.52304,
+                  "gap": 0.02304,
+                  "mean_width": 17.4499,
+                  "winkler": 36.3629,
+                  "per_regime_coverage": {
+                    "0": 0.52969,
+                    "1": 0.57678,
+                    "2": 0.44009,
+                    "3": 0.52749,
+                    "4": 0.48057,
+                    "5": 0.77108,
+                    "6": 0.12821,
+                    "7": 0.48498
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79457,
+                  "gap": -0.00543,
+                  "mean_width": 38.5183,
+                  "winkler": 51.1807,
+                  "per_regime_coverage": {
+                    "0": 0.79227,
+                    "1": 0.84365,
+                    "2": 0.89902,
+                    "3": 0.8004,
+                    "4": 0.76168,
+                    "5": 0.93976,
+                    "6": 0.28205,
+                    "7": 0.78905
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94344,
+                  "gap": -0.00656,
+                  "mean_width": 55.5266,
+                  "winkler": 63.345,
+                  "per_regime_coverage": {
+                    "0": 0.93969,
+                    "1": 0.96409,
+                    "2": 0.96383,
+                    "3": 0.94907,
+                    "4": 0.94305,
+                    "5": 1.0,
+                    "6": 0.76068,
+                    "7": 0.93674
+                  }
+                }
+              },
+              {
+                "n_cal": 142512,
+                "n_eval": 144984,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50397,
+                  "gap": 0.00397,
+                  "mean_width": 16.7512,
+                  "winkler": 35.7944,
+                  "per_regime_coverage": {
+                    "0": 0.4903,
+                    "1": 0.53613,
+                    "2": 0.62703,
+                    "3": 0.55148,
+                    "4": 0.46254,
+                    "5": 0.57957,
+                    "6": 0.76221,
+                    "7": 0.5646
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.81004,
+                  "gap": 0.01004,
+                  "mean_width": 39.0368,
+                  "winkler": 50.0407,
+                  "per_regime_coverage": {
+                    "0": 0.80367,
+                    "1": 0.85142,
+                    "2": 0.89865,
+                    "3": 0.80895,
+                    "4": 0.79052,
+                    "5": 0.77197,
+                    "6": 0.81759,
+                    "7": 0.84639
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95937,
+                  "gap": 0.00937,
+                  "mean_width": 56.6343,
+                  "winkler": 62.4334,
+                  "per_regime_coverage": {
+                    "0": 0.96277,
+                    "1": 0.96215,
+                    "2": 0.95676,
+                    "3": 0.94692,
+                    "4": 0.94878,
+                    "5": 0.93112,
+                    "6": 0.94463,
+                    "7": 0.96736
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.5058,
+              "gap_mean": 0.0058,
+              "mean_width": 16.898,
+              "winkler": 36.2614
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.7985,
+              "gap_mean": -0.0015,
+              "mean_width": 38.5948,
+              "winkler": 50.7318
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95109,
+              "gap_mean": 0.00109,
+              "mean_width": 56.0534,
+              "winkler": 63.0024
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'tohoku'; regime from parquet (npz regime is train-sized, 2376459 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 287496,
+        "n_boreholes": 17751,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      },
+      "kanto": {
+        "run": "dkl_national_lro_kanto",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 247862,
+                "n_eval": 247863,
+                "alpha_0.5": {
+                  "coverage": 0.50039,
+                  "gap": 0.00039,
+                  "mean_width": 12.223,
+                  "winkler": 33.2814,
+                  "per_regime_coverage": {
+                    "0": 0.50149,
+                    "1": 0.49914,
+                    "2": 0.35849,
+                    "3": 0.49764,
+                    "4": 0.49471,
+                    "5": 0.50314,
+                    "6": 0.0,
+                    "7": 0.49793
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80041,
+                  "gap": 0.00041,
+                  "mean_width": 35.6479,
+                  "winkler": 49.4283,
+                  "per_regime_coverage": {
+                    "0": 0.80029,
+                    "1": 0.79653,
+                    "2": 0.81132,
+                    "3": 0.80873,
+                    "4": 0.80077,
+                    "5": 0.81132,
+                    "6": 0.0,
+                    "7": 0.80562
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94951,
+                  "gap": -0.00049,
+                  "mean_width": 55.1584,
+                  "winkler": 63.8984,
+                  "per_regime_coverage": {
+                    "0": 0.94941,
+                    "1": 0.94821,
+                    "2": 0.92453,
+                    "3": 0.95247,
+                    "4": 0.95056,
+                    "5": 0.96226,
+                    "6": 1.0,
+                    "7": 0.9513
+                  }
+                }
+              },
+              {
+                "n_cal": 247862,
+                "n_eval": 247863,
+                "alpha_0.5": {
+                  "coverage": 0.49933,
+                  "gap": -0.00067,
+                  "mean_width": 12.1835,
+                  "winkler": 33.3234,
+                  "per_regime_coverage": {
+                    "0": 0.50034,
+                    "1": 0.49816,
+                    "2": 0.52381,
+                    "3": 0.50797,
+                    "4": 0.48594,
+                    "5": 0.55488,
+                    "6": 0.33333,
+                    "7": 0.49414
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79912,
+                  "gap": -0.00088,
+                  "mean_width": 35.5833,
+                  "winkler": 49.4139,
+                  "per_regime_coverage": {
+                    "0": 0.7988,
+                    "1": 0.79937,
+                    "2": 0.8254,
+                    "3": 0.80135,
+                    "4": 0.79547,
+                    "5": 0.81098,
+                    "6": 0.66667,
+                    "7": 0.80128
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94999,
+                  "gap": -1e-05,
+                  "mean_width": 55.2219,
+                  "winkler": 63.8447,
+                  "per_regime_coverage": {
+                    "0": 0.95008,
+                    "1": 0.95007,
+                    "2": 0.93651,
+                    "3": 0.9529,
+                    "4": 0.95419,
+                    "5": 0.96341,
+                    "6": 1.0,
+                    "7": 0.94624
+                  }
+                }
+              },
+              {
+                "n_cal": 247862,
+                "n_eval": 247863,
+                "alpha_0.5": {
+                  "coverage": 0.5025,
+                  "gap": 0.0025,
+                  "mean_width": 12.2781,
+                  "winkler": 33.2357,
+                  "per_regime_coverage": {
+                    "0": 0.50303,
+                    "1": 0.49982,
+                    "2": 0.36842,
+                    "3": 0.49947,
+                    "4": 0.50139,
+                    "5": 0.6125,
+                    "7": 0.50521
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80053,
+                  "gap": 0.00053,
+                  "mean_width": 35.6546,
+                  "winkler": 49.3814,
+                  "per_regime_coverage": {
+                    "0": 0.80106,
+                    "1": 0.79866,
+                    "2": 0.65789,
+                    "3": 0.80425,
+                    "4": 0.80255,
+                    "5": 0.825,
+                    "7": 0.79795
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95092,
+                  "gap": 0.00092,
+                  "mean_width": 55.314,
+                  "winkler": 63.8252,
+                  "per_regime_coverage": {
+                    "0": 0.95045,
+                    "1": 0.95071,
+                    "2": 0.97368,
+                    "3": 0.95294,
+                    "4": 0.95273,
+                    "5": 0.9625,
+                    "7": 0.95338
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50074,
+              "gap_mean": 0.00074,
+              "mean_width": 12.2282,
+              "winkler": 33.2802
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80002,
+              "gap_mean": 2e-05,
+              "mean_width": 35.6286,
+              "winkler": 49.4079
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95014,
+              "gap_mean": 0.00014,
+              "mean_width": 55.2314,
+              "winkler": 63.8561
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 248367,
+                "n_eval": 247358,
+                "n_cal_groups": 11176,
+                "alpha_0.5": {
+                  "coverage": 0.49957,
+                  "gap": -0.00043,
+                  "mean_width": 12.2077,
+                  "winkler": 33.3019,
+                  "per_regime_coverage": {
+                    "0": 0.50383,
+                    "1": 0.49573,
+                    "2": 0.15476,
+                    "3": 0.4874,
+                    "4": 0.48869,
+                    "5": 0.43719,
+                    "6": 1.0,
+                    "7": 0.48551
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.7987,
+                  "gap": -0.0013,
+                  "mean_width": 35.5395,
+                  "winkler": 49.4755,
+                  "per_regime_coverage": {
+                    "0": 0.80274,
+                    "1": 0.78759,
+                    "2": 1.0,
+                    "3": 0.78018,
+                    "4": 0.79829,
+                    "5": 0.76884,
+                    "6": 1.0,
+                    "7": 0.79812
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94977,
+                  "gap": -0.00023,
+                  "mean_width": 55.1459,
+                  "winkler": 63.8556,
+                  "per_regime_coverage": {
+                    "0": 0.95097,
+                    "1": 0.94469,
+                    "2": 1.0,
+                    "3": 0.94669,
+                    "4": 0.94689,
+                    "5": 0.97487,
+                    "6": 1.0,
+                    "7": 0.95301
+                  }
+                }
+              },
+              {
+                "n_cal": 247319,
+                "n_eval": 248406,
+                "n_cal_groups": 11176,
+                "alpha_0.5": {
+                  "coverage": 0.50159,
+                  "gap": 0.00159,
+                  "mean_width": 12.2548,
+                  "winkler": 33.2927,
+                  "per_regime_coverage": {
+                    "0": 0.50353,
+                    "1": 0.50512,
+                    "2": 0.57143,
+                    "3": 0.49525,
+                    "4": 0.51309,
+                    "5": 0.5061,
+                    "6": 1.0,
+                    "7": 0.47603
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80121,
+                  "gap": 0.00121,
+                  "mean_width": 35.7023,
+                  "winkler": 49.5657,
+                  "per_regime_coverage": {
+                    "0": 0.80211,
+                    "1": 0.80076,
+                    "2": 0.92857,
+                    "3": 0.79578,
+                    "4": 0.8193,
+                    "5": 0.86585,
+                    "6": 1.0,
+                    "7": 0.78967
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94771,
+                  "gap": -0.00229,
+                  "mean_width": 55.0041,
+                  "winkler": 64.028,
+                  "per_regime_coverage": {
+                    "0": 0.94753,
+                    "1": 0.94914,
+                    "2": 1.0,
+                    "3": 0.95239,
+                    "4": 0.9502,
+                    "5": 0.96341,
+                    "6": 1.0,
+                    "7": 0.94287
+                  }
+                }
+              },
+              {
+                "n_cal": 248725,
+                "n_eval": 247000,
+                "n_cal_groups": 11176,
+                "alpha_0.5": {
+                  "coverage": 0.49499,
+                  "gap": -0.00501,
+                  "mean_width": 12.0496,
+                  "winkler": 33.5478,
+                  "per_regime_coverage": {
+                    "0": 0.49992,
+                    "1": 0.49077,
+                    "2": 0.54839,
+                    "3": 0.46434,
+                    "4": 0.48476,
+                    "5": 0.53691,
+                    "6": 1.0,
+                    "7": 0.48122
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79218,
+                  "gap": -0.00782,
+                  "mean_width": 35.2007,
+                  "winkler": 49.6526,
+                  "per_regime_coverage": {
+                    "0": 0.79332,
+                    "1": 0.79525,
+                    "2": 1.0,
+                    "3": 0.77734,
+                    "4": 0.79303,
+                    "5": 0.79195,
+                    "6": 1.0,
+                    "7": 0.78291
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.949,
+                  "gap": -0.001,
+                  "mean_width": 55.0793,
+                  "winkler": 63.9181,
+                  "per_regime_coverage": {
+                    "0": 0.94979,
+                    "1": 0.94753,
+                    "2": 1.0,
+                    "3": 0.9427,
+                    "4": 0.94935,
+                    "5": 0.95973,
+                    "6": 1.0,
+                    "7": 0.94826
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49872,
+              "gap_mean": -0.00128,
+              "mean_width": 12.1707,
+              "winkler": 33.3808
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79736,
+              "gap_mean": -0.00264,
+              "mean_width": 35.4808,
+              "winkler": 49.5646
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94883,
+              "gap_mean": -0.00117,
+              "mean_width": 55.0764,
+              "winkler": 63.9339
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 238016,
+                "n_eval": 257709,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.51087,
+                  "gap": 0.01087,
+                  "mean_width": 12.51,
+                  "winkler": 33.0964,
+                  "per_regime_coverage": {
+                    "0": 0.5194,
+                    "1": 0.4937,
+                    "2": 0.17143,
+                    "3": 0.48194,
+                    "4": 0.42557,
+                    "5": 0.90909,
+                    "6": 0.33333,
+                    "7": 0.52635
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80364,
+                  "gap": 0.00364,
+                  "mean_width": 35.8518,
+                  "winkler": 49.3124,
+                  "per_regime_coverage": {
+                    "0": 0.80882,
+                    "1": 0.79129,
+                    "2": 1.0,
+                    "3": 0.78346,
+                    "4": 0.77379,
+                    "5": 0.93939,
+                    "6": 0.66667,
+                    "7": 0.80784
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94981,
+                  "gap": -0.00019,
+                  "mean_width": 55.1802,
+                  "winkler": 64.0029,
+                  "per_regime_coverage": {
+                    "0": 0.95083,
+                    "1": 0.94517,
+                    "2": 1.0,
+                    "3": 0.94673,
+                    "4": 0.95558,
+                    "5": 0.9697,
+                    "6": 1.0,
+                    "7": 0.94987
+                  }
+                }
+              },
+              {
+                "n_cal": 241046,
+                "n_eval": 254679,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.51779,
+                  "gap": 0.01779,
+                  "mean_width": 12.6886,
+                  "winkler": 33.1306,
+                  "per_regime_coverage": {
+                    "0": 0.52743,
+                    "1": 0.50506,
+                    "2": 0.73016,
+                    "3": 0.47598,
+                    "4": 0.52852,
+                    "5": 0.16245,
+                    "6": 0.33333,
+                    "7": 0.49209
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.8009,
+                  "gap": 0.0009,
+                  "mean_width": 35.6058,
+                  "winkler": 49.69,
+                  "per_regime_coverage": {
+                    "0": 0.81021,
+                    "1": 0.78106,
+                    "2": 1.0,
+                    "3": 0.79761,
+                    "4": 0.82621,
+                    "5": 0.48014,
+                    "6": 0.66667,
+                    "7": 0.76966
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94726,
+                  "gap": -0.00274,
+                  "mean_width": 54.8352,
+                  "winkler": 64.3657,
+                  "per_regime_coverage": {
+                    "0": 0.94933,
+                    "1": 0.9404,
+                    "2": 1.0,
+                    "3": 0.93038,
+                    "4": 0.94574,
+                    "5": 0.98556,
+                    "6": 1.0,
+                    "7": 0.95316
+                  }
+                }
+              },
+              {
+                "n_cal": 252508,
+                "n_eval": 243217,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.48259,
+                  "gap": -0.01741,
+                  "mean_width": 11.7106,
+                  "winkler": 33.5004,
+                  "per_regime_coverage": {
+                    "0": 0.47801,
+                    "1": 0.4837,
+                    "2": 0.12245,
+                    "3": 0.45108,
+                    "4": 0.47263,
+                    "5": 0.18943,
+                    "7": 0.54543
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79592,
+                  "gap": -0.00408,
+                  "mean_width": 35.4421,
+                  "winkler": 49.2692,
+                  "per_regime_coverage": {
+                    "0": 0.79105,
+                    "1": 0.80477,
+                    "2": 1.0,
+                    "3": 0.78375,
+                    "4": 0.77187,
+                    "5": 0.74009,
+                    "7": 0.83541
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95508,
+                  "gap": 0.00508,
+                  "mean_width": 55.6968,
+                  "winkler": 63.5335,
+                  "per_regime_coverage": {
+                    "0": 0.95544,
+                    "1": 0.95399,
+                    "2": 1.0,
+                    "3": 0.93885,
+                    "4": 0.96205,
+                    "5": 0.98678,
+                    "7": 0.95823
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50375,
+              "gap_mean": 0.00375,
+              "mean_width": 12.3031,
+              "winkler": 33.2425
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80015,
+              "gap_mean": 0.00015,
+              "mean_width": 35.6332,
+              "winkler": 49.4239
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95072,
+              "gap_mean": 0.00072,
+              "mean_width": 55.2374,
+              "winkler": 63.9674
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'kanto'; regime from parquet (npz regime is train-sized, 2168230 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 495725,
+        "n_boreholes": 22352,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      },
+      "chubu": {
+        "run": "dkl_national_lro_chubu",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 228845,
+                "n_eval": 228846,
+                "alpha_0.5": {
+                  "coverage": 0.50044,
+                  "gap": 0.00044,
+                  "mean_width": 13.0429,
+                  "winkler": 34.962,
+                  "per_regime_coverage": {
+                    "0": 0.50071,
+                    "1": 0.49919,
+                    "2": 0.55102,
+                    "3": 0.50005,
+                    "4": 0.49545,
+                    "5": 0.51187,
+                    "6": 0.58376,
+                    "7": 0.50249
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80179,
+                  "gap": 0.00179,
+                  "mean_width": 36.9072,
+                  "winkler": 52.338,
+                  "per_regime_coverage": {
+                    "0": 0.80187,
+                    "1": 0.80448,
+                    "2": 0.89796,
+                    "3": 0.7963,
+                    "4": 0.8035,
+                    "5": 0.79953,
+                    "6": 0.86294,
+                    "7": 0.81254
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95087,
+                  "gap": 0.00087,
+                  "mean_width": 59.8379,
+                  "winkler": 68.74,
+                  "per_regime_coverage": {
+                    "0": 0.95045,
+                    "1": 0.95341,
+                    "2": 1.0,
+                    "3": 0.94983,
+                    "4": 0.95094,
+                    "5": 0.95344,
+                    "6": 0.9797,
+                    "7": 0.95103
+                  }
+                }
+              },
+              {
+                "n_cal": 228845,
+                "n_eval": 228846,
+                "alpha_0.5": {
+                  "coverage": 0.49944,
+                  "gap": -0.00056,
+                  "mean_width": 13.0162,
+                  "winkler": 35.1413,
+                  "per_regime_coverage": {
+                    "0": 0.49882,
+                    "1": 0.50154,
+                    "2": 0.5098,
+                    "3": 0.50065,
+                    "4": 0.49527,
+                    "5": 0.5099,
+                    "6": 0.53738,
+                    "7": 0.4976
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79705,
+                  "gap": -0.00295,
+                  "mean_width": 36.6401,
+                  "winkler": 52.4825,
+                  "per_regime_coverage": {
+                    "0": 0.79709,
+                    "1": 0.8024,
+                    "2": 0.76471,
+                    "3": 0.79413,
+                    "4": 0.79308,
+                    "5": 0.79962,
+                    "6": 0.86916,
+                    "7": 0.79841
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94964,
+                  "gap": -0.00036,
+                  "mean_width": 59.7124,
+                  "winkler": 68.7235,
+                  "per_regime_coverage": {
+                    "0": 0.94958,
+                    "1": 0.9507,
+                    "2": 0.92157,
+                    "3": 0.94825,
+                    "4": 0.95045,
+                    "5": 0.95042,
+                    "6": 0.97196,
+                    "7": 0.95068
+                  }
+                }
+              },
+              {
+                "n_cal": 228845,
+                "n_eval": 228846,
+                "alpha_0.5": {
+                  "coverage": 0.50089,
+                  "gap": 0.00089,
+                  "mean_width": 13.057,
+                  "winkler": 35.0206,
+                  "per_regime_coverage": {
+                    "0": 0.50178,
+                    "1": 0.49573,
+                    "2": 0.59615,
+                    "3": 0.50158,
+                    "4": 0.50076,
+                    "5": 0.49393,
+                    "6": 0.61809,
+                    "7": 0.5023
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80067,
+                  "gap": 0.00067,
+                  "mean_width": 36.8447,
+                  "winkler": 52.4041,
+                  "per_regime_coverage": {
+                    "0": 0.8,
+                    "1": 0.80196,
+                    "2": 0.80769,
+                    "3": 0.79781,
+                    "4": 0.80669,
+                    "5": 0.80156,
+                    "6": 0.85427,
+                    "7": 0.80401
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94936,
+                  "gap": -0.00064,
+                  "mean_width": 59.6996,
+                  "winkler": 68.8441,
+                  "per_regime_coverage": {
+                    "0": 0.949,
+                    "1": 0.95059,
+                    "2": 0.90385,
+                    "3": 0.94824,
+                    "4": 0.95092,
+                    "5": 0.95374,
+                    "6": 0.96985,
+                    "7": 0.94897
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50026,
+              "gap_mean": 0.00026,
+              "mean_width": 13.0387,
+              "winkler": 35.0413
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79984,
+              "gap_mean": -0.00016,
+              "mean_width": 36.7973,
+              "winkler": 52.4082
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94996,
+              "gap_mean": -4e-05,
+              "mean_width": 59.75,
+              "winkler": 68.7692
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 230156,
+                "n_eval": 227535,
+                "n_cal_groups": 13447,
+                "alpha_0.5": {
+                  "coverage": 0.50289,
+                  "gap": 0.00289,
+                  "mean_width": 13.1209,
+                  "winkler": 35.0552,
+                  "per_regime_coverage": {
+                    "0": 0.49573,
+                    "1": 0.50385,
+                    "2": 1.0,
+                    "3": 0.50261,
+                    "4": 0.52065,
+                    "5": 0.53006,
+                    "6": 0.35673,
+                    "7": 0.54925
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80015,
+                  "gap": 0.00015,
+                  "mean_width": 36.7872,
+                  "winkler": 52.481,
+                  "per_regime_coverage": {
+                    "0": 0.79718,
+                    "1": 0.80596,
+                    "2": 1.0,
+                    "3": 0.801,
+                    "4": 0.79453,
+                    "5": 0.81306,
+                    "6": 0.83041,
+                    "7": 0.82619
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.9494,
+                  "gap": -0.0006,
+                  "mean_width": 59.6429,
+                  "winkler": 68.786,
+                  "per_regime_coverage": {
+                    "0": 0.95097,
+                    "1": 0.94381,
+                    "2": 1.0,
+                    "3": 0.9494,
+                    "4": 0.95139,
+                    "5": 0.94309,
+                    "6": 0.94737,
+                    "7": 0.94226
+                  }
+                }
+              },
+              {
+                "n_cal": 227803,
+                "n_eval": 229888,
+                "n_cal_groups": 13447,
+                "alpha_0.5": {
+                  "coverage": 0.49109,
+                  "gap": -0.00891,
+                  "mean_width": 12.8077,
+                  "winkler": 35.2619,
+                  "per_regime_coverage": {
+                    "0": 0.48743,
+                    "1": 0.4897,
+                    "2": 0.12245,
+                    "3": 0.50103,
+                    "4": 0.49728,
+                    "5": 0.4945,
+                    "6": 0.53846,
+                    "7": 0.49243
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79528,
+                  "gap": -0.00472,
+                  "mean_width": 36.5092,
+                  "winkler": 52.5485,
+                  "per_regime_coverage": {
+                    "0": 0.79139,
+                    "1": 0.78781,
+                    "2": 0.16327,
+                    "3": 0.80592,
+                    "4": 0.80316,
+                    "5": 0.80936,
+                    "6": 0.88889,
+                    "7": 0.80374
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94908,
+                  "gap": -0.00092,
+                  "mean_width": 59.6656,
+                  "winkler": 68.7776,
+                  "per_regime_coverage": {
+                    "0": 0.9493,
+                    "1": 0.94469,
+                    "2": 0.18367,
+                    "3": 0.95409,
+                    "4": 0.9459,
+                    "5": 0.95131,
+                    "6": 0.95299,
+                    "7": 0.94669
+                  }
+                }
+              },
+              {
+                "n_cal": 228453,
+                "n_eval": 229238,
+                "n_cal_groups": 13447,
+                "alpha_0.5": {
+                  "coverage": 0.50166,
+                  "gap": 0.00166,
+                  "mean_width": 13.0646,
+                  "winkler": 35.0118,
+                  "per_regime_coverage": {
+                    "0": 0.49961,
+                    "1": 0.49977,
+                    "2": 1.0,
+                    "3": 0.51372,
+                    "4": 0.5134,
+                    "5": 0.50463,
+                    "6": 0.29193,
+                    "7": 0.45831
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79916,
+                  "gap": -0.00084,
+                  "mean_width": 36.7367,
+                  "winkler": 52.3185,
+                  "per_regime_coverage": {
+                    "0": 0.79817,
+                    "1": 0.78848,
+                    "2": 1.0,
+                    "3": 0.80709,
+                    "4": 0.82553,
+                    "5": 0.78751,
+                    "6": 0.67702,
+                    "7": 0.76234
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.9516,
+                  "gap": 0.0016,
+                  "mean_width": 59.9574,
+                  "winkler": 68.6867,
+                  "per_regime_coverage": {
+                    "0": 0.95096,
+                    "1": 0.95046,
+                    "2": 1.0,
+                    "3": 0.95419,
+                    "4": 0.95966,
+                    "5": 0.93801,
+                    "6": 0.93168,
+                    "7": 0.94612
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49855,
+              "gap_mean": -0.00145,
+              "mean_width": 12.9977,
+              "winkler": 35.1096
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.7982,
+              "gap_mean": -0.0018,
+              "mean_width": 36.6777,
+              "winkler": 52.4493
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95003,
+              "gap_mean": 3e-05,
+              "mean_width": 59.7553,
+              "winkler": 68.7501
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 226516,
+                "n_eval": 231175,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.48573,
+                  "gap": -0.01427,
+                  "mean_width": 12.6021,
+                  "winkler": 35.1454,
+                  "per_regime_coverage": {
+                    "0": 0.50422,
+                    "1": 0.42187,
+                    "2": 1.0,
+                    "3": 0.49038,
+                    "4": 0.47899,
+                    "5": 0.37331,
+                    "6": 0.57831,
+                    "7": 0.45763
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79984,
+                  "gap": -0.00016,
+                  "mean_width": 36.8737,
+                  "winkler": 52.2755,
+                  "per_regime_coverage": {
+                    "0": 0.80049,
+                    "1": 0.77682,
+                    "2": 1.0,
+                    "3": 0.80548,
+                    "4": 0.82899,
+                    "5": 0.7712,
+                    "6": 0.91566,
+                    "7": 0.79814
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95219,
+                  "gap": 0.00219,
+                  "mean_width": 59.9277,
+                  "winkler": 68.4562,
+                  "per_regime_coverage": {
+                    "0": 0.95266,
+                    "1": 0.94921,
+                    "2": 1.0,
+                    "3": 0.9495,
+                    "4": 0.95004,
+                    "5": 0.96071,
+                    "6": 0.98795,
+                    "7": 0.96255
+                  }
+                }
+              },
+              {
+                "n_cal": 226970,
+                "n_eval": 230721,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.48881,
+                  "gap": -0.01119,
+                  "mean_width": 12.7494,
+                  "winkler": 35.3322,
+                  "per_regime_coverage": {
+                    "0": 0.49642,
+                    "1": 0.50526,
+                    "2": 0.19048,
+                    "3": 0.4484,
+                    "4": 0.50252,
+                    "5": 0.44115,
+                    "6": 0.64706,
+                    "7": 0.51045
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79503,
+                  "gap": -0.00497,
+                  "mean_width": 36.5436,
+                  "winkler": 52.6699,
+                  "per_regime_coverage": {
+                    "0": 0.79855,
+                    "1": 0.7935,
+                    "2": 0.31746,
+                    "3": 0.78817,
+                    "4": 0.79913,
+                    "5": 0.80947,
+                    "6": 0.84706,
+                    "7": 0.76666
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94573,
+                  "gap": -0.00427,
+                  "mean_width": 59.3151,
+                  "winkler": 68.9337,
+                  "per_regime_coverage": {
+                    "0": 0.94647,
+                    "1": 0.94589,
+                    "2": 0.31746,
+                    "3": 0.94485,
+                    "4": 0.9463,
+                    "5": 0.95855,
+                    "6": 0.94118,
+                    "7": 0.93446
+                  }
+                }
+              },
+              {
+                "n_cal": 220485,
+                "n_eval": 237206,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50416,
+                  "gap": 0.00416,
+                  "mean_width": 13.1531,
+                  "winkler": 34.7386,
+                  "per_regime_coverage": {
+                    "0": 0.50368,
+                    "1": 0.52834,
+                    "2": 0.85714,
+                    "3": 0.48277,
+                    "4": 0.49446,
+                    "5": 0.46108,
+                    "6": 0.5567,
+                    "7": 0.57992
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80857,
+                  "gap": 0.00857,
+                  "mean_width": 37.3078,
+                  "winkler": 52.2148,
+                  "per_regime_coverage": {
+                    "0": 0.80476,
+                    "1": 0.83917,
+                    "2": 1.0,
+                    "3": 0.80002,
+                    "4": 0.8097,
+                    "5": 0.78973,
+                    "6": 0.79381,
+                    "7": 0.82731
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94979,
+                  "gap": -0.00021,
+                  "mean_width": 59.7767,
+                  "winkler": 68.8358,
+                  "per_regime_coverage": {
+                    "0": 0.94822,
+                    "1": 0.95681,
+                    "2": 1.0,
+                    "3": 0.94975,
+                    "4": 0.95111,
+                    "5": 0.9572,
+                    "6": 0.95876,
+                    "7": 0.9461
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.4929,
+              "gap_mean": -0.0071,
+              "mean_width": 12.8349,
+              "winkler": 35.0721
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80115,
+              "gap_mean": 0.00115,
+              "mean_width": 36.9084,
+              "winkler": 52.3867
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94924,
+              "gap_mean": -0.00076,
+              "mean_width": 59.6732,
+              "winkler": 68.7419
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'chubu'; regime from parquet (npz regime is train-sized, 2206264 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 457691,
+        "n_boreholes": 26894,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      },
+      "kansai": {
+        "run": "dkl_national_lro_kansai",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 246806,
+                "n_eval": 246807,
+                "alpha_0.5": {
+                  "coverage": 0.49978,
+                  "gap": -0.00022,
+                  "mean_width": 10.2923,
+                  "winkler": 32.9663,
+                  "per_regime_coverage": {
+                    "0": 0.50059,
+                    "1": 0.4982,
+                    "3": 0.49496,
+                    "4": 0.50924,
+                    "5": 0.5112,
+                    "7": 0.49393
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80033,
+                  "gap": 0.00033,
+                  "mean_width": 34.7962,
+                  "winkler": 51.0014,
+                  "per_regime_coverage": {
+                    "0": 0.80187,
+                    "1": 0.79356,
+                    "3": 0.79534,
+                    "4": 0.79672,
+                    "5": 0.80041,
+                    "7": 0.8034
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95016,
+                  "gap": 0.00016,
+                  "mean_width": 58.3336,
+                  "winkler": 67.7851,
+                  "per_regime_coverage": {
+                    "0": 0.95002,
+                    "1": 0.9473,
+                    "3": 0.95133,
+                    "4": 0.94857,
+                    "5": 0.95461,
+                    "7": 0.95239
+                  }
+                }
+              },
+              {
+                "n_cal": 246806,
+                "n_eval": 246807,
+                "alpha_0.5": {
+                  "coverage": 0.49946,
+                  "gap": -0.00054,
+                  "mean_width": 10.292,
+                  "winkler": 32.9852,
+                  "per_regime_coverage": {
+                    "0": 0.4991,
+                    "1": 0.50247,
+                    "3": 0.49601,
+                    "4": 0.49804,
+                    "5": 0.48366,
+                    "7": 0.50925
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79985,
+                  "gap": -0.00015,
+                  "mean_width": 34.7843,
+                  "winkler": 51.0826,
+                  "per_regime_coverage": {
+                    "0": 0.79908,
+                    "1": 0.80436,
+                    "3": 0.79893,
+                    "4": 0.80476,
+                    "5": 0.79511,
+                    "7": 0.80175
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95031,
+                  "gap": 0.00031,
+                  "mean_width": 58.3421,
+                  "winkler": 67.9796,
+                  "per_regime_coverage": {
+                    "0": 0.95013,
+                    "1": 0.95031,
+                    "3": 0.95053,
+                    "4": 0.9513,
+                    "5": 0.94913,
+                    "7": 0.95116
+                  }
+                }
+              },
+              {
+                "n_cal": 246806,
+                "n_eval": 246807,
+                "alpha_0.5": {
+                  "coverage": 0.49747,
+                  "gap": -0.00253,
+                  "mean_width": 10.2276,
+                  "winkler": 33.1515,
+                  "per_regime_coverage": {
+                    "0": 0.49755,
+                    "1": 0.49277,
+                    "3": 0.4957,
+                    "4": 0.50293,
+                    "5": 0.48696,
+                    "7": 0.50283
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.7967,
+                  "gap": -0.0033,
+                  "mean_width": 34.6027,
+                  "winkler": 51.2498,
+                  "per_regime_coverage": {
+                    "0": 0.79721,
+                    "1": 0.79096,
+                    "3": 0.79765,
+                    "4": 0.80502,
+                    "5": 0.79411,
+                    "7": 0.79161
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94825,
+                  "gap": -0.00175,
+                  "mean_width": 58.117,
+                  "winkler": 68.0783,
+                  "per_regime_coverage": {
+                    "0": 0.94788,
+                    "1": 0.94708,
+                    "3": 0.9501,
+                    "4": 0.95227,
+                    "5": 0.95316,
+                    "7": 0.94624
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.4989,
+              "gap_mean": -0.0011,
+              "mean_width": 10.2706,
+              "winkler": 33.0343
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79896,
+              "gap_mean": -0.00104,
+              "mean_width": 34.7277,
+              "winkler": 51.1113
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94957,
+              "gap_mean": -0.00043,
+              "mean_width": 58.2642,
+              "winkler": 67.9477
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 246484,
+                "n_eval": 247129,
+                "n_cal_groups": 13879,
+                "alpha_0.5": {
+                  "coverage": 0.50385,
+                  "gap": 0.00385,
+                  "mean_width": 10.4409,
+                  "winkler": 32.7098,
+                  "per_regime_coverage": {
+                    "0": 0.50455,
+                    "1": 0.51352,
+                    "3": 0.49623,
+                    "4": 0.50153,
+                    "5": 0.5055,
+                    "7": 0.50159
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.8068,
+                  "gap": 0.0068,
+                  "mean_width": 35.2469,
+                  "winkler": 50.7656,
+                  "per_regime_coverage": {
+                    "0": 0.80792,
+                    "1": 0.81336,
+                    "3": 0.79818,
+                    "4": 0.80368,
+                    "5": 0.86111,
+                    "7": 0.79553
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95199,
+                  "gap": 0.00199,
+                  "mean_width": 58.5289,
+                  "winkler": 67.9227,
+                  "per_regime_coverage": {
+                    "0": 0.95272,
+                    "1": 0.94984,
+                    "3": 0.94951,
+                    "4": 0.95087,
+                    "5": 0.97855,
+                    "7": 0.94706
+                  }
+                }
+              },
+              {
+                "n_cal": 245366,
+                "n_eval": 248247,
+                "n_cal_groups": 13879,
+                "alpha_0.5": {
+                  "coverage": 0.48755,
+                  "gap": -0.01245,
+                  "mean_width": 9.9428,
+                  "winkler": 33.3479,
+                  "per_regime_coverage": {
+                    "0": 0.48633,
+                    "1": 0.49469,
+                    "3": 0.49351,
+                    "4": 0.47787,
+                    "5": 0.48323,
+                    "7": 0.48878
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79402,
+                  "gap": -0.00598,
+                  "mean_width": 34.4704,
+                  "winkler": 51.3734,
+                  "per_regime_coverage": {
+                    "0": 0.7942,
+                    "1": 0.79311,
+                    "3": 0.79576,
+                    "4": 0.80171,
+                    "5": 0.79908,
+                    "7": 0.78511
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94716,
+                  "gap": -0.00284,
+                  "mean_width": 57.9978,
+                  "winkler": 68.2382,
+                  "per_regime_coverage": {
+                    "0": 0.94723,
+                    "1": 0.94671,
+                    "3": 0.94931,
+                    "4": 0.94791,
+                    "5": 0.95024,
+                    "7": 0.94262
+                  }
+                }
+              },
+              {
+                "n_cal": 247011,
+                "n_eval": 246602,
+                "n_cal_groups": 13879,
+                "alpha_0.5": {
+                  "coverage": 0.4947,
+                  "gap": -0.0053,
+                  "mean_width": 10.1654,
+                  "winkler": 33.2123,
+                  "per_regime_coverage": {
+                    "0": 0.48786,
+                    "1": 0.52062,
+                    "3": 0.49324,
+                    "4": 0.48929,
+                    "5": 0.53644,
+                    "7": 0.52785
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79696,
+                  "gap": -0.00304,
+                  "mean_width": 34.6696,
+                  "winkler": 51.2665,
+                  "per_regime_coverage": {
+                    "0": 0.79496,
+                    "1": 0.81395,
+                    "3": 0.78768,
+                    "4": 0.79041,
+                    "5": 0.82072,
+                    "7": 0.81272
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94795,
+                  "gap": -0.00205,
+                  "mean_width": 58.0771,
+                  "winkler": 68.244,
+                  "per_regime_coverage": {
+                    "0": 0.9469,
+                    "1": 0.95126,
+                    "3": 0.94376,
+                    "4": 0.94544,
+                    "5": 0.95811,
+                    "7": 0.96068
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49537,
+              "gap_mean": -0.00463,
+              "mean_width": 10.183,
+              "winkler": 33.09
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79926,
+              "gap_mean": -0.00074,
+              "mean_width": 34.7956,
+              "winkler": 51.1352
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94903,
+              "gap_mean": -0.00097,
+              "mean_width": 58.2013,
+              "winkler": 68.135
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 239106,
+                "n_eval": 254507,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.51173,
+                  "gap": 0.01173,
+                  "mean_width": 10.6741,
+                  "winkler": 32.6305,
+                  "per_regime_coverage": {
+                    "0": 0.51524,
+                    "1": 0.53379,
+                    "3": 0.50315,
+                    "4": 0.51155,
+                    "5": 0.44306,
+                    "7": 0.48956
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80613,
+                  "gap": 0.00613,
+                  "mean_width": 35.2189,
+                  "winkler": 50.7663,
+                  "per_regime_coverage": {
+                    "0": 0.81167,
+                    "1": 0.8105,
+                    "3": 0.78496,
+                    "4": 0.81432,
+                    "5": 0.75745,
+                    "7": 0.79319
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95275,
+                  "gap": 0.00275,
+                  "mean_width": 58.6202,
+                  "winkler": 67.9505,
+                  "per_regime_coverage": {
+                    "0": 0.9553,
+                    "1": 0.95809,
+                    "3": 0.94869,
+                    "4": 0.948,
+                    "5": 0.96,
+                    "7": 0.93398
+                  }
+                }
+              },
+              {
+                "n_cal": 255220,
+                "n_eval": 238393,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.51605,
+                  "gap": 0.01605,
+                  "mean_width": 10.7362,
+                  "winkler": 32.4718,
+                  "per_regime_coverage": {
+                    "0": 0.50697,
+                    "1": 0.55423,
+                    "3": 0.51922,
+                    "4": 0.54702,
+                    "5": 0.64167,
+                    "7": 0.50973
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.81155,
+                  "gap": 0.01155,
+                  "mean_width": 35.5555,
+                  "winkler": 50.773,
+                  "per_regime_coverage": {
+                    "0": 0.81137,
+                    "1": 0.82216,
+                    "3": 0.80446,
+                    "4": 0.82703,
+                    "5": 0.86753,
+                    "7": 0.79064
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95029,
+                  "gap": 0.00029,
+                  "mean_width": 58.4341,
+                  "winkler": 68.1149,
+                  "per_regime_coverage": {
+                    "0": 0.95126,
+                    "1": 0.94802,
+                    "3": 0.95096,
+                    "4": 0.95242,
+                    "5": 0.97098,
+                    "7": 0.93553
+                  }
+                }
+              },
+              {
+                "n_cal": 255934,
+                "n_eval": 237679,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.52179,
+                  "gap": 0.02179,
+                  "mean_width": 10.933,
+                  "winkler": 32.1336,
+                  "per_regime_coverage": {
+                    "0": 0.5233,
+                    "1": 0.53857,
+                    "3": 0.50129,
+                    "4": 0.53784,
+                    "5": 0.53611,
+                    "7": 0.51573
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.82007,
+                  "gap": 0.02007,
+                  "mean_width": 36.0299,
+                  "winkler": 50.3375,
+                  "per_regime_coverage": {
+                    "0": 0.8204,
+                    "1": 0.82176,
+                    "3": 0.81783,
+                    "4": 0.82154,
+                    "5": 0.80907,
+                    "7": 0.82018
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95216,
+                  "gap": 0.00216,
+                  "mean_width": 58.559,
+                  "winkler": 67.8232,
+                  "per_regime_coverage": {
+                    "0": 0.95272,
+                    "1": 0.94336,
+                    "3": 0.95816,
+                    "4": 0.95102,
+                    "5": 0.93611,
+                    "7": 0.94848
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.51652,
+              "gap_mean": 0.01652,
+              "mean_width": 10.7811,
+              "winkler": 32.412
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.81258,
+              "gap_mean": 0.01258,
+              "mean_width": 35.6014,
+              "winkler": 50.6256
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95173,
+              "gap_mean": 0.00173,
+              "mean_width": 58.5378,
+              "winkler": 67.9629
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'kansai'; regime from parquet (npz regime is train-sized, 2170342 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 493613,
+        "n_boreholes": 27758,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      },
+      "chugoku": {
+        "run": "dkl_national_lro_chugoku",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 208613,
+                "n_eval": 208614,
+                "alpha_0.5": {
+                  "coverage": 0.49966,
+                  "gap": -0.00034,
+                  "mean_width": 13.6034,
+                  "winkler": 35.3022,
+                  "per_regime_coverage": {
+                    "0": 0.49761,
+                    "1": 0.50834,
+                    "3": 0.49863,
+                    "4": 0.50076,
+                    "5": 0.51033,
+                    "6": 0.5,
+                    "7": 0.50244
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79931,
+                  "gap": -0.00069,
+                  "mean_width": 36.9857,
+                  "winkler": 52.4831,
+                  "per_regime_coverage": {
+                    "0": 0.79719,
+                    "1": 0.79811,
+                    "3": 0.80074,
+                    "4": 0.80189,
+                    "5": 0.81159,
+                    "6": 0.9,
+                    "7": 0.80217
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94891,
+                  "gap": -0.00109,
+                  "mean_width": 59.2342,
+                  "winkler": 68.6677,
+                  "per_regime_coverage": {
+                    "0": 0.94774,
+                    "1": 0.94811,
+                    "3": 0.95182,
+                    "4": 0.95248,
+                    "5": 0.95102,
+                    "6": 1.0,
+                    "7": 0.94391
+                  }
+                }
+              },
+              {
+                "n_cal": 208613,
+                "n_eval": 208614,
+                "alpha_0.5": {
+                  "coverage": 0.49983,
+                  "gap": -0.00017,
+                  "mean_width": 13.6209,
+                  "winkler": 35.3264,
+                  "per_regime_coverage": {
+                    "0": 0.49889,
+                    "1": 0.50113,
+                    "3": 0.50571,
+                    "4": 0.49704,
+                    "5": 0.50505,
+                    "6": 0.33766,
+                    "7": 0.50627
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79838,
+                  "gap": -0.00162,
+                  "mean_width": 36.9103,
+                  "winkler": 52.4858,
+                  "per_regime_coverage": {
+                    "0": 0.79744,
+                    "1": 0.80099,
+                    "3": 0.80544,
+                    "4": 0.79665,
+                    "5": 0.79973,
+                    "6": 0.7013,
+                    "7": 0.80069
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.9489,
+                  "gap": -0.0011,
+                  "mean_width": 59.2421,
+                  "winkler": 68.6789,
+                  "per_regime_coverage": {
+                    "0": 0.94876,
+                    "1": 0.95302,
+                    "3": 0.95498,
+                    "4": 0.94625,
+                    "5": 0.94842,
+                    "6": 0.92208,
+                    "7": 0.94749
+                  }
+                }
+              },
+              {
+                "n_cal": 208613,
+                "n_eval": 208614,
+                "alpha_0.5": {
+                  "coverage": 0.50164,
+                  "gap": 0.00164,
+                  "mean_width": 13.6633,
+                  "winkler": 35.1608,
+                  "per_regime_coverage": {
+                    "0": 0.50215,
+                    "1": 0.49681,
+                    "3": 0.49865,
+                    "4": 0.50285,
+                    "5": 0.49553,
+                    "6": 0.44776,
+                    "7": 0.50501
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80225,
+                  "gap": 0.00225,
+                  "mean_width": 37.112,
+                  "winkler": 52.3054,
+                  "per_regime_coverage": {
+                    "0": 0.80192,
+                    "1": 0.80689,
+                    "3": 0.80388,
+                    "4": 0.80182,
+                    "5": 0.79979,
+                    "6": 0.79104,
+                    "7": 0.80191
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95062,
+                  "gap": 0.00062,
+                  "mean_width": 59.4431,
+                  "winkler": 68.4965,
+                  "per_regime_coverage": {
+                    "0": 0.94982,
+                    "1": 0.9517,
+                    "3": 0.95274,
+                    "4": 0.95279,
+                    "5": 0.94871,
+                    "6": 0.95522,
+                    "7": 0.94857
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50038,
+              "gap_mean": 0.00038,
+              "mean_width": 13.6292,
+              "winkler": 35.2631
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79998,
+              "gap_mean": -2e-05,
+              "mean_width": 37.0027,
+              "winkler": 52.4248
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94948,
+              "gap_mean": -0.00052,
+              "mean_width": 59.3065,
+              "winkler": 68.6144
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 206625,
+                "n_eval": 210602,
+                "n_cal_groups": 15257,
+                "alpha_0.5": {
+                  "coverage": 0.49906,
+                  "gap": -0.00094,
+                  "mean_width": 13.5744,
+                  "winkler": 35.217,
+                  "per_regime_coverage": {
+                    "0": 0.49597,
+                    "1": 0.50034,
+                    "3": 0.49054,
+                    "4": 0.51279,
+                    "5": 0.49563,
+                    "6": 0.61702,
+                    "7": 0.49529
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80117,
+                  "gap": 0.00117,
+                  "mean_width": 37.0648,
+                  "winkler": 52.3631,
+                  "per_regime_coverage": {
+                    "0": 0.80223,
+                    "1": 0.80505,
+                    "3": 0.79771,
+                    "4": 0.80321,
+                    "5": 0.78144,
+                    "6": 0.91489,
+                    "7": 0.79668
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95173,
+                  "gap": 0.00173,
+                  "mean_width": 59.6075,
+                  "winkler": 68.4972,
+                  "per_regime_coverage": {
+                    "0": 0.95197,
+                    "1": 0.95376,
+                    "3": 0.94646,
+                    "4": 0.95199,
+                    "5": 0.95175,
+                    "6": 0.95745,
+                    "7": 0.95379
+                  }
+                }
+              },
+              {
+                "n_cal": 207642,
+                "n_eval": 209585,
+                "n_cal_groups": 15257,
+                "alpha_0.5": {
+                  "coverage": 0.50049,
+                  "gap": 0.00049,
+                  "mean_width": 13.5996,
+                  "winkler": 35.3385,
+                  "per_regime_coverage": {
+                    "0": 0.49242,
+                    "1": 0.51538,
+                    "3": 0.49813,
+                    "4": 0.51404,
+                    "5": 0.49392,
+                    "6": 0.62,
+                    "7": 0.52517
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.7965,
+                  "gap": -0.0035,
+                  "mean_width": 36.8258,
+                  "winkler": 52.5424,
+                  "per_regime_coverage": {
+                    "0": 0.78788,
+                    "1": 0.8005,
+                    "3": 0.79842,
+                    "4": 0.80977,
+                    "5": 0.81117,
+                    "6": 0.92,
+                    "7": 0.81913
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94947,
+                  "gap": -0.00053,
+                  "mean_width": 59.2477,
+                  "winkler": 68.7282,
+                  "per_regime_coverage": {
+                    "0": 0.94869,
+                    "1": 0.94462,
+                    "3": 0.94675,
+                    "4": 0.9516,
+                    "5": 0.95243,
+                    "6": 0.96,
+                    "7": 0.95594
+                  }
+                }
+              },
+              {
+                "n_cal": 208342,
+                "n_eval": 208885,
+                "n_cal_groups": 15257,
+                "alpha_0.5": {
+                  "coverage": 0.49794,
+                  "gap": -0.00206,
+                  "mean_width": 13.5543,
+                  "winkler": 35.3581,
+                  "per_regime_coverage": {
+                    "0": 0.49309,
+                    "1": 0.51417,
+                    "3": 0.5053,
+                    "4": 0.50495,
+                    "5": 0.48871,
+                    "6": 0.57143,
+                    "7": 0.50105
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79802,
+                  "gap": -0.00198,
+                  "mean_width": 36.8877,
+                  "winkler": 52.5904,
+                  "per_regime_coverage": {
+                    "0": 0.7965,
+                    "1": 0.82039,
+                    "3": 0.80449,
+                    "4": 0.79743,
+                    "5": 0.79232,
+                    "6": 0.79221,
+                    "7": 0.78886
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94826,
+                  "gap": -0.00174,
+                  "mean_width": 59.1408,
+                  "winkler": 68.8214,
+                  "per_regime_coverage": {
+                    "0": 0.94861,
+                    "1": 0.95371,
+                    "3": 0.94718,
+                    "4": 0.94763,
+                    "5": 0.94792,
+                    "6": 0.94805,
+                    "7": 0.94393
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49916,
+              "gap_mean": -0.00084,
+              "mean_width": 13.5761,
+              "winkler": 35.3045
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79856,
+              "gap_mean": -0.00144,
+              "mean_width": 36.9261,
+              "winkler": 52.4986
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94982,
+              "gap_mean": -0.00018,
+              "mean_width": 59.332,
+              "winkler": 68.6823
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 201869,
+                "n_eval": 215358,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.49179,
+                  "gap": -0.00821,
+                  "mean_width": 13.3682,
+                  "winkler": 35.8513,
+                  "per_regime_coverage": {
+                    "0": 0.49583,
+                    "1": 0.53698,
+                    "3": 0.49299,
+                    "4": 0.47655,
+                    "5": 0.49607,
+                    "6": 0.61739,
+                    "7": 0.46325
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.78345,
+                  "gap": -0.01655,
+                  "mean_width": 36.0176,
+                  "winkler": 53.2253,
+                  "per_regime_coverage": {
+                    "0": 0.78357,
+                    "1": 0.81026,
+                    "3": 0.77502,
+                    "4": 0.78404,
+                    "5": 0.78825,
+                    "6": 0.97391,
+                    "7": 0.7669
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94308,
+                  "gap": -0.00692,
+                  "mean_width": 58.4208,
+                  "winkler": 69.1149,
+                  "per_regime_coverage": {
+                    "0": 0.94345,
+                    "1": 0.95445,
+                    "3": 0.93806,
+                    "4": 0.9427,
+                    "5": 0.9472,
+                    "6": 0.9913,
+                    "7": 0.93593
+                  }
+                }
+              },
+              {
+                "n_cal": 209274,
+                "n_eval": 207953,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.49837,
+                  "gap": -0.00163,
+                  "mean_width": 13.5888,
+                  "winkler": 35.6807,
+                  "per_regime_coverage": {
+                    "0": 0.50805,
+                    "1": 0.39037,
+                    "3": 0.52865,
+                    "4": 0.49082,
+                    "5": 0.5346,
+                    "7": 0.47533
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79019,
+                  "gap": -0.00981,
+                  "mean_width": 36.4498,
+                  "winkler": 53.0469,
+                  "per_regime_coverage": {
+                    "0": 0.79404,
+                    "1": 0.7685,
+                    "3": 0.79252,
+                    "4": 0.78756,
+                    "5": 0.80639,
+                    "7": 0.77261
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94175,
+                  "gap": -0.00825,
+                  "mean_width": 58.2679,
+                  "winkler": 69.2903,
+                  "per_regime_coverage": {
+                    "0": 0.94319,
+                    "1": 0.93269,
+                    "3": 0.9418,
+                    "4": 0.94272,
+                    "5": 0.93577,
+                    "7": 0.93698
+                  }
+                }
+              },
+              {
+                "n_cal": 210473,
+                "n_eval": 206754,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50389,
+                  "gap": 0.00389,
+                  "mean_width": 13.6872,
+                  "winkler": 35.3744,
+                  "per_regime_coverage": {
+                    "0": 0.49405,
+                    "1": 0.54993,
+                    "3": 0.50195,
+                    "4": 0.50636,
+                    "5": 0.55272,
+                    "6": 0.27273,
+                    "7": 0.52464
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79576,
+                  "gap": -0.00424,
+                  "mean_width": 36.7601,
+                  "winkler": 52.5897,
+                  "per_regime_coverage": {
+                    "0": 0.79481,
+                    "1": 0.80917,
+                    "3": 0.79989,
+                    "4": 0.79131,
+                    "5": 0.80524,
+                    "6": 1.0,
+                    "7": 0.79568
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94936,
+                  "gap": -0.00064,
+                  "mean_width": 59.3318,
+                  "winkler": 68.3579,
+                  "per_regime_coverage": {
+                    "0": 0.95137,
+                    "1": 0.9404,
+                    "3": 0.95195,
+                    "4": 0.94697,
+                    "5": 0.95032,
+                    "6": 1.0,
+                    "7": 0.94159
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49802,
+              "gap_mean": -0.00198,
+              "mean_width": 13.5481,
+              "winkler": 35.6355
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.7898,
+              "gap_mean": -0.0102,
+              "mean_width": 36.4092,
+              "winkler": 52.954
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94473,
+              "gap_mean": -0.00527,
+              "mean_width": 58.6735,
+              "winkler": 68.921
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'chugoku'; regime from parquet (npz regime is train-sized, 2246728 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 417227,
+        "n_boreholes": 30514,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      },
+      "shikoku": {
+        "run": "dkl_national_lro_shikoku",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 121244,
+                "n_eval": 121244,
+                "alpha_0.5": {
+                  "coverage": 0.50087,
+                  "gap": 0.00087,
+                  "mean_width": 15.6314,
+                  "winkler": 36.1224,
+                  "per_regime_coverage": {
+                    "0": 0.50007,
+                    "1": 0.51479,
+                    "3": 0.50005,
+                    "4": 0.50144,
+                    "5": 0.49948,
+                    "6": 0.52083,
+                    "7": 0.5028
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79886,
+                  "gap": -0.00114,
+                  "mean_width": 37.4721,
+                  "winkler": 52.255,
+                  "per_regime_coverage": {
+                    "0": 0.79653,
+                    "1": 0.80556,
+                    "3": 0.80133,
+                    "4": 0.80502,
+                    "5": 0.79598,
+                    "6": 0.77083,
+                    "7": 0.79943
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95008,
+                  "gap": 8e-05,
+                  "mean_width": 59.0787,
+                  "winkler": 68.1173,
+                  "per_regime_coverage": {
+                    "0": 0.94898,
+                    "1": 0.95286,
+                    "3": 0.95182,
+                    "4": 0.95094,
+                    "5": 0.94345,
+                    "6": 0.91667,
+                    "7": 0.95543
+                  }
+                }
+              },
+              {
+                "n_cal": 121244,
+                "n_eval": 121244,
+                "alpha_0.5": {
+                  "coverage": 0.49939,
+                  "gap": -0.00061,
+                  "mean_width": 15.5949,
+                  "winkler": 36.0913,
+                  "per_regime_coverage": {
+                    "0": 0.4993,
+                    "1": 0.49852,
+                    "3": 0.49778,
+                    "4": 0.4991,
+                    "5": 0.49541,
+                    "6": 0.47059,
+                    "7": 0.50583
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80123,
+                  "gap": 0.00123,
+                  "mean_width": 37.6155,
+                  "winkler": 52.1309,
+                  "per_regime_coverage": {
+                    "0": 0.80236,
+                    "1": 0.79265,
+                    "3": 0.80139,
+                    "4": 0.79785,
+                    "5": 0.80465,
+                    "6": 0.70588,
+                    "7": 0.80019
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95157,
+                  "gap": 0.00157,
+                  "mean_width": 59.2645,
+                  "winkler": 67.9817,
+                  "per_regime_coverage": {
+                    "0": 0.95206,
+                    "1": 0.9535,
+                    "3": 0.9501,
+                    "4": 0.95256,
+                    "5": 0.94834,
+                    "6": 1.0,
+                    "7": 0.95063
+                  }
+                }
+              },
+              {
+                "n_cal": 121244,
+                "n_eval": 121244,
+                "alpha_0.5": {
+                  "coverage": 0.49894,
+                  "gap": -0.00106,
+                  "mean_width": 15.5835,
+                  "winkler": 36.1858,
+                  "per_regime_coverage": {
+                    "0": 0.49954,
+                    "1": 0.4847,
+                    "3": 0.50389,
+                    "4": 0.49867,
+                    "5": 0.49395,
+                    "6": 0.40323,
+                    "7": 0.49444
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79864,
+                  "gap": -0.00136,
+                  "mean_width": 37.4577,
+                  "winkler": 52.2745,
+                  "per_regime_coverage": {
+                    "0": 0.79882,
+                    "1": 0.79277,
+                    "3": 0.80034,
+                    "4": 0.79813,
+                    "5": 0.79675,
+                    "6": 0.90323,
+                    "7": 0.79749
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94956,
+                  "gap": -0.00044,
+                  "mean_width": 59.0413,
+                  "winkler": 68.0732,
+                  "per_regime_coverage": {
+                    "0": 0.95036,
+                    "1": 0.94521,
+                    "3": 0.94989,
+                    "4": 0.95184,
+                    "5": 0.94677,
+                    "6": 0.98387,
+                    "7": 0.94331
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.49973,
+              "gap_mean": -0.00027,
+              "mean_width": 15.6033,
+              "winkler": 36.1332
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79958,
+              "gap_mean": -0.00042,
+              "mean_width": 37.5151,
+              "winkler": 52.2201
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.9504,
+              "gap_mean": 0.0004,
+              "mean_width": 59.1282,
+              "winkler": 68.0574
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 121489,
+                "n_eval": 120999,
+                "n_cal_groups": 8946,
+                "alpha_0.5": {
+                  "coverage": 0.50835,
+                  "gap": 0.00835,
+                  "mean_width": 15.8316,
+                  "winkler": 35.9189,
+                  "per_regime_coverage": {
+                    "0": 0.50213,
+                    "1": 0.54294,
+                    "3": 0.51407,
+                    "4": 0.51405,
+                    "5": 0.51773,
+                    "6": 0.42593,
+                    "7": 0.51312
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80534,
+                  "gap": 0.00534,
+                  "mean_width": 37.8015,
+                  "winkler": 52.1005,
+                  "per_regime_coverage": {
+                    "0": 0.80349,
+                    "1": 0.81902,
+                    "3": 0.80019,
+                    "4": 0.81437,
+                    "5": 0.8078,
+                    "6": 0.88889,
+                    "7": 0.8064
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95037,
+                  "gap": 0.00037,
+                  "mean_width": 59.1027,
+                  "winkler": 68.1303,
+                  "per_regime_coverage": {
+                    "0": 0.9484,
+                    "1": 0.9578,
+                    "3": 0.95044,
+                    "4": 0.954,
+                    "5": 0.94962,
+                    "6": 0.90741,
+                    "7": 0.95583
+                  }
+                }
+              },
+              {
+                "n_cal": 122149,
+                "n_eval": 120339,
+                "n_cal_groups": 8946,
+                "alpha_0.5": {
+                  "coverage": 0.49415,
+                  "gap": -0.00585,
+                  "mean_width": 15.4397,
+                  "winkler": 36.2653,
+                  "per_regime_coverage": {
+                    "0": 0.49553,
+                    "1": 0.48584,
+                    "3": 0.48005,
+                    "4": 0.50098,
+                    "5": 0.49477,
+                    "6": 0.69697,
+                    "7": 0.50417
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.7957,
+                  "gap": -0.0043,
+                  "mean_width": 37.2842,
+                  "winkler": 52.2336,
+                  "per_regime_coverage": {
+                    "0": 0.796,
+                    "1": 0.79254,
+                    "3": 0.78211,
+                    "4": 0.80082,
+                    "5": 0.80458,
+                    "6": 0.9697,
+                    "7": 0.8081
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95178,
+                  "gap": 0.00178,
+                  "mean_width": 59.2716,
+                  "winkler": 68.0145,
+                  "per_regime_coverage": {
+                    "0": 0.95217,
+                    "1": 0.94253,
+                    "3": 0.9452,
+                    "4": 0.94967,
+                    "5": 0.95597,
+                    "6": 0.9697,
+                    "7": 0.96616
+                  }
+                }
+              },
+              {
+                "n_cal": 121770,
+                "n_eval": 120718,
+                "n_cal_groups": 8946,
+                "alpha_0.5": {
+                  "coverage": 0.50575,
+                  "gap": 0.00575,
+                  "mean_width": 15.7619,
+                  "winkler": 35.9818,
+                  "per_regime_coverage": {
+                    "0": 0.51142,
+                    "1": 0.46255,
+                    "3": 0.50914,
+                    "4": 0.49364,
+                    "5": 0.47741,
+                    "6": 0.77778,
+                    "7": 0.50994
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80416,
+                  "gap": 0.00416,
+                  "mean_width": 37.7597,
+                  "winkler": 52.1099,
+                  "per_regime_coverage": {
+                    "0": 0.8049,
+                    "1": 0.78553,
+                    "3": 0.80342,
+                    "4": 0.80127,
+                    "5": 0.80048,
+                    "6": 0.93827,
+                    "7": 0.81249
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95036,
+                  "gap": 0.00036,
+                  "mean_width": 59.1497,
+                  "winkler": 68.1141,
+                  "per_regime_coverage": {
+                    "0": 0.95017,
+                    "1": 0.94475,
+                    "3": 0.95131,
+                    "4": 0.94799,
+                    "5": 0.95175,
+                    "6": 1.0,
+                    "7": 0.95401
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50275,
+              "gap_mean": 0.00275,
+              "mean_width": 15.6777,
+              "winkler": 36.0553
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80173,
+              "gap_mean": 0.00173,
+              "mean_width": 37.6151,
+              "winkler": 52.148
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95084,
+              "gap_mean": 0.00084,
+              "mean_width": 59.1747,
+              "winkler": 68.0863
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 126015,
+                "n_eval": 116473,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50669,
+                  "gap": 0.00669,
+                  "mean_width": 15.7546,
+                  "winkler": 35.6118,
+                  "per_regime_coverage": {
+                    "0": 0.4962,
+                    "1": 0.39186,
+                    "3": 0.53241,
+                    "4": 0.52217,
+                    "5": 0.50081,
+                    "6": 0.73585,
+                    "7": 0.5455
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.81165,
+                  "gap": 0.01165,
+                  "mean_width": 38.1216,
+                  "winkler": 51.5942,
+                  "per_regime_coverage": {
+                    "0": 0.81242,
+                    "1": 0.75023,
+                    "3": 0.81209,
+                    "4": 0.81099,
+                    "5": 0.7767,
+                    "6": 0.95283,
+                    "7": 0.84232
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95557,
+                  "gap": 0.00557,
+                  "mean_width": 59.6328,
+                  "winkler": 67.4847,
+                  "per_regime_coverage": {
+                    "0": 0.95587,
+                    "1": 0.94661,
+                    "3": 0.94895,
+                    "4": 0.95762,
+                    "5": 0.93468,
+                    "6": 0.99057,
+                    "7": 0.97472
+                  }
+                }
+              },
+              {
+                "n_cal": 121055,
+                "n_eval": 121433,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.48487,
+                  "gap": -0.01513,
+                  "mean_width": 15.2022,
+                  "winkler": 36.6697,
+                  "per_regime_coverage": {
+                    "0": 0.48003,
+                    "1": 0.45871,
+                    "3": 0.47264,
+                    "4": 0.53683,
+                    "5": 0.47631,
+                    "6": 0.67826,
+                    "7": 0.47715
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.78757,
+                  "gap": -0.01243,
+                  "mean_width": 36.8663,
+                  "winkler": 52.7197,
+                  "per_regime_coverage": {
+                    "0": 0.7855,
+                    "1": 0.74369,
+                    "3": 0.78972,
+                    "4": 0.82278,
+                    "5": 0.77481,
+                    "6": 0.95652,
+                    "7": 0.77168
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94617,
+                  "gap": -0.00383,
+                  "mean_width": 58.6869,
+                  "winkler": 68.5432,
+                  "per_regime_coverage": {
+                    "0": 0.94521,
+                    "1": 0.92649,
+                    "3": 0.95387,
+                    "4": 0.95781,
+                    "5": 0.94222,
+                    "6": 0.9913,
+                    "7": 0.93321
+                  }
+                }
+              },
+              {
+                "n_cal": 126096,
+                "n_eval": 116392,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50884,
+                  "gap": 0.00884,
+                  "mean_width": 15.8034,
+                  "winkler": 36.0238,
+                  "per_regime_coverage": {
+                    "0": 0.5073,
+                    "1": 0.53165,
+                    "3": 0.47977,
+                    "4": 0.52362,
+                    "5": 0.53143,
+                    "7": 0.53828
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80373,
+                  "gap": 0.00373,
+                  "mean_width": 37.7302,
+                  "winkler": 52.291,
+                  "per_regime_coverage": {
+                    "0": 0.79722,
+                    "1": 0.7972,
+                    "3": 0.79031,
+                    "4": 0.82064,
+                    "5": 0.82992,
+                    "7": 0.83681
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94848,
+                  "gap": -0.00152,
+                  "mean_width": 59.0515,
+                  "winkler": 68.5448,
+                  "per_regime_coverage": {
+                    "0": 0.94317,
+                    "1": 0.95126,
+                    "3": 0.95339,
+                    "4": 0.95402,
+                    "5": 0.95654,
+                    "7": 0.95807
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50013,
+              "gap_mean": 0.00013,
+              "mean_width": 15.5867,
+              "winkler": 36.1018
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80098,
+              "gap_mean": 0.00098,
+              "mean_width": 37.5727,
+              "winkler": 52.2016
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95007,
+              "gap_mean": 7e-05,
+              "mean_width": 59.1237,
+              "winkler": 68.1909
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'shikoku'; regime from parquet (npz regime is train-sized, 2421467 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 242488,
+        "n_boreholes": 17892,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      },
+      "kyushu_okinawa": {
+        "run": "dkl_national_lro_kyushu_okinawa",
+        "splits": {
+          "row": {
+            "per_seed": [
+              {
+                "n_cal": 215614,
+                "n_eval": 215615,
+                "alpha_0.5": {
+                  "coverage": 0.49932,
+                  "gap": -0.00068,
+                  "mean_width": 16.6905,
+                  "winkler": 42.0287,
+                  "per_regime_coverage": {
+                    "0": 0.50178,
+                    "1": 0.49403,
+                    "3": 0.50149,
+                    "4": 0.49602,
+                    "5": 0.49852,
+                    "6": 0.48905,
+                    "7": 0.4974
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79861,
+                  "gap": -0.00139,
+                  "mean_width": 39.6162,
+                  "winkler": 64.4377,
+                  "per_regime_coverage": {
+                    "0": 0.79861,
+                    "1": 0.79992,
+                    "3": 0.80021,
+                    "4": 0.79382,
+                    "5": 0.78875,
+                    "6": 0.79552,
+                    "7": 0.79772
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95011,
+                  "gap": 0.00011,
+                  "mean_width": 69.9069,
+                  "winkler": 98.0817,
+                  "per_regime_coverage": {
+                    "0": 0.95056,
+                    "1": 0.95012,
+                    "3": 0.94944,
+                    "4": 0.94841,
+                    "5": 0.95854,
+                    "6": 0.94341,
+                    "7": 0.9501
+                  }
+                }
+              },
+              {
+                "n_cal": 215614,
+                "n_eval": 215615,
+                "alpha_0.5": {
+                  "coverage": 0.49919,
+                  "gap": -0.00081,
+                  "mean_width": 16.6777,
+                  "winkler": 42.0773,
+                  "per_regime_coverage": {
+                    "0": 0.49984,
+                    "1": 0.49671,
+                    "3": 0.50159,
+                    "4": 0.49787,
+                    "5": 0.52004,
+                    "6": 0.48628,
+                    "7": 0.49853
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79783,
+                  "gap": -0.00217,
+                  "mean_width": 39.5698,
+                  "winkler": 64.6325,
+                  "per_regime_coverage": {
+                    "0": 0.79922,
+                    "1": 0.79527,
+                    "3": 0.79994,
+                    "4": 0.79095,
+                    "5": 0.80821,
+                    "6": 0.79638,
+                    "7": 0.79746
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94844,
+                  "gap": -0.00156,
+                  "mean_width": 69.6367,
+                  "winkler": 98.7319,
+                  "per_regime_coverage": {
+                    "0": 0.94822,
+                    "1": 0.94773,
+                    "3": 0.94994,
+                    "4": 0.94874,
+                    "5": 0.9542,
+                    "6": 0.94896,
+                    "7": 0.94837
+                  }
+                }
+              },
+              {
+                "n_cal": 215614,
+                "n_eval": 215615,
+                "alpha_0.5": {
+                  "coverage": 0.50182,
+                  "gap": 0.00182,
+                  "mean_width": 16.7587,
+                  "winkler": 41.8951,
+                  "per_regime_coverage": {
+                    "0": 0.50393,
+                    "1": 0.50196,
+                    "3": 0.49227,
+                    "4": 0.4997,
+                    "5": 0.51957,
+                    "6": 0.48253,
+                    "7": 0.50715
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.8021,
+                  "gap": 0.0021,
+                  "mean_width": 39.7955,
+                  "winkler": 64.2589,
+                  "per_regime_coverage": {
+                    "0": 0.80414,
+                    "1": 0.79948,
+                    "3": 0.79985,
+                    "4": 0.80289,
+                    "5": 0.79843,
+                    "6": 0.77402,
+                    "7": 0.80202
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94963,
+                  "gap": -0.00037,
+                  "mean_width": 69.9373,
+                  "winkler": 97.831,
+                  "per_regime_coverage": {
+                    "0": 0.94988,
+                    "1": 0.94859,
+                    "3": 0.95112,
+                    "4": 0.94838,
+                    "5": 0.9364,
+                    "6": 0.93777,
+                    "7": 0.95131
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50011,
+              "gap_mean": 0.00011,
+              "mean_width": 16.709,
+              "winkler": 42.0004
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.79951,
+              "gap_mean": -0.00049,
+              "mean_width": 39.6605,
+              "winkler": 64.443
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94939,
+              "gap_mean": -0.00061,
+              "mean_width": 69.827,
+              "winkler": 98.2149
+            }
+          },
+          "borehole": {
+            "per_seed": [
+              {
+                "n_cal": 216549,
+                "n_eval": 214680,
+                "n_cal_groups": 13632,
+                "alpha_0.5": {
+                  "coverage": 0.49864,
+                  "gap": -0.00136,
+                  "mean_width": 16.658,
+                  "winkler": 41.6023,
+                  "per_regime_coverage": {
+                    "0": 0.50235,
+                    "1": 0.4867,
+                    "3": 0.51004,
+                    "4": 0.49424,
+                    "5": 0.51136,
+                    "6": 0.50145,
+                    "7": 0.48916
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80526,
+                  "gap": 0.00526,
+                  "mean_width": 39.8931,
+                  "winkler": 63.6643,
+                  "per_regime_coverage": {
+                    "0": 0.81164,
+                    "1": 0.79011,
+                    "3": 0.80911,
+                    "4": 0.80336,
+                    "5": 0.82197,
+                    "6": 0.77791,
+                    "7": 0.80035
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95292,
+                  "gap": 0.00292,
+                  "mean_width": 70.327,
+                  "winkler": 97.0684,
+                  "per_regime_coverage": {
+                    "0": 0.95479,
+                    "1": 0.95104,
+                    "3": 0.95521,
+                    "4": 0.95158,
+                    "5": 0.96117,
+                    "6": 0.94043,
+                    "7": 0.94345
+                  }
+                }
+              },
+              {
+                "n_cal": 215016,
+                "n_eval": 216213,
+                "n_cal_groups": 13632,
+                "alpha_0.5": {
+                  "coverage": 0.50436,
+                  "gap": 0.00436,
+                  "mean_width": 16.8644,
+                  "winkler": 41.6692,
+                  "per_regime_coverage": {
+                    "0": 0.49915,
+                    "1": 0.51712,
+                    "3": 0.51545,
+                    "4": 0.48548,
+                    "5": 0.46995,
+                    "6": 0.51586,
+                    "7": 0.50437
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80351,
+                  "gap": 0.00351,
+                  "mean_width": 39.9181,
+                  "winkler": 63.8271,
+                  "per_regime_coverage": {
+                    "0": 0.80005,
+                    "1": 0.80817,
+                    "3": 0.80273,
+                    "4": 0.79745,
+                    "5": 0.82759,
+                    "6": 0.78966,
+                    "7": 0.82051
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95254,
+                  "gap": 0.00254,
+                  "mean_width": 70.3024,
+                  "winkler": 97.0153,
+                  "per_regime_coverage": {
+                    "0": 0.95073,
+                    "1": 0.95768,
+                    "3": 0.95318,
+                    "4": 0.94874,
+                    "5": 0.95468,
+                    "6": 0.95241,
+                    "7": 0.95306
+                  }
+                }
+              },
+              {
+                "n_cal": 215420,
+                "n_eval": 215809,
+                "n_cal_groups": 13632,
+                "alpha_0.5": {
+                  "coverage": 0.50195,
+                  "gap": 0.00195,
+                  "mean_width": 16.7414,
+                  "winkler": 41.5861,
+                  "per_regime_coverage": {
+                    "0": 0.5067,
+                    "1": 0.50832,
+                    "3": 0.51075,
+                    "4": 0.47472,
+                    "5": 0.51697,
+                    "6": 0.48016,
+                    "7": 0.46591
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80693,
+                  "gap": 0.00693,
+                  "mean_width": 40.0215,
+                  "winkler": 63.5907,
+                  "per_regime_coverage": {
+                    "0": 0.81029,
+                    "1": 0.81661,
+                    "3": 0.80827,
+                    "4": 0.78597,
+                    "5": 0.79922,
+                    "6": 0.68153,
+                    "7": 0.79276
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95476,
+                  "gap": 0.00476,
+                  "mean_width": 70.8038,
+                  "winkler": 96.5682,
+                  "per_regime_coverage": {
+                    "0": 0.95666,
+                    "1": 0.9549,
+                    "3": 0.95216,
+                    "4": 0.94899,
+                    "5": 0.96023,
+                    "6": 0.93729,
+                    "7": 0.95342
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50165,
+              "gap_mean": 0.00165,
+              "mean_width": 16.7546,
+              "winkler": 41.6192
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.80523,
+              "gap_mean": 0.00523,
+              "mean_width": 39.9442,
+              "winkler": 63.694
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.95341,
+              "gap_mean": 0.00341,
+              "mean_width": 70.4777,
+              "winkler": 96.884
+            }
+          },
+          "site": {
+            "per_seed": [
+              {
+                "n_cal": 219271,
+                "n_eval": 211958,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50157,
+                  "gap": 0.00157,
+                  "mean_width": 16.8125,
+                  "winkler": 42.3471,
+                  "per_regime_coverage": {
+                    "0": 0.50194,
+                    "1": 0.54208,
+                    "3": 0.46612,
+                    "4": 0.4557,
+                    "5": 0.46828,
+                    "6": 0.71185,
+                    "7": 0.47533
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80314,
+                  "gap": 0.00314,
+                  "mean_width": 39.8922,
+                  "winkler": 65.4594,
+                  "per_regime_coverage": {
+                    "0": 0.79605,
+                    "1": 0.83581,
+                    "3": 0.80381,
+                    "4": 0.77781,
+                    "5": 0.89925,
+                    "6": 0.9128,
+                    "7": 0.77313
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94661,
+                  "gap": -0.00339,
+                  "mean_width": 69.5725,
+                  "winkler": 102.6902,
+                  "per_regime_coverage": {
+                    "0": 0.9383,
+                    "1": 0.97134,
+                    "3": 0.96931,
+                    "4": 0.95284,
+                    "5": 0.99813,
+                    "6": 0.97725,
+                    "7": 0.89369
+                  }
+                }
+              },
+              {
+                "n_cal": 223068,
+                "n_eval": 208161,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50165,
+                  "gap": 0.00165,
+                  "mean_width": 16.6423,
+                  "winkler": 41.8453,
+                  "per_regime_coverage": {
+                    "0": 0.48739,
+                    "1": 0.49514,
+                    "3": 0.54435,
+                    "4": 0.47988,
+                    "5": 0.57928,
+                    "6": 0.67437,
+                    "7": 0.55622
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.79732,
+                  "gap": -0.00268,
+                  "mean_width": 39.2347,
+                  "winkler": 64.5829,
+                  "per_regime_coverage": {
+                    "0": 0.78313,
+                    "1": 0.80941,
+                    "3": 0.82712,
+                    "4": 0.80411,
+                    "5": 0.73386,
+                    "6": 0.86555,
+                    "7": 0.81455
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.94019,
+                  "gap": -0.00981,
+                  "mean_width": 68.2033,
+                  "winkler": 102.8243,
+                  "per_regime_coverage": {
+                    "0": 0.92916,
+                    "1": 0.9442,
+                    "3": 0.97188,
+                    "4": 0.95521,
+                    "5": 0.85578,
+                    "6": 0.96429,
+                    "7": 0.95134
+                  }
+                }
+              },
+              {
+                "n_cal": 218016,
+                "n_eval": 213213,
+                "n_cal_groups": null,
+                "alpha_0.5": {
+                  "coverage": 0.50146,
+                  "gap": 0.00146,
+                  "mean_width": 16.9935,
+                  "winkler": 41.1167,
+                  "per_regime_coverage": {
+                    "0": 0.49806,
+                    "1": 0.47906,
+                    "3": 0.49072,
+                    "4": 0.57582,
+                    "5": 0.48131,
+                    "6": 0.81395,
+                    "7": 0.48762
+                  }
+                },
+                "alpha_0.8": {
+                  "coverage": 0.80194,
+                  "gap": 0.00194,
+                  "mean_width": 39.6113,
+                  "winkler": 62.281,
+                  "per_regime_coverage": {
+                    "0": 0.81502,
+                    "1": 0.77928,
+                    "3": 0.77174,
+                    "4": 0.82062,
+                    "5": 0.83774,
+                    "6": 0.92331,
+                    "7": 0.78054
+                  }
+                },
+                "alpha_0.95": {
+                  "coverage": 0.95812,
+                  "gap": 0.00812,
+                  "mean_width": 71.324,
+                  "winkler": 92.5625,
+                  "per_regime_coverage": {
+                    "0": 0.97452,
+                    "1": 0.9387,
+                    "3": 0.93391,
+                    "4": 0.95323,
+                    "5": 0.91887,
+                    "6": 0.9812,
+                    "7": 0.93796
+                  }
+                }
+              }
+            ],
+            "alpha_0.5": {
+              "coverage_mean": 0.50156,
+              "gap_mean": 0.00156,
+              "mean_width": 16.8161,
+              "winkler": 41.7697
+            },
+            "alpha_0.8": {
+              "coverage_mean": 0.8008,
+              "gap_mean": 0.0008,
+              "mean_width": 39.5794,
+              "winkler": 64.1078
+            },
+            "alpha_0.95": {
+              "coverage_mean": 0.94831,
+              "gap_mean": -0.00169,
+              "mean_width": 69.6999,
+              "winkler": 99.359
+            }
+          }
+        },
+        "alignment": "held-out region bbox 'kyushu_okinawa'; regime from parquet (npz regime is train-sized, 2232726 rows -- run_tta_lro.py:143 quirk)",
+        "n_rows": 431229,
+        "n_boreholes": 27264,
+        "n_nonfinite_dropped": 0,
+        "config": {
+          "alphas": [
+            0.5,
+            0.8,
+            0.95
+          ],
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "cal_fraction": 0.5,
+          "min_group_n": 30,
+          "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+        },
+        "_provenance": {
+          "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+          "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+          "script": "backend/scripts/run_mondrian_recal_grouped.py"
+        }
+      }
+    },
+    "full_corpus": {
+      "run": "dkl_national_full_v2",
+      "alignment": "positional (full corpus)",
+      "splits": {
+        "row": {
+          "per_seed": [
+            {
+              "n_cal": 1331977,
+              "n_eval": 1331978,
+              "alpha_0.5": {
+                "coverage": 0.49912,
+                "gap": -0.00088,
+                "mean_width": 4.5945,
+                "winkler": 17.2192,
+                "per_regime_coverage": {
+                  "0": 0.49998,
+                  "1": 0.49868,
+                  "2": 0.50953,
+                  "3": 0.49717,
+                  "4": 0.49881,
+                  "5": 0.4888,
+                  "6": 0.52029,
+                  "7": 0.49788
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.80006,
+                "gap": 6e-05,
+                "mean_width": 16.5698,
+                "winkler": 28.6732,
+                "per_regime_coverage": {
+                  "0": 0.80068,
+                  "1": 0.80001,
+                  "2": 0.79867,
+                  "3": 0.79893,
+                  "4": 0.79998,
+                  "5": 0.79438,
+                  "6": 0.81174,
+                  "7": 0.79797
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.94995,
+                "gap": -5e-05,
+                "mean_width": 33.832,
+                "winkler": 44.3661,
+                "per_regime_coverage": {
+                  "0": 0.95006,
+                  "1": 0.95103,
+                  "2": 0.94812,
+                  "3": 0.94934,
+                  "4": 0.94982,
+                  "5": 0.9492,
+                  "6": 0.95812,
+                  "7": 0.94847
+                }
+              }
+            },
+            {
+              "n_cal": 1331977,
+              "n_eval": 1331978,
+              "alpha_0.5": {
+                "coverage": 0.50126,
+                "gap": 0.00126,
+                "mean_width": 4.6253,
+                "winkler": 17.1881,
+                "per_regime_coverage": {
+                  "0": 0.50102,
+                  "1": 0.50201,
+                  "2": 0.505,
+                  "3": 0.50149,
+                  "4": 0.50266,
+                  "5": 0.50008,
+                  "6": 0.51201,
+                  "7": 0.49984
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.80038,
+                "gap": 0.00038,
+                "mean_width": 16.5811,
+                "winkler": 28.635,
+                "per_regime_coverage": {
+                  "0": 0.80037,
+                  "1": 0.80161,
+                  "2": 0.80226,
+                  "3": 0.80073,
+                  "4": 0.80016,
+                  "5": 0.80192,
+                  "6": 0.80232,
+                  "7": 0.79755
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.95049,
+                "gap": 0.00049,
+                "mean_width": 33.9041,
+                "winkler": 44.3241,
+                "per_regime_coverage": {
+                  "0": 0.95044,
+                  "1": 0.95073,
+                  "2": 0.95784,
+                  "3": 0.95078,
+                  "4": 0.95094,
+                  "5": 0.95371,
+                  "6": 0.95197,
+                  "7": 0.94856
+                }
+              }
+            },
+            {
+              "n_cal": 1331977,
+              "n_eval": 1331978,
+              "alpha_0.5": {
+                "coverage": 0.49989,
+                "gap": -0.00011,
+                "mean_width": 4.6014,
+                "winkler": 17.2177,
+                "per_regime_coverage": {
+                  "0": 0.50149,
+                  "1": 0.49695,
+                  "2": 0.53937,
+                  "3": 0.49711,
+                  "4": 0.50047,
+                  "5": 0.49529,
+                  "6": 0.51067,
+                  "7": 0.49539
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.79972,
+                "gap": -0.00028,
+                "mean_width": 16.5567,
+                "winkler": 28.6812,
+                "per_regime_coverage": {
+                  "0": 0.80016,
+                  "1": 0.79702,
+                  "2": 0.82534,
+                  "3": 0.80017,
+                  "4": 0.7995,
+                  "5": 0.79761,
+                  "6": 0.81236,
+                  "7": 0.79958
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.95019,
+                "gap": 0.00019,
+                "mean_width": 33.8659,
+                "winkler": 44.3831,
+                "per_regime_coverage": {
+                  "0": 0.95017,
+                  "1": 0.95048,
+                  "2": 0.95566,
+                  "3": 0.9508,
+                  "4": 0.94918,
+                  "5": 0.95211,
+                  "6": 0.96212,
+                  "7": 0.94923
+                }
+              }
+            }
+          ],
+          "alpha_0.5": {
+            "coverage_mean": 0.50009,
+            "gap_mean": 9e-05,
+            "mean_width": 4.6071,
+            "winkler": 17.2083
+          },
+          "alpha_0.8": {
+            "coverage_mean": 0.80005,
+            "gap_mean": 5e-05,
+            "mean_width": 16.5692,
+            "winkler": 28.6631
+          },
+          "alpha_0.95": {
+            "coverage_mean": 0.95021,
+            "gap_mean": 0.00021,
+            "mean_width": 33.8673,
+            "winkler": 44.3578
+          }
+        },
+        "borehole": {
+          "per_seed": [
+            {
+              "n_cal": 1331469,
+              "n_eval": 1332486,
+              "n_cal_groups": 81229,
+              "alpha_0.5": {
+                "coverage": 0.50107,
+                "gap": 0.00107,
+                "mean_width": 4.6181,
+                "winkler": 17.1938,
+                "per_regime_coverage": {
+                  "0": 0.50022,
+                  "1": 0.5014,
+                  "2": 0.4673,
+                  "3": 0.49646,
+                  "4": 0.50945,
+                  "5": 0.51311,
+                  "6": 0.50584,
+                  "7": 0.50395
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.80056,
+                "gap": 0.00056,
+                "mean_width": 16.5738,
+                "winkler": 28.6687,
+                "per_regime_coverage": {
+                  "0": 0.80016,
+                  "1": 0.79889,
+                  "2": 0.77622,
+                  "3": 0.79877,
+                  "4": 0.80226,
+                  "5": 0.81494,
+                  "6": 0.79503,
+                  "7": 0.80557
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.94978,
+                "gap": -0.00022,
+                "mean_width": 33.7995,
+                "winkler": 44.4022,
+                "per_regime_coverage": {
+                  "0": 0.94956,
+                  "1": 0.94873,
+                  "2": 0.93418,
+                  "3": 0.95083,
+                  "4": 0.95202,
+                  "5": 0.94977,
+                  "6": 0.9406,
+                  "7": 0.94944
+                }
+              }
+            },
+            {
+              "n_cal": 1331832,
+              "n_eval": 1332123,
+              "n_cal_groups": 81229,
+              "alpha_0.5": {
+                "coverage": 0.50103,
+                "gap": 0.00103,
+                "mean_width": 4.6095,
+                "winkler": 17.1899,
+                "per_regime_coverage": {
+                  "0": 0.50197,
+                  "1": 0.5026,
+                  "2": 0.54995,
+                  "3": 0.48987,
+                  "4": 0.50091,
+                  "5": 0.5096,
+                  "6": 0.50119,
+                  "7": 0.50716
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.80068,
+                "gap": 0.00068,
+                "mean_width": 16.5835,
+                "winkler": 28.6454,
+                "per_regime_coverage": {
+                  "0": 0.80158,
+                  "1": 0.79811,
+                  "2": 0.84287,
+                  "3": 0.79658,
+                  "4": 0.80187,
+                  "5": 0.80546,
+                  "6": 0.79475,
+                  "7": 0.80128
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.94994,
+                "gap": -6e-05,
+                "mean_width": 33.8238,
+                "winkler": 44.3486,
+                "per_regime_coverage": {
+                  "0": 0.94989,
+                  "1": 0.94876,
+                  "2": 0.95822,
+                  "3": 0.95063,
+                  "4": 0.95155,
+                  "5": 0.94518,
+                  "6": 0.95465,
+                  "7": 0.94984
+                }
+              }
+            },
+            {
+              "n_cal": 1334170,
+              "n_eval": 1329785,
+              "n_cal_groups": 81229,
+              "alpha_0.5": {
+                "coverage": 0.4969,
+                "gap": -0.0031,
+                "mean_width": 4.5579,
+                "winkler": 17.24,
+                "per_regime_coverage": {
+                  "0": 0.50057,
+                  "1": 0.47777,
+                  "2": 0.46308,
+                  "3": 0.49278,
+                  "4": 0.50433,
+                  "5": 0.50266,
+                  "6": 0.51905,
+                  "7": 0.49537
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.79866,
+                "gap": -0.00134,
+                "mean_width": 16.5117,
+                "winkler": 28.6982,
+                "per_regime_coverage": {
+                  "0": 0.80062,
+                  "1": 0.78852,
+                  "2": 0.78371,
+                  "3": 0.79539,
+                  "4": 0.80333,
+                  "5": 0.79242,
+                  "6": 0.82761,
+                  "7": 0.80011
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.94978,
+                "gap": -0.00022,
+                "mean_width": 33.8002,
+                "winkler": 44.3901,
+                "per_regime_coverage": {
+                  "0": 0.9502,
+                  "1": 0.94715,
+                  "2": 0.95665,
+                  "3": 0.94935,
+                  "4": 0.95107,
+                  "5": 0.94947,
+                  "6": 0.96492,
+                  "7": 0.94937
+                }
+              }
+            }
+          ],
+          "alpha_0.5": {
+            "coverage_mean": 0.49967,
+            "gap_mean": -0.00033,
+            "mean_width": 4.5952,
+            "winkler": 17.2079
+          },
+          "alpha_0.8": {
+            "coverage_mean": 0.79997,
+            "gap_mean": -3e-05,
+            "mean_width": 16.5563,
+            "winkler": 28.6708
+          },
+          "alpha_0.95": {
+            "coverage_mean": 0.94983,
+            "gap_mean": -0.00017,
+            "mean_width": 33.8078,
+            "winkler": 44.3803
+          }
+        },
+        "site": {
+          "per_seed": [
+            {
+              "n_cal": 1356398,
+              "n_eval": 1307557,
+              "n_cal_groups": null,
+              "alpha_0.5": {
+                "coverage": 0.50754,
+                "gap": 0.00754,
+                "mean_width": 4.6993,
+                "winkler": 17.1068,
+                "per_regime_coverage": {
+                  "0": 0.50856,
+                  "1": 0.50281,
+                  "2": 0.53143,
+                  "3": 0.50511,
+                  "4": 0.5136,
+                  "5": 0.51957,
+                  "6": 0.12191,
+                  "7": 0.508
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.804,
+                "gap": 0.004,
+                "mean_width": 16.7073,
+                "winkler": 28.5827,
+                "per_regime_coverage": {
+                  "0": 0.80549,
+                  "1": 0.80435,
+                  "2": 0.84396,
+                  "3": 0.80264,
+                  "4": 0.80538,
+                  "5": 0.8049,
+                  "6": 0.44876,
+                  "7": 0.79693
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.95064,
+                "gap": 0.00064,
+                "mean_width": 33.9354,
+                "winkler": 44.3565,
+                "per_regime_coverage": {
+                  "0": 0.95088,
+                  "1": 0.95254,
+                  "2": 0.95568,
+                  "3": 0.95059,
+                  "4": 0.9508,
+                  "5": 0.9539,
+                  "6": 0.83687,
+                  "7": 0.9466
+                }
+              }
+            },
+            {
+              "n_cal": 1315670,
+              "n_eval": 1348285,
+              "n_cal_groups": null,
+              "alpha_0.5": {
+                "coverage": 0.48688,
+                "gap": -0.01312,
+                "mean_width": 4.4738,
+                "winkler": 17.4011,
+                "per_regime_coverage": {
+                  "0": 0.48566,
+                  "1": 0.47751,
+                  "2": 0.46229,
+                  "3": 0.49425,
+                  "4": 0.5034,
+                  "5": 0.49109,
+                  "6": 0.69168,
+                  "7": 0.4728
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.79296,
+                "gap": -0.00704,
+                "mean_width": 16.3365,
+                "winkler": 28.8828,
+                "per_regime_coverage": {
+                  "0": 0.78951,
+                  "1": 0.79518,
+                  "2": 0.78742,
+                  "3": 0.7995,
+                  "4": 0.80348,
+                  "5": 0.78008,
+                  "6": 0.87824,
+                  "7": 0.79435
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.94871,
+                "gap": -0.00129,
+                "mean_width": 33.6869,
+                "winkler": 44.536,
+                "per_regime_coverage": {
+                  "0": 0.94738,
+                  "1": 0.95149,
+                  "2": 0.94607,
+                  "3": 0.9498,
+                  "4": 0.9504,
+                  "5": 0.95219,
+                  "6": 0.96555,
+                  "7": 0.95012
+                }
+              }
+            },
+            {
+              "n_cal": 1341245,
+              "n_eval": 1322710,
+              "n_cal_groups": null,
+              "alpha_0.5": {
+                "coverage": 0.50632,
+                "gap": 0.00632,
+                "mean_width": 4.6691,
+                "winkler": 17.1758,
+                "per_regime_coverage": {
+                  "0": 0.51201,
+                  "1": 0.49557,
+                  "2": 0.55983,
+                  "3": 0.49346,
+                  "4": 0.49767,
+                  "5": 0.53946,
+                  "6": 0.73921,
+                  "7": 0.49398
+                }
+              },
+              "alpha_0.8": {
+                "coverage": 0.80135,
+                "gap": 0.00135,
+                "mean_width": 16.6264,
+                "winkler": 28.6754,
+                "per_regime_coverage": {
+                  "0": 0.80362,
+                  "1": 0.79925,
+                  "2": 0.84504,
+                  "3": 0.79781,
+                  "4": 0.79966,
+                  "5": 0.82128,
+                  "6": 0.8944,
+                  "7": 0.78534
+                }
+              },
+              "alpha_0.95": {
+                "coverage": 0.94993,
+                "gap": -7e-05,
+                "mean_width": 33.8528,
+                "winkler": 44.399,
+                "per_regime_coverage": {
+                  "0": 0.95086,
+                  "1": 0.94999,
+                  "2": 0.96587,
+                  "3": 0.94757,
+                  "4": 0.95068,
+                  "5": 0.95221,
+                  "6": 0.97263,
+                  "7": 0.94326
+                }
+              }
+            }
+          ],
+          "alpha_0.5": {
+            "coverage_mean": 0.50025,
+            "gap_mean": 0.00025,
+            "mean_width": 4.6141,
+            "winkler": 17.2279
+          },
+          "alpha_0.8": {
+            "coverage_mean": 0.79944,
+            "gap_mean": -0.00056,
+            "mean_width": 16.5567,
+            "winkler": 28.7136
+          },
+          "alpha_0.95": {
+            "coverage_mean": 0.94976,
+            "gap_mean": -0.00024,
+            "mean_width": 33.825,
+            "winkler": 44.4305
+          }
+        }
+      }
+    }
+  },
+  "_provenance": {
+    "script": "backend/scripts/run_mondrian_recal_grouped.py",
+    "runs": [
+      "dkl_national_lro_hokkaido",
+      "dkl_national_lro_tohoku",
+      "dkl_national_lro_kanto",
+      "dkl_national_lro_chubu",
+      "dkl_national_lro_kansai",
+      "dkl_national_lro_chugoku",
+      "dkl_national_lro_shikoku",
+      "dkl_national_lro_kyushu_okinawa",
+      "dkl_national_full_v2"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "cal_fraction": 0.5,
+    "min_group_n": 30,
+    "alphas": [
+      0.5,
+      0.8,
+      0.95
+    ],
+    "identity": "borehole identity from data/features/borings_japan_v4id.parquet. LRO npz rows are matched to the held-out-region bounding box and verified byte-identical on y_true; regime is taken from the parquet because the LRO runner saved a TRAIN-fold regime array into predictions.npz (2,168,230 rows against 495,725 predictions for kanto) -- the quirk documented at backend/scripts/run_tta_lro.py:143. The LRO npz 'regime' field must not be trusted by any consumer."
+  },
+  "per_cell_worst_case_vs_row_split": {
+    "borehole": {
+      "coverage_gap_vs_row_abs": {
+        "value": 0.00572,
+        "region": "kyushu_okinawa",
+        "alpha": "alpha_0.8"
+      },
+      "width_pct_vs_row_abs": {
+        "value": 0.93187,
+        "region": "kyushu_okinawa",
+        "alpha": "alpha_0.95"
+      },
+      "winkler_pct_vs_row_abs": {
+        "value": 1.35509,
+        "region": "kyushu_okinawa",
+        "alpha": "alpha_0.95"
+      },
+      "bar_alpha095_worst_abs_gap": {
+        "value": 0.00341,
+        "region": "kyushu_okinawa",
+        "bar": 0.01
+      },
+      "bar_alpha095_width_ratio_range": [
+        0.9972,
+        1.0093
+      ]
+    },
+    "site": {
+      "coverage_gap_vs_row_abs": {
+        "value": 0.01762,
+        "region": "kansai",
+        "alpha": "alpha_0.5"
+      },
+      "width_pct_vs_row_abs": {
+        "value": 4.9705,
+        "region": "kansai",
+        "alpha": "alpha_0.5"
+      },
+      "winkler_pct_vs_row_abs": {
+        "value": 1.8838,
+        "region": "kansai",
+        "alpha": "alpha_0.5"
+      },
+      "bar_alpha095_worst_abs_gap": {
+        "value": 0.00527,
+        "region": "chugoku",
+        "bar": 0.01
+      },
+      "bar_alpha095_width_ratio_range": [
+        0.9893,
+        1.0047
+      ]
+    }
+  },
+  "bar_check": {
+    "alpha": 0.95,
+    "coverage_gap_bar": 0.01,
+    "width_ratio_bar": 1.2,
+    "borehole": {
+      "value": 0.00341,
+      "region": "kyushu_okinawa",
+      "bar": 0.01
+    },
+    "site": {
+      "value": 0.00527,
+      "region": "chugoku",
+      "bar": 0.01
+    },
+    "verdict": "CONFIRMED under the strictest per-cell reading"
+  }
+}

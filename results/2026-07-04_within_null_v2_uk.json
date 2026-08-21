@@ -1,0 +1,211 @@
+{
+  "n_regions": 5,
+  "per_region": {
+    "midlands": {
+      "n_test": 5524,
+      "n_train": 12633,
+      "no_text": 20.183742158689142,
+      "text": 18.60289793013313,
+      "text_sd": 0.12245870336108174,
+      "nulls": {
+        "global": {
+          "mean": 19.5862283619968,
+          "sd": 0.07169180267562794,
+          "content_pct": -5.02,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 19.572998359932313,
+          "sd": 0.06466091960300031,
+          "content_pct": -4.96,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 19.38292356281906,
+          "sd": 0.09994381545712065,
+          "content_pct": -4.02,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "north_england": {
+      "n_test": 4278,
+      "n_train": 13879,
+      "no_text": 16.17532231307588,
+      "text": 13.541462967355244,
+      "text_sd": 0.09733899928283045,
+      "nulls": {
+        "global": {
+          "mean": 15.363934943034737,
+          "sd": 0.07062282019440871,
+          "content_pct": -11.86,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 15.339202735747513,
+          "sd": 0.07003615053972723,
+          "content_pct": -11.72,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 15.102195508809281,
+          "sd": 0.08613142147819504,
+          "content_pct": -10.33,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "scotland": {
+      "n_test": 3104,
+      "n_train": 15053,
+      "no_text": 17.532583794275023,
+      "text": 15.8167288558086,
+      "text_sd": 0.015210613753441975,
+      "nulls": {
+        "global": {
+          "mean": 17.439704337007548,
+          "sd": 0.09747256000403627,
+          "content_pct": -9.31,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 17.413249092109456,
+          "sd": 0.09345323844770226,
+          "content_pct": -9.17,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 17.538700710002093,
+          "sd": 0.15062591968764186,
+          "content_pct": -9.82,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "south_england": {
+      "n_test": 4053,
+      "n_train": 14104,
+      "no_text": 17.945255341434205,
+      "text": 15.784585579913028,
+      "text_sd": 0.13648985022039065,
+      "nulls": {
+        "global": {
+          "mean": 16.67563057911048,
+          "sd": 0.1859932537950091,
+          "content_pct": -5.34,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 16.69573643778512,
+          "sd": 0.20315957987896427,
+          "content_pct": -5.46,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 16.709244579512205,
+          "sd": 0.2342861058452037,
+          "content_pct": -5.53,
+          "perm_p": 0.0
+        }
+      }
+    },
+    "wales_west": {
+      "n_test": 1198,
+      "n_train": 16959,
+      "no_text": 20.566526318265534,
+      "text": 16.76387842315602,
+      "text_sd": 0.15944131060224898,
+      "nulls": {
+        "global": {
+          "mean": 20.318726045752797,
+          "sd": 0.24539423715238975,
+          "content_pct": -17.5,
+          "perm_p": 0.0
+        },
+        "within_region": {
+          "mean": 20.334482261415566,
+          "sd": 0.2464758248196927,
+          "content_pct": -17.56,
+          "perm_p": 0.0
+        },
+        "within_class": {
+          "mean": 20.359110759156604,
+          "sd": 0.3133519593264802,
+          "content_pct": -17.66,
+          "perm_p": 0.0
+        }
+      }
+    }
+  },
+  "summary": {
+    "global": {
+      "mean_content_pct": -9.81,
+      "regions_negative": "5/5",
+      "per_region_content_pct": {
+        "midlands": -5.02,
+        "north_england": -11.86,
+        "scotland": -9.31,
+        "south_england": -5.34,
+        "wales_west": -17.5
+      },
+      "mean_perm_p": 0.0
+    },
+    "within_region": {
+      "mean_content_pct": -9.77,
+      "regions_negative": "5/5",
+      "per_region_content_pct": {
+        "midlands": -4.96,
+        "north_england": -11.72,
+        "scotland": -9.17,
+        "south_england": -5.46,
+        "wales_west": -17.56
+      },
+      "mean_perm_p": 0.0
+    },
+    "within_class": {
+      "mean_content_pct": -9.47,
+      "regions_negative": "5/5",
+      "per_region_content_pct": {
+        "midlands": -4.02,
+        "north_england": -10.33,
+        "scotland": -9.82,
+        "south_england": -5.53,
+        "wales_west": -17.66
+      },
+      "mean_perm_p": 0.0
+    }
+  },
+  "config": {
+    "domain": "uk",
+    "representation": "lithology_only",
+    "n_rows": 18157,
+    "n_perm": 100,
+    "text_seeds": [
+      42,
+      43,
+      44
+    ],
+    "base": [
+      "depth_from_surface",
+      "ground_level",
+      "latitude_deg",
+      "longitude_deg"
+    ],
+    "class_strata": [
+      "BOULDERS",
+      "CHALK",
+      "CLAY",
+      "COBBLES",
+      "GRAVEL",
+      "LIMESTONE",
+      "MUDSTONE",
+      "PEAT",
+      "SAND",
+      "SANDSTONE",
+      "SILT",
+      "SILTSTONE",
+      "TILL",
+      "other"
+    ]
+  }
+}

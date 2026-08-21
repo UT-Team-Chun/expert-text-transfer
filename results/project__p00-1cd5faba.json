@@ -1,0 +1,70 @@
+{
+  "families": {
+    "project": {
+      "fold_col": "project_key",
+      "per_fold": {
+        "地質調査業務": {
+          "no_text": [
+            10.872416785400924,
+            0.013022625063457636
+          ],
+          "text": [
+            9.3227308854486,
+            0.05841488967934658
+          ],
+          "block_null_mean": 10.642700976378933,
+          "block_null_std": 0.027163397221372947,
+          "row_null_mean": 10.872383166122049,
+          "row_null_std": 0.014878944570125214,
+          "content_pct_block": -12.403,
+          "content_pct_row": -14.253,
+          "perm_p_block": 0.09090909090909091,
+          "perm_p_row": 0.09090909090909091,
+          "n_te": 3768,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 10,
+            "frac_block_matched_mean": 0.99545,
+            "frac_rank_fallback_mean": 0.00451,
+            "frac_self_retained_mean": 4e-05
+          }
+        }
+      },
+      "fold_p_block": [
+        0.09090909090909091
+      ],
+      "fold_p_row": [
+        0.09090909090909091
+      ]
+    }
+  },
+  "config": {
+    "per_region_files": 0,
+    "sample_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_perm_block": 10,
+    "n_perm_row": 10,
+    "top_n": 8,
+    "min_fold_rows": 300,
+    "families_filter": [
+      "project"
+    ],
+    "fold_labels_filter": [
+      "地質調査業務"
+    ],
+    "strip": "lithology_only v2",
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T4"
+  },
+  "_provenance": {
+    "purpose": "P-T4 provenance-transfer folds (leave-contractor/client/year/DTD/project-out)",
+    "metadata": "data/features/derived/kunijiban_metadata.parquet (national header pass)",
+    "script": "backend/scripts/nc_provenance_folds.py"
+  }
+}

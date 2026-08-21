@@ -1,0 +1,849 @@
+{
+  "families": {
+    "client": {
+      "fold_col": "orderer_name",
+      "n_folds": 7,
+      "mean_content_pct_block": -14.33,
+      "units_negative": "7/7",
+      "stouffer_p_block": 1.3025512530341092e-14,
+      "per_fold": {
+        "国土交通省四国地方整備局中村河川国道事務所": {
+          "no_text": [
+            10.13922163629096,
+            0.08940973059515693
+          ],
+          "text": [
+            8.890621691543931,
+            0.032456809009198964
+          ],
+          "block_null_mean": 10.06467423121447,
+          "block_null_std": 0.07542598360338112,
+          "row_null_mean": 10.016195373212668,
+          "row_null_std": 0.03567236057149131,
+          "content_pct_block": -11.665,
+          "content_pct_row": -11.238,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 1207,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90884,
+            "frac_rank_fallback_mean": 0.08998,
+            "frac_self_retained_mean": 0.00118
+          }
+        },
+        "国土交通省四国地方整備局徳島河川国道事務所": {
+          "no_text": [
+            8.889740776804656,
+            0.10140540799440162
+          ],
+          "text": [
+            8.11676938614609,
+            0.06837571106197214
+          ],
+          "block_null_mean": 8.969033431794145,
+          "block_null_std": 0.10565107135236515,
+          "row_null_mean": 8.902317297349288,
+          "row_null_std": 0.05866275120321018,
+          "content_pct_block": -9.502,
+          "content_pct_row": -8.824,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 532,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90887,
+            "frac_rank_fallback_mean": 0.09005,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        "国土交通省 四国地方整備局 中村河川国道事務所": {
+          "no_text": [
+            10.771141101852072,
+            0.02418646989584009
+          ],
+          "text": [
+            9.24007623091989,
+            0.05850025417080392
+          ],
+          "block_null_mean": 10.630934552961271,
+          "block_null_std": 0.12488546668940044,
+          "row_null_mean": 10.619892437162402,
+          "row_null_std": 0.06752128049127887,
+          "content_pct_block": -13.083,
+          "content_pct_row": -12.993,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 324,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.9094,
+            "frac_rank_fallback_mean": 0.08952,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        "国土交通省四国地方整備局大洲河川国道事務所": {
+          "no_text": [
+            10.995280069374479,
+            0.09384403958680483
+          ],
+          "text": [
+            8.601441648779115,
+            0.06422598944123789
+          ],
+          "block_null_mean": 10.694447082023707,
+          "block_null_std": 0.10713302361391726,
+          "row_null_mean": 10.943520769934034,
+          "row_null_std": 0.04336208964170898,
+          "content_pct_block": -19.571,
+          "content_pct_row": -21.402,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 400,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.91037,
+            "frac_rank_fallback_mean": 0.08854,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        "国土交通省近畿地方整備局紀南河川国道事務所": {
+          "no_text": [
+            11.702505006188437,
+            0.1238041804167838
+          ],
+          "text": [
+            10.016324016782361,
+            0.034427609771432804
+          ],
+          "block_null_mean": 11.614851115378654,
+          "block_null_std": 0.10050139595718363,
+          "row_null_mean": 11.654298135797,
+          "row_null_std": 0.07732666835544212,
+          "content_pct_block": -13.763,
+          "content_pct_row": -14.055,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 315,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90999,
+            "frac_rank_fallback_mean": 0.08893,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        "国土交通省東北地方整備局仙台河川国道事務所": {
+          "no_text": [
+            9.748878668975692,
+            0.04377469019882372
+          ],
+          "text": [
+            8.49850704066903,
+            0.09277948426667457
+          ],
+          "block_null_mean": 10.044481425077624,
+          "block_null_std": 0.11767805459028273,
+          "row_null_mean": 9.835957551367782,
+          "row_null_std": 0.0473098455046154,
+          "content_pct_block": -15.391,
+          "content_pct_row": -13.598,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 335,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90995,
+            "frac_rank_fallback_mean": 0.08896,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        "国土交通省四国地方整備局土佐国道事務所": {
+          "no_text": [
+            11.62195024891998,
+            0.13235750911971614
+          ],
+          "text": [
+            9.43464907601315,
+            0.08096627671380388
+          ],
+          "block_null_mean": 11.413427305227458,
+          "block_null_std": 0.1311786104036464,
+          "row_null_mean": 11.520367909833512,
+          "row_null_std": 0.1148271326347895,
+          "content_pct_block": -17.337,
+          "content_pct_row": -18.105,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 300,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90902,
+            "frac_rank_fallback_mean": 0.08989,
+            "frac_self_retained_mean": 0.00109
+          }
+        }
+      }
+    },
+    "contractor": {
+      "fold_col": "surveyor_name",
+      "n_folds": 8,
+      "mean_content_pct_block": -10.521,
+      "units_negative": "8/8",
+      "stouffer_p_block": 1.9367407596348844e-16,
+      "per_fold": {
+        "応用地質株式会社": {
+          "no_text": [
+            10.425881519489934,
+            0.027003020045630308
+          ],
+          "text": [
+            9.552516053993232,
+            0.02519311073531131
+          ],
+          "block_null_mean": 10.369176944254308,
+          "block_null_std": 0.05680247908589966,
+          "row_null_mean": 10.329808144533041,
+          "row_null_std": 0.02964347745528786,
+          "content_pct_block": -7.876,
+          "content_pct_row": -7.525,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 3176,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90403,
+            "frac_rank_fallback_mean": 0.09482,
+            "frac_self_retained_mean": 0.00115
+          }
+        },
+        "基礎地盤コンサルタンツ株式会社": {
+          "no_text": [
+            10.942998684519859,
+            0.02059691225472066
+          ],
+          "text": [
+            9.390240556083343,
+            0.03268986116361509
+          ],
+          "block_null_mean": 10.777255335008398,
+          "block_null_std": 0.06393472470409844,
+          "row_null_mean": 10.824761939660544,
+          "row_null_std": 0.03534585433948603,
+          "content_pct_block": -12.87,
+          "content_pct_row": -13.252,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 2133,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90849,
+            "frac_rank_fallback_mean": 0.0906,
+            "frac_self_retained_mean": 0.00091
+          }
+        },
+        "川崎地質株式会社": {
+          "no_text": [
+            10.420118310123293,
+            0.059392582037666536
+          ],
+          "text": [
+            8.96705525636326,
+            0.035719927925892785
+          ],
+          "block_null_mean": 10.483652367180417,
+          "block_null_std": 0.05799648865247933,
+          "row_null_mean": 10.419415138728853,
+          "row_null_std": 0.02957768826087715,
+          "content_pct_block": -14.466,
+          "content_pct_row": -13.939,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 1847,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.9091,
+            "frac_rank_fallback_mean": 0.08999,
+            "frac_self_retained_mean": 0.0009
+          }
+        },
+        "大地コンサルタント株式会社": {
+          "no_text": [
+            10.706347639466598,
+            0.055449580558397465
+          ],
+          "text": [
+            9.502600870188758,
+            0.036599985496561946
+          ],
+          "block_null_mean": 10.482715174260179,
+          "block_null_std": 0.0702926706307577,
+          "row_null_mean": 10.518654843127164,
+          "row_null_std": 0.051035875251056004,
+          "content_pct_block": -9.35,
+          "content_pct_row": -9.66,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 1390,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.9054,
+            "frac_rank_fallback_mean": 0.09349,
+            "frac_self_retained_mean": 0.00111
+          }
+        },
+        "株式会社ダイヤコンサルタント": {
+          "no_text": [
+            10.928458454389748,
+            0.06809165634858465
+          ],
+          "text": [
+            9.779879505039064,
+            0.03267471547202326
+          ],
+          "block_null_mean": 10.847069036326245,
+          "block_null_std": 0.06592974583401393,
+          "row_null_mean": 10.842655003303456,
+          "row_null_std": 0.03233500509864682,
+          "content_pct_block": -9.839,
+          "content_pct_row": -9.802,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 1405,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90932,
+            "frac_rank_fallback_mean": 0.08947,
+            "frac_self_retained_mean": 0.00121
+          }
+        },
+        "日本工営株式会社": {
+          "no_text": [
+            10.038767140519274,
+            0.016736846849129412
+          ],
+          "text": [
+            9.26632028059114,
+            0.034495529380177956
+          ],
+          "block_null_mean": 10.067725073499405,
+          "block_null_std": 0.0676195435076469,
+          "row_null_mean": 10.104958827133844,
+          "row_null_std": 0.02971593175029214,
+          "content_pct_block": -7.96,
+          "content_pct_row": -8.299,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 1006,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.91008,
+            "frac_rank_fallback_mean": 0.08882,
+            "frac_self_retained_mean": 0.0011
+          }
+        },
+        "サンコーコンサルタント株式会社": {
+          "no_text": [
+            10.19275834482648,
+            0.04758316200225021
+          ],
+          "text": [
+            9.113592842738703,
+            0.013389526559677492
+          ],
+          "block_null_mean": 10.219285166028675,
+          "block_null_std": 0.061974761825817765,
+          "row_null_mean": 10.153348447610654,
+          "row_null_std": 0.03731872720482925,
+          "content_pct_block": -10.82,
+          "content_pct_row": -10.241,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 1161,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.91014,
+            "frac_rank_fallback_mean": 0.08876,
+            "frac_self_retained_mean": 0.0011
+          }
+        },
+        "復建調査設計株式会社": {
+          "no_text": [
+            10.338295256195819,
+            0.1608810396480943
+          ],
+          "text": [
+            9.249940104131353,
+            0.11299862316647634
+          ],
+          "block_null_mean": 10.39130340307597,
+          "block_null_std": 0.11049119231978836,
+          "row_null_mean": 10.373738238144483,
+          "row_null_std": 0.058817106299130936,
+          "content_pct_block": -10.984,
+          "content_pct_row": -10.833,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 465,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90982,
+            "frac_rank_fallback_mean": 0.08909,
+            "frac_self_retained_mean": 0.00109
+          }
+        }
+      }
+    },
+    "dtd": {
+      "fold_col": "dtd_version",
+      "n_folds": 5,
+      "mean_content_pct_block": -10.423,
+      "units_negative": "5/5",
+      "stouffer_p_block": 6.085899282385275e-11,
+      "per_fold": {
+        "2.00": {
+          "no_text": [
+            10.88619533776055,
+            0.007532330115019468
+          ],
+          "text": [
+            10.073613048830728,
+            0.053166646241989475
+          ],
+          "block_null_mean": 10.920444835826943,
+          "block_null_std": 0.08114013307028643,
+          "row_null_mean": 10.965495309536532,
+          "row_null_std": 0.03508349045073385,
+          "content_pct_block": -7.755,
+          "content_pct_row": -8.134,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 940,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90749,
+            "frac_rank_fallback_mean": 0.09141,
+            "frac_self_retained_mean": 0.0011
+          }
+        },
+        "2.01": {
+          "no_text": [
+            9.54293108549941,
+            0.043459347872358715
+          ],
+          "text": [
+            8.892448302198575,
+            0.023427984948182285
+          ],
+          "block_null_mean": 9.76185424472742,
+          "block_null_std": 0.10348129754962201,
+          "row_null_mean": 9.57396820830322,
+          "row_null_std": 0.0485396491816999,
+          "content_pct_block": -8.906,
+          "content_pct_row": -7.118,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 483,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.91115,
+            "frac_rank_fallback_mean": 0.08776,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        "2.10": {
+          "no_text": [
+            10.517698014096508,
+            0.012350390175230755
+          ],
+          "text": [
+            9.149779034927112,
+            0.00786510432848306
+          ],
+          "block_null_mean": 10.412540188517276,
+          "block_null_std": 0.02573681899781926,
+          "row_null_mean": 10.388549462091428,
+          "row_null_std": 0.016251225145470373,
+          "content_pct_block": -12.127,
+          "content_pct_row": -11.924,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 16440,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.87491,
+            "frac_rank_fallback_mean": 0.123,
+            "frac_self_retained_mean": 0.00209
+          }
+        },
+        "3.00": {
+          "no_text": [
+            10.786994905059126,
+            0.013772013361296525
+          ],
+          "text": [
+            9.21321590460432,
+            0.0197955072361198
+          ],
+          "block_null_mean": 10.572548953005247,
+          "block_null_std": 0.029362325401566844,
+          "row_null_mean": 10.578659843980144,
+          "row_null_std": 0.01668154721236828,
+          "content_pct_block": -12.857,
+          "content_pct_row": -12.908,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 13452,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.87696,
+            "frac_rank_fallback_mean": 0.12128,
+            "frac_self_retained_mean": 0.00175
+          }
+        },
+        "4.00": {
+          "no_text": [
+            10.87115335624373,
+            0.021005227126265905
+          ],
+          "text": [
+            9.614606730233884,
+            0.020843275222987064
+          ],
+          "block_null_mean": 10.738901538494563,
+          "block_null_std": 0.025957825423403674,
+          "row_null_mean": 10.696585028113425,
+          "row_null_std": 0.011884425852377737,
+          "content_pct_block": -10.469,
+          "content_pct_row": -10.115,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 21325,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.87669,
+            "frac_rank_fallback_mean": 0.1221,
+            "frac_self_retained_mean": 0.00121
+          }
+        }
+      }
+    },
+    "year": {
+      "fold_col": "year_bin",
+      "n_folds": 6,
+      "mean_content_pct_block": -12.798,
+      "units_negative": "6/6",
+      "stouffer_p_block": 8.845423966577684e-13,
+      "per_fold": {
+        "1980s": {
+          "no_text": [
+            10.911191968391188,
+            0.06772414397702095
+          ],
+          "text": [
+            10.135760617605085,
+            0.09080890536201539
+          ],
+          "block_null_mean": 11.110712379064207,
+          "block_null_std": 0.12733318706661895,
+          "row_null_mean": 11.089303326643922,
+          "row_null_std": 0.08506209909459646,
+          "content_pct_block": -8.775,
+          "content_pct_row": -8.599,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 352,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.91041,
+            "frac_rank_fallback_mean": 0.0885,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        "1990s": {
+          "no_text": [
+            10.076574257807884,
+            0.053760087563249716
+          ],
+          "text": [
+            8.308453971723106,
+            0.032415184421802135
+          ],
+          "block_null_mean": 10.039089747359784,
+          "block_null_std": 0.07358789744679911,
+          "row_null_mean": 9.989077355042344,
+          "row_null_std": 0.03198052158790146,
+          "content_pct_block": -17.239,
+          "content_pct_row": -16.825,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 913,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.90818,
+            "frac_rank_fallback_mean": 0.09072,
+            "frac_self_retained_mean": 0.0011
+          }
+        },
+        "2000s": {
+          "no_text": [
+            10.448556073683292,
+            0.017734096067337595
+          ],
+          "text": [
+            9.160859557471591,
+            0.009342920166527824
+          ],
+          "block_null_mean": 10.413354671069023,
+          "block_null_std": 0.024729224477280928,
+          "row_null_mean": 10.379448026604443,
+          "row_null_std": 0.011983317310691457,
+          "content_pct_block": -12.028,
+          "content_pct_row": -11.74,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 17178,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.87299,
+            "frac_rank_fallback_mean": 0.12485,
+            "frac_self_retained_mean": 0.00217
+          }
+        },
+        "2010s": {
+          "no_text": [
+            10.92357668112505,
+            0.012137248697995968
+          ],
+          "text": [
+            9.326555122238846,
+            0.018001614935879675
+          ],
+          "block_null_mean": 10.687648552536704,
+          "block_null_std": 0.025431300653922597,
+          "row_null_mean": 10.673838836757813,
+          "row_null_std": 0.015792461276984533,
+          "content_pct_block": -12.735,
+          "content_pct_row": -12.622,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 20796,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.86803,
+            "frac_rank_fallback_mean": 0.13082,
+            "frac_self_retained_mean": 0.00116
+          }
+        },
+        "<=1979": {
+          "no_text": [
+            11.712277888024994,
+            0.02287823174409661
+          ],
+          "text": [
+            9.96354409252735,
+            0.08828968950554704
+          ],
+          "block_null_mean": 11.635039112724662,
+          "block_null_std": 0.0971665575873959,
+          "row_null_mean": 11.624501018384779,
+          "row_null_std": 0.05722165442187031,
+          "content_pct_block": -14.366,
+          "content_pct_row": -14.288,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 505,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.91147,
+            "frac_rank_fallback_mean": 0.08744,
+            "frac_self_retained_mean": 0.00109
+          }
+        },
+        ">=2020": {
+          "no_text": [
+            10.886183581774382,
+            0.02303485476016582
+          ],
+          "text": [
+            9.527219159289231,
+            0.02619050543506568
+          ],
+          "block_null_mean": 10.782927726856538,
+          "block_null_std": 0.029156690373272346,
+          "row_null_mean": 10.745086538689511,
+          "row_null_std": 0.01642031958378451,
+          "content_pct_block": -11.645,
+          "content_pct_row": -11.334,
+          "perm_p_block": 0.001996007984031936,
+          "perm_p_row": 0.004975124378109453,
+          "n_te": 12990,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 500,
+            "frac_block_matched_mean": 0.8909,
+            "frac_rank_fallback_mean": 0.10774,
+            "frac_self_retained_mean": 0.00136
+          }
+        }
+      }
+    }
+  },
+  "config": {
+    "per_region_files": 500,
+    "sample_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_perm_block": 500,
+    "n_perm_row": 200,
+    "top_n": 8,
+    "min_fold_rows": 300,
+    "families_filter": [
+      "client"
+    ],
+    "fold_labels_filter": [
+      "国土交通省四国地方整備局中村河川国道事務所"
+    ],
+    "strip": "lithology_only v2",
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T4",
+    "combined_from_shards": [
+      "client__c00-26eefa17.json",
+      "client__c01-c00cb618.json",
+      "client__c02-3723caea.json",
+      "client__c03-c3d64d90.json",
+      "client__c04-cf82110b.json",
+      "client__c05-88607ea1.json",
+      "client__c06-521da782.json",
+      "contractor__c00-e668f039.json",
+      "contractor__c01-5a58780b.json",
+      "contractor__c02-7ceb6e95.json",
+      "contractor__c03-29e869d1.json",
+      "contractor__c04-d142832e.json",
+      "contractor__c05-1d9f1c0c.json",
+      "contractor__c06-3478a9bb.json",
+      "contractor__c07-8e1cd08e.json",
+      "dtd__d00-9f770654.json",
+      "dtd__d01-218e4971.json",
+      "dtd__d02-5a7dbdfa.json",
+      "dtd__d03-a97491cd.json",
+      "dtd__d04-8c9d9d6d.json",
+      "year__y00-aa05ccc3.json",
+      "year__y01-f9543514.json",
+      "year__y02-bf4af42b.json",
+      "year__y03-5d715117.json",
+      "year__y04-727ce1ae.json",
+      "year__y05-c9c822f3.json"
+    ]
+  },
+  "_provenance": {
+    "purpose": "P-T4 provenance-transfer folds (leave-contractor/client/year/DTD/project-out), combined from per-fold shards",
+    "metadata": "data/features/derived/kunijiban_metadata.parquet (national header pass)",
+    "sharding": "statistically inert: each permutation seeds its own generator from 100_000 * seed + permutation index",
+    "script": "backend/scripts/nc_provenance_folds.py"
+  }
+}

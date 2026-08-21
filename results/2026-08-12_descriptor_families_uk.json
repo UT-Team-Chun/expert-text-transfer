@@ -1,0 +1,161 @@
+{
+  "arms": {
+    "parser_text_only": {
+      "n_features": 68,
+      "content_pct": -8.041,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.935,
+        "north_england": -10.301,
+        "scotland": -7.735,
+        "south_england": -4.886,
+        "wales_west": -12.082
+      }
+    },
+    "parser_with_codes": {
+      "n_features": 68,
+      "content_pct": -8.041,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.935,
+        "north_england": -10.301,
+        "scotland": -7.735,
+        "south_england": -4.886,
+        "wales_west": -12.082
+      }
+    },
+    "minus_dictionary": {
+      "n_features": 57,
+      "content_pct": -9.766,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.139,
+        "north_england": -10.469,
+        "scotland": -8.231,
+        "south_england": -6.778,
+        "wales_west": -18.175
+      },
+      "attenuation_pp": -1.725
+    },
+    "minus_grain_size": {
+      "n_features": 65,
+      "content_pct": -8.07,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.725,
+        "north_england": -9.871,
+        "scotland": -6.908,
+        "south_england": -4.812,
+        "wales_west": -13.495
+      },
+      "attenuation_pp": -0.029
+    },
+    "minus_sorting": {
+      "n_features": 62,
+      "content_pct": -9.941,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.823,
+        "north_england": -11.114,
+        "scotland": -8.79,
+        "south_england": -5.941,
+        "wales_west": -17.923
+      },
+      "attenuation_pp": -1.9
+    },
+    "minus_lith_class": {
+      "n_features": 50,
+      "content_pct": -9.176,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -5.059,
+        "north_england": -11.153,
+        "scotland": -4.644,
+        "south_england": -7.715,
+        "wales_west": -16.555
+      },
+      "attenuation_pp": -1.135
+    },
+    "minus_secondary": {
+      "n_features": 62,
+      "content_pct": -7.534,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.611,
+        "north_england": -8.087,
+        "scotland": -3.378,
+        "south_england": -6.448,
+        "wales_west": -14.223
+      },
+      "attenuation_pp": 0.507
+    },
+    "minus_weathering": {
+      "n_features": 64,
+      "content_pct": -9.637,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -5.675,
+        "north_england": -10.559,
+        "scotland": -8.766,
+        "south_england": -7.846,
+        "wales_west": -14.843
+      },
+      "attenuation_pp": -1.596
+    },
+    "minus_angularity": {
+      "n_features": 62,
+      "content_pct": -10.524,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -5.687,
+        "north_england": -10.27,
+        "scotland": -10.948,
+        "south_england": -7.88,
+        "wales_west": -16.978
+      },
+      "attenuation_pp": -2.483
+    },
+    "minus_colour": {
+      "n_features": 58,
+      "content_pct": -7.474,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.294,
+        "north_england": -12.062,
+        "scotland": -5.956,
+        "south_england": -0.853,
+        "wales_west": -13.676
+      },
+      "attenuation_pp": 0.567
+    },
+    "minus_composition_pct": {
+      "n_features": 64,
+      "content_pct": -9.621,
+      "regions_negative": "5/5",
+      "per_region": {
+        "midlands": -4.639,
+        "north_england": -11.084,
+        "scotland": -9.674,
+        "south_england": -3.4,
+        "wales_west": -18.212
+      },
+      "attenuation_pp": -1.58
+    }
+  },
+  "config": {
+    "domain": "uk",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_rows": 18157,
+    "per_region_files": 500,
+    "sample_seed": 42,
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T10 (exploratory)"
+  },
+  "_provenance": {
+    "purpose": "P-T10 descriptor-family mechanism localisation; also separates the parser rung into text-only vs +archive-code variants (the published -16.2%/-4.4% used the mixed one)",
+    "script": "backend/scripts/nc_descriptor_families.py"
+  }
+}

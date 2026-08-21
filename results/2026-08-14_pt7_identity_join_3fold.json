@@ -1,0 +1,57 @@
+{
+  "purpose": "P-T7: in-distribution spatial 3-fold text effect recomputed on the identity-join parquet (borings_japan_v5id_sarashina_per_layer). Consolidated from the three run summaries so the manuscript can cite a local artefact rather than a path on a cluster share.",
+  "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T7",
+  "bar": "new effect within [-27.5%, -17.5%]",
+  "text_arm": {
+    "per_fold": {
+      "kfold0": {
+        "holdout_rmse_n": 8.323810577392578,
+        "holdout_mae_n": 5.2327494621276855,
+        "holdout_rmse_gw": 5.240693092346191,
+        "kfold_n_train": 1776002,
+        "kfold_n_holdout": 887953,
+        "training_time_seconds": 126567.54332447052
+      },
+      "kfold1": {
+        "holdout_rmse_n": 8.63626480102539,
+        "holdout_mae_n": 5.457641124725342,
+        "holdout_rmse_gw": 4.028635501861572,
+        "kfold_n_train": 1775892,
+        "kfold_n_holdout": 888063,
+        "training_time_seconds": 12512.082082748413
+      },
+      "kfold2": {
+        "holdout_rmse_n": 8.55447769165039,
+        "holdout_mae_n": 5.266679286956787,
+        "holdout_rmse_gw": 4.088271141052246,
+        "kfold_n_train": 1776016,
+        "kfold_n_holdout": 887939,
+        "training_time_seconds": 12670.82117986679
+      }
+    },
+    "rmse_n_mean": 8.5049,
+    "rmse_n_sd": 0.162,
+    "mae_n_mean": 5.319,
+    "mae_n_sd": 0.1212
+  },
+  "no_text_baseline": {
+    "rmse_n": 11.333,
+    "rmse_n_sd": 0.212,
+    "mae_n": 8.021,
+    "source": "v4 m8k l=2 matched no-text config, results_table.md"
+  },
+  "effect": {
+    "rmse_pct": -24.95,
+    "mae_pct": -33.69,
+    "verdict": "CONFIRMED"
+  },
+  "hardware_inhomogeneity": "Fold 0 was trained UNINTERRUPTED on an RTX 6000 Ada (126,568 s = 35.2 h); folds 1 and 2 on H100 NVL (12,512 s / 12,671 s). A resumed H100 replicate of fold 0 -- restarted from fold 0's own epoch-17 checkpoint and run to epoch 50 in 9,126 s -- gave holdout_rmse_n 8.2784 against the uninterrupted run's 8.3238, a 0.55% difference and well inside the fold-to-fold spread (8.32-8.64). Its artefacts were written to an Azure Files share that has since been recycled and were overwritten on the NFS mirror by the uninterrupted run, so THIS file quotes the uninterrupted run, which is both the copy that exists and the one with no resume seam. The replicate is recorded here as an unplanned hardware/resume robustness check rather than quoted as a result, because it no longer has an artefact.",
+  "_provenance": {
+    "consolidated_from": [
+      "data/runs/dkl_national_lmc_v5id_sarashina_l2_kfold0/summary.json",
+      "data/runs/dkl_national_lmc_v5id_sarashina_l2_kfold1/summary.json",
+      "data/runs/dkl_national_lmc_v5id_sarashina_l2_kfold2/summary.json"
+    ],
+    "script": "consolidated by hand from the three run summaries; no recomputation"
+  }
+}

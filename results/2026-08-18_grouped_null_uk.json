@@ -1,0 +1,248 @@
+{
+  "per_region": {
+    "midlands": {
+      "no_text": [
+        18.350882395955455,
+        0.12138583923863784
+      ],
+      "text": [
+        18.620551220285375,
+        0.06586284491344639
+      ],
+      "block_null_mean": 18.65800828111141,
+      "block_null_std": 0.11758508511459147,
+      "row_null_mean": 18.689427032378653,
+      "row_null_std": 0.07887892378204375,
+      "content_pct_block": -0.201,
+      "content_pct_row": -0.369,
+      "perm_p_block": 0.3726273726273726,
+      "perm_p_row": 0.18407960199004975,
+      "n_te": 5524,
+      "null_permutation": {
+        "strata_columns": [
+          "region"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 1000,
+        "frac_block_matched_mean": 0.94768,
+        "frac_rank_fallback_mean": 0.04528,
+        "frac_self_retained_mean": 0.00704
+      }
+    },
+    "north_england": {
+      "no_text": [
+        15.242249318439539,
+        0.08482143544233883
+      ],
+      "text": [
+        13.52436781562031,
+        0.07468019933466427
+      ],
+      "block_null_mean": 14.779416313449644,
+      "block_null_std": 0.12345631437346034,
+      "row_null_mean": 14.526254688395579,
+      "row_null_std": 0.05742512626872896,
+      "content_pct_block": -8.492,
+      "content_pct_row": -6.897,
+      "perm_p_block": 0.000999000999000999,
+      "perm_p_row": 0.004975124378109453,
+      "n_te": 4278,
+      "null_permutation": {
+        "strata_columns": [
+          "region"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 1000,
+        "frac_block_matched_mean": 0.89452,
+        "frac_rank_fallback_mean": 0.09741,
+        "frac_self_retained_mean": 0.00807
+      }
+    },
+    "scotland": {
+      "no_text": [
+        17.210199351899462,
+        0.46253416331024977
+      ],
+      "text": [
+        16.18510556466764,
+        0.12689916843829374
+      ],
+      "block_null_mean": 16.884626947091746,
+      "block_null_std": 0.2407440692428053,
+      "row_null_mean": 17.11535296931726,
+      "row_null_std": 0.1810293852337254,
+      "content_pct_block": -4.143,
+      "content_pct_row": -5.435,
+      "perm_p_block": 0.000999000999000999,
+      "perm_p_row": 0.004975124378109453,
+      "n_te": 3104,
+      "null_permutation": {
+        "strata_columns": [
+          "region"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 1000,
+        "frac_block_matched_mean": 0.87179,
+        "frac_rank_fallback_mean": 0.11626,
+        "frac_self_retained_mean": 0.01196
+      }
+    },
+    "south_england": {
+      "no_text": [
+        17.078808215676073,
+        0.01364477462094477
+      ],
+      "text": [
+        15.480267265207948,
+        0.11676489828114404
+      ],
+      "block_null_mean": 16.199488268495823,
+      "block_null_std": 0.13357467718228194,
+      "row_null_mean": 16.322960256458703,
+      "row_null_std": 0.07632569077760179,
+      "content_pct_block": -4.44,
+      "content_pct_row": -5.163,
+      "perm_p_block": 0.000999000999000999,
+      "perm_p_row": 0.004975124378109453,
+      "n_te": 4053,
+      "null_permutation": {
+        "strata_columns": [
+          "region"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 1000,
+        "frac_block_matched_mean": 0.88407,
+        "frac_rank_fallback_mean": 0.10182,
+        "frac_self_retained_mean": 0.01411
+      }
+    },
+    "wales_west": {
+      "no_text": [
+        18.485001610856923,
+        0.395434748422652
+      ],
+      "text": [
+        15.8260956985929,
+        0.18461943036751333
+      ],
+      "block_null_mean": 18.676722266931282,
+      "block_null_std": 0.38953243455217007,
+      "row_null_mean": 18.051818792556848,
+      "row_null_std": 0.18919576159986215,
+      "content_pct_block": -15.263,
+      "content_pct_row": -12.33,
+      "perm_p_block": 0.000999000999000999,
+      "perm_p_row": 0.004975124378109453,
+      "n_te": 1198,
+      "null_permutation": {
+        "strata_columns": [
+          "region"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 1000,
+        "frac_block_matched_mean": 0.8915,
+        "frac_rank_fallback_mean": 0.09918,
+        "frac_self_retained_mean": 0.00932
+      }
+    }
+  },
+  "summary": {
+    "content_pct_block_mean": -6.508,
+    "content_pct_row_mean": -6.039,
+    "delta_block_minus_row_pp": -0.469,
+    "regions_negative_block": "5/5",
+    "regions_negative_row": "5/5",
+    "bonferroni_min_p_block": 0.004995004995004995,
+    "bonferroni_min_p_row": 0.02487562189054726,
+    "cauchy_p_block": 0.0012483346596692693,
+    "cauchy_p_row": 0.006181622731325152,
+    "stouffer_p_block": 6.982904071600318e-09,
+    "stouffer_p_row": 2.6748390161016423e-07,
+    "fold_p_block": [
+      0.372627,
+      0.000999,
+      0.000999,
+      0.000999,
+      0.000999
+    ],
+    "fold_p_row": [
+      0.18408,
+      0.004975,
+      0.004975,
+      0.004975,
+      0.004975
+    ],
+    "region_spread_block": {
+      "per_region_min": -15.263,
+      "per_region_max": -0.201,
+      "resample_2p5_97p5": [
+        -11.2,
+        -2.626
+      ],
+      "note": "descriptive spread over 8 regions, NOT a 95% CI: a percentile bootstrap on 8 units under-covers. Use borehole_block_bootstrap for inference."
+    },
+    "borehole_block_bootstrap": {
+      "theta_hat_pct": -4.038,
+      "bca_95": [
+        -5.043,
+        -2.929
+      ],
+      "percentile_95": [
+        -5.1,
+        -2.978
+      ],
+      "n_boreholes": 2597,
+      "jackknife": "full leave-one-out (closed form), not thinned"
+    }
+  },
+  "config": {
+    "domain": "uk",
+    "strip_mode": "lithology_only",
+    "strip_stats": {
+      "mode": "lithology_only",
+      "version": "v2",
+      "cache_tag": "lithonly_v2",
+      "frac_chars_removed": 0.052,
+      "chars_removed": 152909,
+      "n_texts_changed": 16370,
+      "n_emptied": 0
+    },
+    "embedding_cache": "grouped_uk_lithonly_v2_d1c3ec425705441c_e5.npy",
+    "per_region_files": 500,
+    "sample_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_perm_block": 1000,
+    "n_perm_row": 200,
+    "use_knn": true,
+    "combined_from_shards": [
+      "uk_midlands.json",
+      "uk_north_england.json",
+      "uk_scotland.json",
+      "uk_south_england.json",
+      "uk_wales_west.json"
+    ]
+  },
+  "_provenance": {
+    "purpose": "Pre-registered grouped-null primary analysis (P-T1/T2/T3), combined from per-region shards",
+    "null": {
+      "unit": "borehole block (length-matched derangement; rank-wise for boreholes with an unshared length)",
+      "strata_columns_used": [
+        "region"
+      ],
+      "every_draw_was_a_permutation": true,
+      "draws_checked_per_region": [
+        1000
+      ],
+      "pairing": "real and null share the HGB seed set (seed-paired)",
+      "p_value": "(1+r)/(1+n) corrected per fold",
+      "fold_combination": "Bonferroni-corrected minimum and Cauchy combination are primary (valid under arbitrary dependence, which leave-one-region-out folds have because they share most of their training rows); Stouffer reported as a secondary figure only",
+      "interval": "borehole-block BCa over paired per-borehole losses, full leave-one-out jackknife; the 8-region resample is a descriptive spread, not a CI"
+    },
+    "sharding": "statistically inert: each permutation seeds its own generator from 100_000 * seed + permutation index, which depends on neither region nor loop order",
+    "script": "backend/scripts/nc_grouped_null.py"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "purpose": "P-T9: the pre-registered coordinate-free arm. Arm A silences the encoder Fourier positional encoding only (--zero-fourier); arm B additionally removes the GP raw-(lat,lon) Matern-3/2 residual kernel (--no-residual-geo), so no coordinate reaches the model by either route. Held-out RMSE is computed from each run predictions.npz because the trainer summary records only the in-region holdout.",
+  "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T9",
+  "bar": "arm B RMSE <= arm A RMSE + 2%; informative in either direction",
+  "per_region": {
+    "chubu": {
+      "coordfree": {
+        "run_dir": "dkl_natlro_pt9_chubu_coordfree",
+        "holdout_rmse": 12.333,
+        "holdout_mae": 9.4897,
+        "n_eval": 457691,
+        "zero_fourier": true,
+        "add_residual_geo": false,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 46321.7
+      },
+      "zfonly": {
+        "run_dir": "dkl_natlro_pt9_chubu_zfonly",
+        "holdout_rmse": 12.4752,
+        "holdout_mae": 9.4652,
+        "n_eval": 457691,
+        "zero_fourier": true,
+        "add_residual_geo": true,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 46263.7
+      },
+      "pct_B_minus_A": -1.14,
+      "arms_match_except_residual_geo": true
+    },
+    "kansai": {
+      "coordfree": {
+        "run_dir": "dkl_natlro_pt9_kansai_coordfree",
+        "holdout_rmse": 11.5942,
+        "holdout_mae": 8.8392,
+        "n_eval": 493613,
+        "zero_fourier": true,
+        "add_residual_geo": false,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 5026.3
+      },
+      "zfonly": {
+        "run_dir": "dkl_natlro_pt9_kansai_zfonly",
+        "holdout_rmse": 11.4477,
+        "holdout_mae": 8.7598,
+        "n_eval": 493613,
+        "zero_fourier": true,
+        "add_residual_geo": true,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 5170.6
+      },
+      "pct_B_minus_A": 1.28,
+      "arms_match_except_residual_geo": true
+    },
+    "kyushu_okinawa": {
+      "coordfree": {
+        "run_dir": "dkl_natlro_pt9_kyushu_okinawa_coordfree",
+        "holdout_rmse": 11.6043,
+        "holdout_mae": 8.8007,
+        "n_eval": 431229,
+        "zero_fourier": true,
+        "add_residual_geo": false,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 5059.2
+      },
+      "zfonly": {
+        "run_dir": "dkl_natlro_pt9_kyushu_okinawa_zfonly",
+        "holdout_rmse": 11.6201,
+        "holdout_mae": 8.7717,
+        "n_eval": 431229,
+        "zero_fourier": true,
+        "add_residual_geo": true,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 5330.0
+      },
+      "pct_B_minus_A": -0.136,
+      "arms_match_except_residual_geo": true
+    },
+    "tohoku": {
+      "coordfree": {
+        "run_dir": "dkl_natlro_pt9_tohoku_coordfree",
+        "holdout_rmse": 11.6815,
+        "holdout_mae": 8.8823,
+        "n_eval": 287496,
+        "zero_fourier": true,
+        "add_residual_geo": false,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 5371.4
+      },
+      "zfonly": {
+        "run_dir": "dkl_natlro_pt9_tohoku_zfonly",
+        "holdout_rmse": 11.7715,
+        "holdout_mae": 9.2455,
+        "n_eval": 287496,
+        "zero_fourier": true,
+        "add_residual_geo": true,
+        "n_epochs": 50,
+        "n_inducing": 6000,
+        "n_features": 14,
+        "training_time_seconds": 5694.7
+      },
+      "pct_B_minus_A": -0.765,
+      "arms_match_except_residual_geo": true
+    }
+  },
+  "summary": {
+    "mean_pct_B_minus_A": -0.19,
+    "worst_abs_pct": 1.28,
+    "n_regions": 4,
+    "bar_pct": 2.0,
+    "verdict": "CONFIRMED",
+    "all_pairs_match_except_flag": true
+  },
+  "scope": "Four of eight held-out regions, limited by GPU capacity and reported as a scope rather than as coverage. Both arms of a region were pinned to the same hardware class: the same model, config and split gave holdout RMSE 8.2784 vs 8.3238 across GPU classes (with a mid-training resume on one side), a 0.55% difference that is not negligible against a 2% bar."
+}

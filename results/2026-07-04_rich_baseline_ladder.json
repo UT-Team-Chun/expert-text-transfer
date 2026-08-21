@@ -1,0 +1,65 @@
+{
+  "config": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "representation": "lithology_only e5",
+    "protocol": "administrative LRO, leak-proof per-fold PCA"
+  },
+  "japan": {
+    "thin": {
+      "n_base_features": 3,
+      "baseline_rmse": 12.936,
+      "shuffled_rmse": 11.924,
+      "text_rmse": 9.564,
+      "content_pct": -19.8,
+      "regions_negative": "8/8"
+    },
+    "plus_regime": {
+      "n_base_features": 11,
+      "baseline_rmse": 12.412,
+      "shuffled_rmse": 11.563,
+      "text_rmse": 9.559,
+      "content_pct": -17.33,
+      "regions_negative": "8/8"
+    },
+    "plus_geology": {
+      "n_base_features": 34,
+      "baseline_rmse": 12.154,
+      "shuffled_rmse": 11.45,
+      "text_rmse": 9.537,
+      "content_pct": -16.71,
+      "regions_negative": "8/8"
+    },
+    "plus_parser": {
+      "n_base_features": 95,
+      "baseline_rmse": 10.182,
+      "shuffled_rmse": 9.904,
+      "text_rmse": 9.466,
+      "content_pct": -4.42,
+      "regions_negative": "8/8"
+    }
+  },
+  "uk": {
+    "thin": {
+      "n_base_features": 4,
+      "baseline_rmse": 18.529,
+      "shuffled_rmse": 18.034,
+      "text_rmse": 16.139,
+      "content_pct": -10.51,
+      "regions_negative": "5/5"
+    },
+    "plus_parser": {
+      "n_base_features": 66,
+      "baseline_rmse": 16.497,
+      "shuffled_rmse": 16.302,
+      "text_rmse": 15.338,
+      "content_pct": -5.91,
+      "regions_negative": "5/5"
+    }
+  }
+}

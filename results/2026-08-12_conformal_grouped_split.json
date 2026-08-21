@@ -1,0 +1,569 @@
+{
+  "run": "dkl_national_full_v2",
+  "splits": {
+    "row": {
+      "per_seed": [
+        {
+          "n_cal": 1331977,
+          "n_eval": 1331978,
+          "alpha_0.5": {
+            "coverage": 0.49912,
+            "gap": -0.00088,
+            "mean_width": 4.5945,
+            "winkler": 17.2192,
+            "per_regime_coverage": {
+              "0": 0.49998,
+              "1": 0.49868,
+              "2": 0.50953,
+              "3": 0.49717,
+              "4": 0.49881,
+              "5": 0.4888,
+              "6": 0.52029,
+              "7": 0.49788
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.80006,
+            "gap": 6e-05,
+            "mean_width": 16.5698,
+            "winkler": 28.6732,
+            "per_regime_coverage": {
+              "0": 0.80068,
+              "1": 0.80001,
+              "2": 0.79867,
+              "3": 0.79893,
+              "4": 0.79998,
+              "5": 0.79438,
+              "6": 0.81174,
+              "7": 0.79797
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.94995,
+            "gap": -5e-05,
+            "mean_width": 33.832,
+            "winkler": 44.3661,
+            "per_regime_coverage": {
+              "0": 0.95006,
+              "1": 0.95103,
+              "2": 0.94812,
+              "3": 0.94934,
+              "4": 0.94982,
+              "5": 0.9492,
+              "6": 0.95812,
+              "7": 0.94847
+            }
+          }
+        },
+        {
+          "n_cal": 1331977,
+          "n_eval": 1331978,
+          "alpha_0.5": {
+            "coverage": 0.50126,
+            "gap": 0.00126,
+            "mean_width": 4.6253,
+            "winkler": 17.1881,
+            "per_regime_coverage": {
+              "0": 0.50102,
+              "1": 0.50201,
+              "2": 0.505,
+              "3": 0.50149,
+              "4": 0.50266,
+              "5": 0.50008,
+              "6": 0.51201,
+              "7": 0.49984
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.80038,
+            "gap": 0.00038,
+            "mean_width": 16.5811,
+            "winkler": 28.635,
+            "per_regime_coverage": {
+              "0": 0.80037,
+              "1": 0.80161,
+              "2": 0.80226,
+              "3": 0.80073,
+              "4": 0.80016,
+              "5": 0.80192,
+              "6": 0.80232,
+              "7": 0.79755
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.95049,
+            "gap": 0.00049,
+            "mean_width": 33.9041,
+            "winkler": 44.3241,
+            "per_regime_coverage": {
+              "0": 0.95044,
+              "1": 0.95073,
+              "2": 0.95784,
+              "3": 0.95078,
+              "4": 0.95094,
+              "5": 0.95371,
+              "6": 0.95197,
+              "7": 0.94856
+            }
+          }
+        },
+        {
+          "n_cal": 1331977,
+          "n_eval": 1331978,
+          "alpha_0.5": {
+            "coverage": 0.49989,
+            "gap": -0.00011,
+            "mean_width": 4.6014,
+            "winkler": 17.2177,
+            "per_regime_coverage": {
+              "0": 0.50149,
+              "1": 0.49695,
+              "2": 0.53937,
+              "3": 0.49711,
+              "4": 0.50047,
+              "5": 0.49529,
+              "6": 0.51067,
+              "7": 0.49539
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.79972,
+            "gap": -0.00028,
+            "mean_width": 16.5567,
+            "winkler": 28.6812,
+            "per_regime_coverage": {
+              "0": 0.80016,
+              "1": 0.79702,
+              "2": 0.82534,
+              "3": 0.80017,
+              "4": 0.7995,
+              "5": 0.79761,
+              "6": 0.81236,
+              "7": 0.79958
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.95019,
+            "gap": 0.00019,
+            "mean_width": 33.8659,
+            "winkler": 44.3831,
+            "per_regime_coverage": {
+              "0": 0.95017,
+              "1": 0.95048,
+              "2": 0.95566,
+              "3": 0.9508,
+              "4": 0.94918,
+              "5": 0.95211,
+              "6": 0.96212,
+              "7": 0.94923
+            }
+          }
+        }
+      ],
+      "alpha_0.5": {
+        "coverage_mean": 0.50009,
+        "gap_mean": 9e-05,
+        "mean_width": 4.6071,
+        "winkler": 17.2083
+      },
+      "alpha_0.8": {
+        "coverage_mean": 0.80005,
+        "gap_mean": 5e-05,
+        "mean_width": 16.5692,
+        "winkler": 28.6631
+      },
+      "alpha_0.95": {
+        "coverage_mean": 0.95021,
+        "gap_mean": 0.00021,
+        "mean_width": 33.8673,
+        "winkler": 44.3578
+      }
+    },
+    "borehole": {
+      "per_seed": [
+        {
+          "n_cal": 1331469,
+          "n_eval": 1332486,
+          "n_cal_groups": 81229,
+          "alpha_0.5": {
+            "coverage": 0.50107,
+            "gap": 0.00107,
+            "mean_width": 4.6181,
+            "winkler": 17.1938,
+            "per_regime_coverage": {
+              "0": 0.50022,
+              "1": 0.5014,
+              "2": 0.4673,
+              "3": 0.49646,
+              "4": 0.50945,
+              "5": 0.51311,
+              "6": 0.50584,
+              "7": 0.50395
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.80056,
+            "gap": 0.00056,
+            "mean_width": 16.5738,
+            "winkler": 28.6687,
+            "per_regime_coverage": {
+              "0": 0.80016,
+              "1": 0.79889,
+              "2": 0.77622,
+              "3": 0.79877,
+              "4": 0.80226,
+              "5": 0.81494,
+              "6": 0.79503,
+              "7": 0.80557
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.94978,
+            "gap": -0.00022,
+            "mean_width": 33.7995,
+            "winkler": 44.4022,
+            "per_regime_coverage": {
+              "0": 0.94956,
+              "1": 0.94873,
+              "2": 0.93418,
+              "3": 0.95083,
+              "4": 0.95202,
+              "5": 0.94977,
+              "6": 0.9406,
+              "7": 0.94944
+            }
+          }
+        },
+        {
+          "n_cal": 1331832,
+          "n_eval": 1332123,
+          "n_cal_groups": 81229,
+          "alpha_0.5": {
+            "coverage": 0.50103,
+            "gap": 0.00103,
+            "mean_width": 4.6095,
+            "winkler": 17.1899,
+            "per_regime_coverage": {
+              "0": 0.50197,
+              "1": 0.5026,
+              "2": 0.54995,
+              "3": 0.48987,
+              "4": 0.50091,
+              "5": 0.5096,
+              "6": 0.50119,
+              "7": 0.50716
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.80068,
+            "gap": 0.00068,
+            "mean_width": 16.5835,
+            "winkler": 28.6454,
+            "per_regime_coverage": {
+              "0": 0.80158,
+              "1": 0.79811,
+              "2": 0.84287,
+              "3": 0.79658,
+              "4": 0.80187,
+              "5": 0.80546,
+              "6": 0.79475,
+              "7": 0.80128
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.94994,
+            "gap": -6e-05,
+            "mean_width": 33.8238,
+            "winkler": 44.3486,
+            "per_regime_coverage": {
+              "0": 0.94989,
+              "1": 0.94876,
+              "2": 0.95822,
+              "3": 0.95063,
+              "4": 0.95155,
+              "5": 0.94518,
+              "6": 0.95465,
+              "7": 0.94984
+            }
+          }
+        },
+        {
+          "n_cal": 1334170,
+          "n_eval": 1329785,
+          "n_cal_groups": 81229,
+          "alpha_0.5": {
+            "coverage": 0.4969,
+            "gap": -0.0031,
+            "mean_width": 4.5579,
+            "winkler": 17.24,
+            "per_regime_coverage": {
+              "0": 0.50057,
+              "1": 0.47777,
+              "2": 0.46308,
+              "3": 0.49278,
+              "4": 0.50433,
+              "5": 0.50266,
+              "6": 0.51905,
+              "7": 0.49537
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.79866,
+            "gap": -0.00134,
+            "mean_width": 16.5117,
+            "winkler": 28.6982,
+            "per_regime_coverage": {
+              "0": 0.80062,
+              "1": 0.78852,
+              "2": 0.78371,
+              "3": 0.79539,
+              "4": 0.80333,
+              "5": 0.79242,
+              "6": 0.82761,
+              "7": 0.80011
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.94978,
+            "gap": -0.00022,
+            "mean_width": 33.8002,
+            "winkler": 44.3901,
+            "per_regime_coverage": {
+              "0": 0.9502,
+              "1": 0.94715,
+              "2": 0.95665,
+              "3": 0.94935,
+              "4": 0.95107,
+              "5": 0.94947,
+              "6": 0.96492,
+              "7": 0.94937
+            }
+          }
+        }
+      ],
+      "alpha_0.5": {
+        "coverage_mean": 0.49967,
+        "gap_mean": -0.00033,
+        "mean_width": 4.5952,
+        "winkler": 17.2079
+      },
+      "alpha_0.8": {
+        "coverage_mean": 0.79997,
+        "gap_mean": -3e-05,
+        "mean_width": 16.5563,
+        "winkler": 28.6708
+      },
+      "alpha_0.95": {
+        "coverage_mean": 0.94983,
+        "gap_mean": -0.00017,
+        "mean_width": 33.8078,
+        "winkler": 44.3803
+      }
+    },
+    "site": {
+      "per_seed": [
+        {
+          "n_cal": 1356398,
+          "n_eval": 1307557,
+          "n_cal_groups": null,
+          "alpha_0.5": {
+            "coverage": 0.50754,
+            "gap": 0.00754,
+            "mean_width": 4.6993,
+            "winkler": 17.1068,
+            "per_regime_coverage": {
+              "0": 0.50856,
+              "1": 0.50281,
+              "2": 0.53143,
+              "3": 0.50511,
+              "4": 0.5136,
+              "5": 0.51957,
+              "6": 0.12191,
+              "7": 0.508
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.804,
+            "gap": 0.004,
+            "mean_width": 16.7073,
+            "winkler": 28.5827,
+            "per_regime_coverage": {
+              "0": 0.80549,
+              "1": 0.80435,
+              "2": 0.84396,
+              "3": 0.80264,
+              "4": 0.80538,
+              "5": 0.8049,
+              "6": 0.44876,
+              "7": 0.79693
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.95064,
+            "gap": 0.00064,
+            "mean_width": 33.9354,
+            "winkler": 44.3565,
+            "per_regime_coverage": {
+              "0": 0.95088,
+              "1": 0.95254,
+              "2": 0.95568,
+              "3": 0.95059,
+              "4": 0.9508,
+              "5": 0.9539,
+              "6": 0.83687,
+              "7": 0.9466
+            }
+          }
+        },
+        {
+          "n_cal": 1315670,
+          "n_eval": 1348285,
+          "n_cal_groups": null,
+          "alpha_0.5": {
+            "coverage": 0.48688,
+            "gap": -0.01312,
+            "mean_width": 4.4738,
+            "winkler": 17.4011,
+            "per_regime_coverage": {
+              "0": 0.48566,
+              "1": 0.47751,
+              "2": 0.46229,
+              "3": 0.49425,
+              "4": 0.5034,
+              "5": 0.49109,
+              "6": 0.69168,
+              "7": 0.4728
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.79296,
+            "gap": -0.00704,
+            "mean_width": 16.3365,
+            "winkler": 28.8828,
+            "per_regime_coverage": {
+              "0": 0.78951,
+              "1": 0.79518,
+              "2": 0.78742,
+              "3": 0.7995,
+              "4": 0.80348,
+              "5": 0.78008,
+              "6": 0.87824,
+              "7": 0.79435
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.94871,
+            "gap": -0.00129,
+            "mean_width": 33.6869,
+            "winkler": 44.536,
+            "per_regime_coverage": {
+              "0": 0.94738,
+              "1": 0.95149,
+              "2": 0.94607,
+              "3": 0.9498,
+              "4": 0.9504,
+              "5": 0.95219,
+              "6": 0.96555,
+              "7": 0.95012
+            }
+          }
+        },
+        {
+          "n_cal": 1341245,
+          "n_eval": 1322710,
+          "n_cal_groups": null,
+          "alpha_0.5": {
+            "coverage": 0.50632,
+            "gap": 0.00632,
+            "mean_width": 4.6691,
+            "winkler": 17.1758,
+            "per_regime_coverage": {
+              "0": 0.51201,
+              "1": 0.49557,
+              "2": 0.55983,
+              "3": 0.49346,
+              "4": 0.49767,
+              "5": 0.53946,
+              "6": 0.73921,
+              "7": 0.49398
+            }
+          },
+          "alpha_0.8": {
+            "coverage": 0.80135,
+            "gap": 0.00135,
+            "mean_width": 16.6264,
+            "winkler": 28.6754,
+            "per_regime_coverage": {
+              "0": 0.80362,
+              "1": 0.79925,
+              "2": 0.84504,
+              "3": 0.79781,
+              "4": 0.79966,
+              "5": 0.82128,
+              "6": 0.8944,
+              "7": 0.78534
+            }
+          },
+          "alpha_0.95": {
+            "coverage": 0.94993,
+            "gap": -7e-05,
+            "mean_width": 33.8528,
+            "winkler": 44.399,
+            "per_regime_coverage": {
+              "0": 0.95086,
+              "1": 0.94999,
+              "2": 0.96587,
+              "3": 0.94757,
+              "4": 0.95068,
+              "5": 0.95221,
+              "6": 0.97263,
+              "7": 0.94326
+            }
+          }
+        }
+      ],
+      "alpha_0.5": {
+        "coverage_mean": 0.50025,
+        "gap_mean": 0.00025,
+        "mean_width": 4.6141,
+        "winkler": 17.2279
+      },
+      "alpha_0.8": {
+        "coverage_mean": 0.79944,
+        "gap_mean": -0.00056,
+        "mean_width": 16.5567,
+        "winkler": 28.7136
+      },
+      "alpha_0.95": {
+        "coverage_mean": 0.94976,
+        "gap_mean": -0.00024,
+        "mean_width": 33.825,
+        "winkler": 44.4305
+      }
+    }
+  },
+  "alignment": "positional (full corpus)",
+  "n_rows": 2663955,
+  "n_boreholes": 162459,
+  "n_nonfinite_dropped": 0,
+  "config": {
+    "alphas": [
+      0.5,
+      0.8,
+      0.95
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "cal_fraction": 0.5,
+    "min_group_n": 30,
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T8"
+  },
+  "_provenance": {
+    "purpose": "P-T8: conformal coverage under borehole/site-grouped calibration splits, with width and Winkler alongside coverage (the row split shares borehole error across the cal/eval boundary)",
+    "alignment": "predictions.npz rows verified byte-identical to the v4id parquet on y_true before identity is attached; full-corpus runs align positionally (regime also checked), LRO runs match a held-out-region bbox and take regime from the parquet because the LRO runner saved a train-sized regime array",
+    "script": "backend/scripts/run_mondrian_recal_grouped.py"
+  }
+}

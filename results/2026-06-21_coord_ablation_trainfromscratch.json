@@ -1,0 +1,47 @@
+{
+  "purpose": "Train-from-scratch coordinate ablation (reviewer point 3): is the in-region advantage of the Fourier coordinate encoding genuine transferable structure, or a memorized spatial lookup? Each cell RE-TRAINS from scratch with a different feature stack (NOT eval-time zeroing).",
+  "source": "cluster /mnt/nas/geo-estimation/runs/{c8_feat_*, contig_feat_*_f{0,1,2}}; Kanto, DKL+SVGP, M=4000, 30 epochs, rbf+LinearMean.",
+  "fold_x_fourier_2x2": {
+    "random_fold_in_region": {
+      "fourier_on_coords_geo_regime": 6.342,
+      "fourier_off_zero_fourier": 7.849
+    },
+    "contig_fold_extrapolation": {
+      "fourier_on_coords_geo_regime": 13.67,
+      "fourier_off_zero_fourier": 12.436
+    }
+  },
+  "interpretation": "Fourier coordinate encoding HELPS in-region (6.34 vs 7.85, -19%) but HURTS spatial extrapolation (13.67 vs 12.44, +10%) -- both train-from-scratch. The coordinate lookup is a net liability for transfer: a model trained WITHOUT it generalizes ~9% better across space. Textbook coordinate-memorization signature, train-time (refutes 'you only broke the model at test time').",
+  "random_fold_full": {
+    "coords_only": 5.964,
+    "coords_elev": 6.567,
+    "coords_geo": 6.436,
+    "coords_geo_regime": 6.342,
+    "zero_fourier": 7.849
+  },
+  "contig_fold_full_mean_std": {
+    "coords_only": [
+      13.142,
+      0.909
+    ],
+    "coords_depth_elev": [
+      13.569,
+      0.65
+    ],
+    "coords_geo": [
+      13.98,
+      1.295
+    ],
+    "coords_geo_regime": [
+      13.67,
+      0.806
+    ],
+    "zero_fourier": [
+      12.436,
+      0.897
+    ]
+  },
+  "reconciliation": "Replaces the S8b eval-time framing '7.55 -> 12.44', which mixed the NATIONAL random-K-fold operational RMSE (7.546, dkl_national_full_v2) with a KANTO contig zero-Fourier number (apples-to-oranges). Use this internally-consistent train-from-scratch 2x2 (same Kanto data, fold x Fourier) instead.",
+  "gpu_used": false,
+  "note": "No new GPU run needed -- the 15 contig_feat + 5 c8_feat train-from-scratch cells already existed on the cluster; harvested only."
+}

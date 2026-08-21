@@ -1,0 +1,12 @@
+{
+  "uk": {
+    "raw": -9.2,
+    "zscore": -9.2,
+    "quantile": -7.7
+  },
+  "japan": {
+    "raw": -16.2,
+    "zscore": -16.2,
+    "quantile": -18.9
+  }
+}

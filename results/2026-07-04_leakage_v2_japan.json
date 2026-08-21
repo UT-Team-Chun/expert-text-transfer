@@ -1,0 +1,132 @@
+{
+  "config": {
+    "domain": "japan",
+    "n_rows": 41146,
+    "n_regions": 8,
+    "base": [
+      "depth_from_surface",
+      "latitude_deg",
+      "longitude_deg"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "variants": {
+    "lm_full": {
+      "no_text": 12.936,
+      "shuffled": 11.922,
+      "text": 9.393,
+      "content_pct": -21.2,
+      "per_region_content": {
+        "chubu": -16.8,
+        "chugoku": -19.3,
+        "hokkaido": -25.1,
+        "kansai": -16.2,
+        "kanto": -28.1,
+        "kyushu_okinawa": -22.3,
+        "shikoku": -17.6,
+        "tohoku": -23.2
+      },
+      "n_neg": "8/8",
+      "sign_p": 0.00391,
+      "mean_frac_chars_removed": 0.0
+    },
+    "lm_lithology_only": {
+      "no_text": 12.936,
+      "shuffled": 11.924,
+      "text": 9.564,
+      "content_pct": -19.8,
+      "per_region_content": {
+        "chubu": -15.2,
+        "chugoku": -17.6,
+        "hokkaido": -22.3,
+        "kansai": -16.3,
+        "kanto": -25.4,
+        "kyushu_okinawa": -22.2,
+        "shikoku": -17.6,
+        "tohoku": -20.8
+      },
+      "n_neg": "8/8",
+      "sign_p": 0.00391,
+      "mean_frac_chars_removed": 0.082
+    },
+    "lm_hardness_only": {
+      "no_text": 12.936,
+      "shuffled": 11.921,
+      "text": 9.602,
+      "content_pct": -19.5,
+      "per_region_content": {
+        "chubu": -16.0,
+        "chugoku": -16.8,
+        "hokkaido": -22.6,
+        "kansai": -14.9,
+        "kanto": -26.8,
+        "kyushu_okinawa": -19.7,
+        "shikoku": -16.8,
+        "tohoku": -20.8
+      },
+      "n_neg": "8/8",
+      "sign_p": 0.00391,
+      "mean_frac_chars_removed": 0.046
+    },
+    "dictionary_onehot": {
+      "no_text": 12.936,
+      "shuffled": 12.936,
+      "text": 12.936,
+      "content_pct": 0.0,
+      "per_region_content": {
+        "chubu": 0.0,
+        "chugoku": 0.0,
+        "hokkaido": 0.0,
+        "kansai": 0.0,
+        "kanto": 0.0,
+        "kyushu_okinawa": 0.0,
+        "shikoku": 0.0,
+        "tohoku": 0.0
+      },
+      "n_neg": "0/8",
+      "sign_p": 1.0
+    },
+    "tfidf_char": {
+      "no_text": 12.936,
+      "shuffled": 11.914,
+      "text": 9.792,
+      "content_pct": -17.8,
+      "per_region_content": {
+        "chubu": -13.0,
+        "chugoku": -16.0,
+        "hokkaido": -22.1,
+        "kansai": -13.9,
+        "kanto": -22.8,
+        "kyushu_okinawa": -20.5,
+        "shikoku": -15.7,
+        "tohoku": -17.4
+      },
+      "n_neg": "8/8",
+      "sign_p": 0.00391
+    },
+    "structured_litho": {
+      "no_text": 12.936,
+      "shuffled": 12.104,
+      "text": 10.14,
+      "content_pct": -16.2,
+      "per_region_content": {
+        "chubu": -12.8,
+        "chugoku": -16.5,
+        "hokkaido": -18.3,
+        "kansai": -12.9,
+        "kanto": -22.1,
+        "kyushu_okinawa": -14.3,
+        "shikoku": -13.9,
+        "tohoku": -18.5
+      },
+      "n_neg": "8/8",
+      "sign_p": 0.00391
+    }
+  }
+}

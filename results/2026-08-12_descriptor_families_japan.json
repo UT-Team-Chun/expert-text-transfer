@@ -1,0 +1,194 @@
+{
+  "arms": {
+    "parser_text_only": {
+      "n_features": 66,
+      "content_pct": -17.531,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -15.266,
+        "chugoku": -12.867,
+        "hokkaido": -21.194,
+        "kansai": -11.491,
+        "kanto": -23.517,
+        "kyushu_okinawa": -18.075,
+        "shikoku": -17.154,
+        "tohoku": -19.596
+      }
+    },
+    "parser_with_codes": {
+      "n_features": 88,
+      "content_pct": -16.216,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -13.957,
+        "chugoku": -12.724,
+        "hokkaido": -18.631,
+        "kansai": -12.004,
+        "kanto": -21.564,
+        "kyushu_okinawa": -13.01,
+        "shikoku": -17.498,
+        "tohoku": -19.619
+      }
+    },
+    "minus_dictionary": {
+      "n_features": 56,
+      "content_pct": -17.022,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -14.487,
+        "chugoku": -13.134,
+        "hokkaido": -20.693,
+        "kansai": -11.716,
+        "kanto": -23.954,
+        "kyushu_okinawa": -13.921,
+        "shikoku": -17.269,
+        "tohoku": -20.037
+      },
+      "attenuation_pp": 0.509
+    },
+    "minus_grain_size": {
+      "n_features": 56,
+      "content_pct": -16.48,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -14.743,
+        "chugoku": -11.419,
+        "hokkaido": -21.334,
+        "kansai": -11.273,
+        "kanto": -22.705,
+        "kyushu_okinawa": -12.715,
+        "shikoku": -17.846,
+        "tohoku": -19.043
+      },
+      "attenuation_pp": 1.051
+    },
+    "minus_sorting": {
+      "n_features": 60,
+      "content_pct": -17.107,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -14.655,
+        "chugoku": -13.145,
+        "hokkaido": -21.267,
+        "kansai": -11.683,
+        "kanto": -22.895,
+        "kyushu_okinawa": -14.944,
+        "shikoku": -18.349,
+        "tohoku": -18.985
+      },
+      "attenuation_pp": 0.424
+    },
+    "minus_lith_class": {
+      "n_features": 49,
+      "content_pct": -15.711,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -11.722,
+        "chugoku": -12.928,
+        "hokkaido": -20.826,
+        "kansai": -8.755,
+        "kanto": -19.382,
+        "kyushu_okinawa": -16.653,
+        "shikoku": -16.343,
+        "tohoku": -18.294
+      },
+      "attenuation_pp": 1.82
+    },
+    "minus_weathering": {
+      "n_features": 63,
+      "content_pct": -17.456,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -14.88,
+        "chugoku": -12.425,
+        "hokkaido": -21.006,
+        "kansai": -11.948,
+        "kanto": -25.186,
+        "kyushu_okinawa": -16.449,
+        "shikoku": -17.548,
+        "tohoku": -18.854
+      },
+      "attenuation_pp": 0.075
+    },
+    "minus_water_state": {
+      "n_features": 62,
+      "content_pct": -16.909,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -15.219,
+        "chugoku": -12.572,
+        "hokkaido": -21.269,
+        "kansai": -11.23,
+        "kanto": -24.047,
+        "kyushu_okinawa": -14.034,
+        "shikoku": -17.147,
+        "tohoku": -18.634
+      },
+      "attenuation_pp": 0.622
+    },
+    "minus_angularity": {
+      "n_features": 62,
+      "content_pct": -17.26,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -15.329,
+        "chugoku": -12.308,
+        "hokkaido": -19.399,
+        "kansai": -11.267,
+        "kanto": -25.222,
+        "kyushu_okinawa": -17.077,
+        "shikoku": -17.143,
+        "tohoku": -18.948
+      },
+      "attenuation_pp": 0.271
+    },
+    "minus_colour": {
+      "n_features": 58,
+      "content_pct": -17.36,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -14.753,
+        "chugoku": -12.525,
+        "hokkaido": -20.685,
+        "kansai": -12.497,
+        "kanto": -23.816,
+        "kyushu_okinawa": -16.553,
+        "shikoku": -17.727,
+        "tohoku": -19.384
+      },
+      "attenuation_pp": 0.171
+    },
+    "minus_composition_pct": {
+      "n_features": 62,
+      "content_pct": -17.289,
+      "regions_negative": "8/8",
+      "per_region": {
+        "chubu": -15.436,
+        "chugoku": -12.719,
+        "hokkaido": -19.619,
+        "kansai": -11.619,
+        "kanto": -24.082,
+        "kyushu_okinawa": -16.227,
+        "shikoku": -17.884,
+        "tohoku": -19.697
+      },
+      "attenuation_pp": 0.242
+    }
+  },
+  "config": {
+    "domain": "japan",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_rows": 52806,
+    "per_region_files": 500,
+    "sample_seed": 42,
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T10 (exploratory)"
+  },
+  "_provenance": {
+    "purpose": "P-T10 descriptor-family mechanism localisation; also separates the parser rung into text-only vs +archive-code variants (the published -16.2%/-4.4% used the mixed one)",
+    "script": "backend/scripts/nc_descriptor_families.py"
+  }
+}

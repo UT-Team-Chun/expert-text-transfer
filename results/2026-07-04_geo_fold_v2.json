@@ -1,0 +1,97 @@
+{
+  "config": {
+    "representation": "lithology_only",
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "join_coverage": 1.0,
+    "n_joined": 41146,
+    "n_full": 41146
+  },
+  "geological_fold_lm": {
+    "leave_litho_macro_out": {
+      "n_groups": 13,
+      "no_text": 11.449,
+      "text": 10.545,
+      "shuffled": 11.611,
+      "content_pct": -9.18,
+      "groups_negative": "12/13",
+      "per_group_content": {
+        "0": -16.7,
+        "1": -14.4,
+        "11": -12.0,
+        "12": -5.7,
+        "13": -8.0,
+        "14": -11.7,
+        "2": -11.3,
+        "3": -6.2,
+        "4": -1.0,
+        "5": -16.7,
+        "7": -12.3,
+        "8": 3.8,
+        "9": -13.7
+      }
+    },
+    "leave_era_out": {
+      "n_groups": 9,
+      "no_text": 11.555,
+      "text": 10.189,
+      "shuffled": 11.538,
+      "content_pct": -11.69,
+      "groups_negative": "9/9",
+      "per_group_content": {
+        "0": -17.4,
+        "1": -8.5,
+        "10": -11.8,
+        "2": -12.2,
+        "3": -1.6,
+        "5": -9.6,
+        "6": -16.5,
+        "7": -14.6,
+        "8": -13.1
+      }
+    }
+  },
+  "regime_ablation": {
+    "thin_base": {
+      "n_groups": 8,
+      "no_text": 12.936,
+      "text": 9.564,
+      "shuffled": 11.924,
+      "content_pct": -19.8,
+      "groups_negative": "8/8",
+      "per_group_content": {
+        "chubu": -15.2,
+        "chugoku": -17.6,
+        "hokkaido": -22.3,
+        "kansai": -16.3,
+        "kanto": -25.4,
+        "kyushu_okinawa": -22.2,
+        "shikoku": -17.6,
+        "tohoku": -20.8
+      }
+    },
+    "plus_regime": {
+      "n_groups": 8,
+      "no_text": 12.412,
+      "text": 9.559,
+      "shuffled": 11.563,
+      "content_pct": -17.33,
+      "groups_negative": "8/8",
+      "per_group_content": {
+        "chubu": -14.8,
+        "chugoku": -15.2,
+        "hokkaido": -19.8,
+        "kansai": -16.0,
+        "kanto": -21.8,
+        "kyushu_okinawa": -16.6,
+        "shikoku": -14.2,
+        "tohoku": -19.9
+      }
+    }
+  }
+}

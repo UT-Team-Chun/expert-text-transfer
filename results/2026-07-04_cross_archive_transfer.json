@@ -1,0 +1,76 @@
+{
+  "config": {
+    "representation": "lithology_only, multilingual-e5, source-fit PCA-64",
+    "model": "HGB(400)",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "note": "zero-shot: no target rows in training; metrics scale-free (Spearman) + z-RMSE (two aggregate stats only)"
+  },
+  "japan_to_uk": {
+    "n_source": 41146,
+    "n_target": 18157,
+    "reference_target_trained_depth_only": {
+      "spearman_rho": 0.4094,
+      "z_rmse": 1.1068
+    },
+    "zero_shot": {
+      "depth_only": {
+        "spearman_rho": 0.1181,
+        "z_rmse": 1.3034
+      },
+      "depth_text": {
+        "spearman_rho": 0.3333,
+        "z_rmse": 1.1902
+      },
+      "depth_shuffled": {
+        "spearman_rho": 0.2731,
+        "z_rmse": 1.2212
+      }
+    },
+    "few_shot_depth_text": {
+      "n=100": {
+        "spearman_rho": 0.3017,
+        "z_rmse": 1.2375
+      },
+      "n=1000": {
+        "spearman_rho": 0.5059,
+        "z_rmse": 1.0054
+      }
+    }
+  },
+  "uk_to_japan": {
+    "n_source": 18157,
+    "n_target": 41146,
+    "reference_target_trained_depth_only": {
+      "spearman_rho": 0.2663,
+      "z_rmse": 1.208
+    },
+    "zero_shot": {
+      "depth_only": {
+        "spearman_rho": 0.2575,
+        "z_rmse": 1.2336
+      },
+      "depth_text": {
+        "spearman_rho": 0.2969,
+        "z_rmse": 1.2045
+      },
+      "depth_shuffled": {
+        "spearman_rho": 0.1568,
+        "z_rmse": 1.3083
+      }
+    },
+    "few_shot_depth_text": {
+      "n=100": {
+        "spearman_rho": 0.3159,
+        "z_rmse": 1.185
+      },
+      "n=1000": {
+        "spearman_rho": 0.4613,
+        "z_rmse": 1.075
+      }
+    }
+  }
+}

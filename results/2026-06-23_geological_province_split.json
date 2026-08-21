@@ -1,0 +1,40 @@
+{
+  "join_coverage": 0.53,
+  "n": 41146,
+  "litho": {
+    "content_pct": -9.5,
+    "n_neg": "11/11",
+    "n_groups": 11,
+    "n_rows": 21703,
+    "per_group": {
+      "litho_0": -13.2,
+      "litho_1": -2.0,
+      "litho_11": -11.8,
+      "litho_12": -11.1,
+      "litho_13": -5.7,
+      "litho_14": -11.4,
+      "litho_2": -9.8,
+      "litho_3": -8.6,
+      "litho_5": -10.4,
+      "litho_7": -6.4,
+      "litho_9": -13.4
+    }
+  },
+  "era": {
+    "content_pct": -10.5,
+    "n_neg": "9/9",
+    "n_groups": 9,
+    "n_rows": 21817,
+    "per_group": {
+      "era_0": -16.1,
+      "era_1": -6.0,
+      "era_10": -11.5,
+      "era_2": -10.5,
+      "era_3": -13.3,
+      "era_5": -6.8,
+      "era_6": -12.8,
+      "era_7": -8.7,
+      "era_8": -9.0
+    }
+  }
+}

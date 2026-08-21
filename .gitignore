@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+runs/
+*.parquet
+*.npy
+*.npz
+*.pt
+.DS_Store
+.pytest_cache/

@@ -1,0 +1,13 @@
+{
+  "admin_on_aist_subset": {
+    "content_pct": -14.8,
+    "n_neg": "8/8",
+    "n_regions": 8,
+    "n_rows": 21817
+  },
+  "compare": {
+    "admin_full_41k": -16.2,
+    "leave_litho_out": -9.5,
+    "leave_era_out": -10.5
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "config": {
+    "domain": "japan",
+    "n_rows": 41146,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "representation": "lithology_only",
+    "bands_m": [
+      [
+        0.0,
+        5.0
+      ],
+      [
+        5.0,
+        10.0
+      ],
+      [
+        10.0,
+        20.0
+      ],
+      [
+        20.0,
+        1000000000.0
+      ]
+    ]
+  },
+  "all_depths": {
+    "n_regions": 8,
+    "no_text": 12.936,
+    "text": 9.408,
+    "shuffled": 11.925,
+    "content_pct": -21.11,
+    "regions_negative": "8/8",
+    "per_region_content": {
+      "chubu": -16.3,
+      "chugoku": -18.8,
+      "hokkaido": -24.8,
+      "kansai": -16.0,
+      "kanto": -27.6,
+      "kyushu_okinawa": -22.7,
+      "shikoku": -18.5,
+      "tohoku": -23.0
+    }
+  },
+  "by_band": {
+    "0-5m": {
+      "n_regions": 8,
+      "no_text": 11.157,
+      "text": 8.904,
+      "shuffled": 10.721,
+      "content_pct": -16.95,
+      "regions_negative": "8/8",
+      "per_region_content": {
+        "chubu": -14.8,
+        "chugoku": -14.5,
+        "hokkaido": -18.1,
+        "kansai": -10.2,
+        "kanto": -23.1,
+        "kyushu_okinawa": -20.2,
+        "shikoku": -17.5,
+        "tohoku": -17.1
+      },
+      "n": 10329
+    },
+    "5-10m": {
+      "n_regions": 8,
+      "no_text": 12.757,
+      "text": 9.436,
+      "shuffled": 11.895,
+      "content_pct": -20.68,
+      "regions_negative": "8/8",
+      "per_region_content": {
+        "chubu": -15.4,
+        "chugoku": -18.8,
+        "hokkaido": -22.8,
+        "kansai": -14.1,
+        "kanto": -29.5,
+        "kyushu_okinawa": -22.2,
+        "shikoku": -16.3,
+        "tohoku": -25.0
+      },
+      "n": 9854
+    },
+    "10-20m": {
+      "n_regions": 8,
+      "no_text": 13.9,
+      "text": 9.699,
+      "shuffled": 12.812,
+      "content_pct": -24.29,
+      "regions_negative": "8/8",
+      "per_region_content": {
+        "chubu": -17.0,
+        "chugoku": -20.6,
+        "hokkaido": -33.8,
+        "kansai": -23.8,
+        "kanto": -29.5,
+        "kyushu_okinawa": -25.8,
+        "shikoku": -19.0,
+        "tohoku": -21.6
+      },
+      "n": 11186
+    },
+    "20-1e+09m": {
+      "n_regions": 8,
+      "no_text": 13.048,
+      "text": 9.912,
+      "shuffled": 12.443,
+      "content_pct": -20.34,
+      "regions_negative": "8/8",
+      "per_region_content": {
+        "chubu": -18.1,
+        "chugoku": -21.8,
+        "hokkaido": -33.8,
+        "kansai": -18.7,
+        "kanto": -20.9,
+        "kyushu_okinawa": -6.7,
+        "shikoku": -12.6,
+        "tohoku": -26.2
+      },
+      "n": 9777
+    }
+  }
+}

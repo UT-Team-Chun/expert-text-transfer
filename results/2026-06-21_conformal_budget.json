@@ -1,0 +1,85 @@
+{
+  "regions": [
+    "chubu",
+    "chugoku",
+    "hokkaido",
+    "kansai",
+    "kanto",
+    "kyushu_okinawa",
+    "shikoku",
+    "tohoku"
+  ],
+  "n_per_region": {
+    "chubu": 457691,
+    "chugoku": 417227,
+    "hokkaido": 216692,
+    "kansai": 493613,
+    "kanto": 495725,
+    "kyushu_okinawa": 431229,
+    "shikoku": 242488,
+    "tohoku": 287496
+  },
+  "target_5050": {
+    "cov0.5": {
+      "mean_cov": 0.4995,
+      "mean_gap": -0.0005
+    },
+    "cov0.8": {
+      "mean_cov": 0.8001,
+      "mean_gap": 0.0001
+    },
+    "cov0.9": {
+      "mean_cov": 0.9003,
+      "mean_gap": 0.0003
+    },
+    "cov0.95": {
+      "mean_cov": 0.9503,
+      "mean_gap": 0.0003
+    }
+  },
+  "source_free": {
+    "cov0.5": {
+      "mean_cov": 0.4881,
+      "mean_gap": -0.0119,
+      "worst_gap": -0.0938
+    },
+    "cov0.8": {
+      "mean_cov": 0.7957,
+      "mean_gap": -0.0043,
+      "worst_gap": -0.0473
+    },
+    "cov0.9": {
+      "mean_cov": 0.8985,
+      "mean_gap": -0.0015,
+      "worst_gap": -0.0282
+    },
+    "cov0.95": {
+      "mean_cov": 0.9487,
+      "mean_gap": -0.0013,
+      "worst_gap": -0.0297
+    }
+  },
+  "target_budget_cov0.95": {
+    "n50": {
+      "mean_cov": 0.9474,
+      "mean_gap": -0.0026,
+      "n_regions": 8
+    },
+    "n100": {
+      "mean_cov": 0.9366,
+      "mean_gap": -0.0134,
+      "n_regions": 8
+    },
+    "n500": {
+      "mean_cov": 0.9501,
+      "mean_gap": 0.0001,
+      "n_regions": 8
+    },
+    "n1000": {
+      "mean_cov": 0.9514,
+      "mean_gap": 0.0014,
+      "n_regions": 8
+    }
+  },
+  "interpretation": "target_5050 (current paper protocol) recovers near-nominal marginal coverage because it uses target-region labels. source_free (calibrated on OTHER regions, no target labels) shows the residual miscoverage of true source-only transfer. The budget curve shows how few target-region calibration labels restore coverage. Honest claim: marginal coverage under LRO REQUIRES target-region calibration labels; source-only conditional coverage remains unresolved."
+}

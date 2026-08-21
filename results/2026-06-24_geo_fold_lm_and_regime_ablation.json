@@ -1,0 +1,97 @@
+{
+  "config": {
+    "representation": "lithology_only",
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "join_coverage": 1.0,
+    "n_joined": 41146,
+    "n_full": 41146
+  },
+  "geological_fold_lm": {
+    "leave_litho_macro_out": {
+      "n_groups": 13,
+      "no_text": 11.449,
+      "text": 10.379,
+      "shuffled": 11.647,
+      "content_pct": -10.89,
+      "groups_negative": "12/13",
+      "per_group_content": {
+        "0": -18.4,
+        "1": -15.9,
+        "11": -11.6,
+        "12": -9.2,
+        "13": -12.4,
+        "14": -12.8,
+        "2": -13.7,
+        "3": -7.0,
+        "4": -2.4,
+        "5": -17.1,
+        "7": -13.0,
+        "8": 1.6,
+        "9": -16.8
+      }
+    },
+    "leave_era_out": {
+      "n_groups": 9,
+      "no_text": 11.555,
+      "text": 9.988,
+      "shuffled": 11.541,
+      "content_pct": -13.45,
+      "groups_negative": "9/9",
+      "per_group_content": {
+        "0": -19.0,
+        "1": -9.7,
+        "10": -12.8,
+        "2": -15.6,
+        "3": -7.5,
+        "5": -11.0,
+        "6": -17.7,
+        "7": -14.5,
+        "8": -13.2
+      }
+    }
+  },
+  "regime_ablation": {
+    "thin_base": {
+      "n_groups": 8,
+      "no_text": 12.936,
+      "text": 9.408,
+      "shuffled": 11.925,
+      "content_pct": -21.11,
+      "groups_negative": "8/8",
+      "per_group_content": {
+        "chubu": -16.3,
+        "chugoku": -18.8,
+        "hokkaido": -24.8,
+        "kansai": -16.0,
+        "kanto": -27.6,
+        "kyushu_okinawa": -22.7,
+        "shikoku": -18.5,
+        "tohoku": -23.0
+      }
+    },
+    "plus_regime": {
+      "n_groups": 8,
+      "no_text": 12.412,
+      "text": 9.399,
+      "shuffled": 11.605,
+      "content_pct": -19.01,
+      "groups_negative": "8/8",
+      "per_group_content": {
+        "chubu": -15.8,
+        "chugoku": -16.6,
+        "hokkaido": -23.0,
+        "kansai": -15.4,
+        "kanto": -24.8,
+        "kyushu_okinawa": -18.9,
+        "shikoku": -14.7,
+        "tohoku": -22.1
+      }
+    }
+  }
+}

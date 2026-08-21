@@ -1,0 +1,65 @@
+{
+  "config": {
+    "model": "DKL+SVGP",
+    "kernel": "rbf",
+    "mean": "linear",
+    "inducing_init": "random",
+    "n_inducing": 6000,
+    "n_epochs": 50,
+    "regime_one_hot": true,
+    "corpus": "borings_japan.parquet (2,663,955 rows)",
+    "protocol": "leave-region-out; train on 7 regions, evaluate held-out region",
+    "metric": "held-out RMSE (summary.json spatial_kfold[0].rmse)",
+    "source_runs": "GlusterFS /mnt/nas/geo-estimation/runs/dkl_natlro_coordabl_<region>_<fourier_on|off>",
+    "robustness": "8000-inducing subset (hokkaido/tohoku/chubu/chugoku/shikoku, 2026-06) agrees within fold noise"
+  },
+  "per_region": {
+    "hokkaido": {
+      "fourier_on": 14.893,
+      "fourier_off": 13.083,
+      "penalty_pct": 13.8
+    },
+    "tohoku": {
+      "fourier_on": 14.336,
+      "fourier_off": 11.545,
+      "penalty_pct": 24.2
+    },
+    "kanto": {
+      "fourier_on": 13.499,
+      "fourier_off": 11.735,
+      "penalty_pct": 15.0
+    },
+    "chubu": {
+      "fourier_on": 13.845,
+      "fourier_off": 12.45,
+      "penalty_pct": 11.2
+    },
+    "kansai": {
+      "fourier_on": 13.955,
+      "fourier_off": 11.556,
+      "penalty_pct": 20.8
+    },
+    "chugoku": {
+      "fourier_on": 13.529,
+      "fourier_off": 12.139,
+      "penalty_pct": 11.5
+    },
+    "shikoku": {
+      "fourier_on": 14.124,
+      "fourier_off": 12.312,
+      "penalty_pct": 14.7
+    },
+    "kyushu_okinawa": {
+      "fourier_on": 13.804,
+      "fourier_off": 11.557,
+      "penalty_pct": 19.4
+    }
+  },
+  "summary": {
+    "mean_fourier_on": 13.998,
+    "mean_fourier_off": 12.047,
+    "mean_penalty_rmse": 1.951,
+    "mean_penalty_pct": 16.2,
+    "regions_where_coords_hurt": "8/8"
+  }
+}

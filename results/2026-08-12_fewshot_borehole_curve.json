@@ -1,0 +1,252 @@
+{
+  "config": {
+    "representation": "lithology_only, multilingual-e5, source-fit PCA-64",
+    "model": "HGB(400)",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "budgets_boreholes": [
+      0,
+      10,
+      25,
+      50,
+      100,
+      300
+    ],
+    "holdout": "fixed 50% of target BOREHOLES (seed 0), shared across budgets/arms/seeds",
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T6",
+    "supersedes": "row-budgeted few-shot of nc_cross_archive (2026-07-04_cross_archive_transfer.json)"
+  },
+  "_provenance": {
+    "purpose": "P-T6 borehole-budgeted few-shot curve; kills the sibling-layer leak of the row-budgeted design",
+    "script": "backend/scripts/nc_fewshot_curve.py"
+  },
+  "japan_to_uk": {
+    "n_source_rows": 41146,
+    "n_target_rows": 18157,
+    "n_target_boreholes": 2597,
+    "n_holdout_rows": 8730,
+    "n_holdout_boreholes": 1298,
+    "reference_target_trained_depth_only": {
+      "spearman_rho": 0.4084,
+      "z_rmse": 1.1003
+    },
+    "zero_shot_holdout": {
+      "depth_only": {
+        "spearman_rho": 0.1157,
+        "z_rmse": 1.3006
+      },
+      "depth_text": {
+        "spearman_rho": 0.3503,
+        "z_rmse": 1.1706
+      },
+      "depth_shuffled": {
+        "spearman_rho": 0.2854,
+        "z_rmse": 1.2074
+      }
+    },
+    "zero_shot_full_target": {
+      "depth_only": {
+        "spearman_rho": 0.1181,
+        "z_rmse": 1.3034
+      },
+      "depth_text": {
+        "spearman_rho": 0.3333,
+        "z_rmse": 1.1902
+      },
+      "depth_shuffled": {
+        "spearman_rho": 0.2731,
+        "z_rmse": 1.2212
+      }
+    },
+    "fewshot_curve": {
+      "boreholes=0": {
+        "depth_only": {
+          "spearman_rho_mean": 0.1157,
+          "spearman_rho_std": 0.0118,
+          "z_rmse_mean": 1.3006
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.3503,
+          "spearman_rho_std": 0.016,
+          "z_rmse_mean": 1.1706
+        }
+      },
+      "boreholes=10": {
+        "depth_only": {
+          "spearman_rho_mean": 0.1975,
+          "spearman_rho_std": 0.0446,
+          "z_rmse_mean": 1.2759
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.2687,
+          "spearman_rho_std": 0.092,
+          "z_rmse_mean": 1.2446
+        }
+      },
+      "boreholes=25": {
+        "depth_only": {
+          "spearman_rho_mean": 0.1405,
+          "spearman_rho_std": 0.0599,
+          "z_rmse_mean": 1.3013
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.3118,
+          "spearman_rho_std": 0.0208,
+          "z_rmse_mean": 1.2141
+        }
+      },
+      "boreholes=50": {
+        "depth_only": {
+          "spearman_rho_mean": 0.184,
+          "spearman_rho_std": 0.0528,
+          "z_rmse_mean": 1.2834
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.3376,
+          "spearman_rho_std": 0.037,
+          "z_rmse_mean": 1.1877
+        }
+      },
+      "boreholes=100": {
+        "depth_only": {
+          "spearman_rho_mean": 0.1758,
+          "spearman_rho_std": 0.0111,
+          "z_rmse_mean": 1.2908
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.428,
+          "spearman_rho_std": 0.0227,
+          "z_rmse_mean": 1.1021
+        }
+      },
+      "boreholes=300": {
+        "depth_only": {
+          "spearman_rho_mean": 0.14,
+          "spearman_rho_std": 0.0429,
+          "z_rmse_mean": 1.3094
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.5062,
+          "spearman_rho_std": 0.0046,
+          "z_rmse_mean": 1.0206
+        }
+      }
+    }
+  },
+  "uk_to_japan": {
+    "n_source_rows": 18157,
+    "n_target_rows": 41146,
+    "n_target_boreholes": 3116,
+    "n_holdout_rows": 20309,
+    "n_holdout_boreholes": 1558,
+    "reference_target_trained_depth_only": {
+      "spearman_rho": 0.2838,
+      "z_rmse": 1.2003
+    },
+    "zero_shot_holdout": {
+      "depth_only": {
+        "spearman_rho": 0.2705,
+        "z_rmse": 1.2229
+      },
+      "depth_text": {
+        "spearman_rho": 0.3066,
+        "z_rmse": 1.1982
+      },
+      "depth_shuffled": {
+        "spearman_rho": 0.1666,
+        "z_rmse": 1.302
+      }
+    },
+    "zero_shot_full_target": {
+      "depth_only": {
+        "spearman_rho": 0.2575,
+        "z_rmse": 1.2336
+      },
+      "depth_text": {
+        "spearman_rho": 0.2969,
+        "z_rmse": 1.2045
+      },
+      "depth_shuffled": {
+        "spearman_rho": 0.1568,
+        "z_rmse": 1.3083
+      }
+    },
+    "fewshot_curve": {
+      "boreholes=0": {
+        "depth_only": {
+          "spearman_rho_mean": 0.2705,
+          "spearman_rho_std": 0.0029,
+          "z_rmse_mean": 1.2229
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.3066,
+          "spearman_rho_std": 0.0319,
+          "z_rmse_mean": 1.1982
+        }
+      },
+      "boreholes=10": {
+        "depth_only": {
+          "spearman_rho_mean": 0.2671,
+          "spearman_rho_std": 0.0087,
+          "z_rmse_mean": 1.2288
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.3413,
+          "spearman_rho_std": 0.0222,
+          "z_rmse_mean": 1.1709
+        }
+      },
+      "boreholes=25": {
+        "depth_only": {
+          "spearman_rho_mean": 0.261,
+          "spearman_rho_std": 0.0139,
+          "z_rmse_mean": 1.2319
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.3454,
+          "spearman_rho_std": 0.0081,
+          "z_rmse_mean": 1.1667
+        }
+      },
+      "boreholes=50": {
+        "depth_only": {
+          "spearman_rho_mean": 0.2565,
+          "spearman_rho_std": 0.0096,
+          "z_rmse_mean": 1.2376
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.3853,
+          "spearman_rho_std": 0.0038,
+          "z_rmse_mean": 1.1383
+        }
+      },
+      "boreholes=100": {
+        "depth_only": {
+          "spearman_rho_mean": 0.2578,
+          "spearman_rho_std": 0.0014,
+          "z_rmse_mean": 1.2374
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.4306,
+          "spearman_rho_std": 0.0074,
+          "z_rmse_mean": 1.1006
+        }
+      },
+      "boreholes=300": {
+        "depth_only": {
+          "spearman_rho_mean": 0.2587,
+          "spearman_rho_std": 0.0037,
+          "z_rmse_mean": 1.2515
+        },
+        "depth_text": {
+          "spearman_rho_mean": 0.5076,
+          "spearman_rho_std": 0.0057,
+          "z_rmse_mean": 1.0322
+        }
+      }
+    }
+  }
+}

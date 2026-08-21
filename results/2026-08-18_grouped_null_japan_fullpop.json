@@ -1,0 +1,353 @@
+{
+  "per_region": {
+    "chubu": {
+      "no_text": [
+        10.943963996398317,
+        0.027687211581750748
+      ],
+      "text": [
+        9.869121907558757,
+        0.005769605725873565
+      ],
+      "block_null_mean": 11.00305659174049,
+      "block_null_std": 0.01632840877242308,
+      "row_null_mean": 10.968646841570775,
+      "row_null_std": 0.02573792629160295,
+      "content_pct_block": -10.306,
+      "content_pct_row": -10.024,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 191623,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.97644,
+        "frac_rank_fallback_mean": 0.02308,
+        "frac_self_retained_mean": 0.00048
+      }
+    },
+    "chugoku": {
+      "no_text": [
+        11.333104962435252,
+        0.02229749927073534
+      ],
+      "text": [
+        9.947089034431949,
+        0.018973698858530248
+      ],
+      "block_null_mean": 11.296621783346975,
+      "block_null_std": 0.02049203099174218,
+      "row_null_mean": 11.295764864166788,
+      "row_null_std": 0.026737094255546254,
+      "content_pct_block": -11.946,
+      "content_pct_row": -11.94,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 213328,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.97477,
+        "frac_rank_fallback_mean": 0.02472,
+        "frac_self_retained_mean": 0.00051
+      }
+    },
+    "hokkaido": {
+      "no_text": [
+        12.108037413640055,
+        0.01382804913132462
+      ],
+      "text": [
+        10.37264952787662,
+        0.08269887510839032
+      ],
+      "block_null_mean": 12.286712071141277,
+      "block_null_std": 0.07375074786851858,
+      "row_null_mean": 12.14670297055271,
+      "row_null_std": 0.06465806111150128,
+      "content_pct_block": -15.578,
+      "content_pct_row": -14.605,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 177858,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.97505,
+        "frac_rank_fallback_mean": 0.02447,
+        "frac_self_retained_mean": 0.00048
+      }
+    },
+    "kansai": {
+      "no_text": [
+        10.606827116308958,
+        0.010239436536243644
+      ],
+      "text": [
+        9.367896735934607,
+        0.002357748142649478
+      ],
+      "block_null_mean": 10.623199856718228,
+      "block_null_std": 0.023605399552319765,
+      "row_null_mean": 10.62614163361629,
+      "row_null_std": 0.023000954730361515,
+      "content_pct_block": -11.817,
+      "content_pct_row": -11.841,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 139873,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.97751,
+        "frac_rank_fallback_mean": 0.02209,
+        "frac_self_retained_mean": 0.00039
+      }
+    },
+    "kanto": {
+      "no_text": [
+        11.357993958309555,
+        0.07122679031060877
+      ],
+      "text": [
+        9.569237795736116,
+        0.009341892247054267
+      ],
+      "block_null_mean": 11.261616146627897,
+      "block_null_std": 0.019997748337692065,
+      "row_null_mean": 11.35773082869628,
+      "row_null_std": 0.0650668056807898,
+      "content_pct_block": -15.028,
+      "content_pct_row": -15.747,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 203729,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.97536,
+        "frac_rank_fallback_mean": 0.02415,
+        "frac_self_retained_mean": 0.00049
+      }
+    },
+    "kyushu_okinawa": {
+      "no_text": [
+        11.088575846477148,
+        0.08974951277071096
+      ],
+      "text": [
+        10.452919890797137,
+        0.0115784500055825
+      ],
+      "block_null_mean": 11.355637864764955,
+      "block_null_std": 0.06329984886966473,
+      "row_null_mean": 11.107962279101173,
+      "row_null_std": 0.06899224635136567,
+      "content_pct_block": -7.95,
+      "content_pct_row": -5.897,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 219241,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.9756,
+        "frac_rank_fallback_mean": 0.02392,
+        "frac_self_retained_mean": 0.00048
+      }
+    },
+    "shikoku": {
+      "no_text": [
+        10.96843460722421,
+        0.03242426141943812
+      ],
+      "text": [
+        9.506844553106726,
+        0.00156746746568979
+      ],
+      "block_null_mean": 10.88265243051482,
+      "block_null_std": 0.03883790682856113,
+      "row_null_mean": 10.969765893168713,
+      "row_null_std": 0.021793696974610387,
+      "content_pct_block": -12.642,
+      "content_pct_row": -13.336,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 23509,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.9776,
+        "frac_rank_fallback_mean": 0.02197,
+        "frac_self_retained_mean": 0.00042
+      }
+    },
+    "tohoku": {
+      "no_text": [
+        11.249659923688029,
+        0.03402104219927015
+      ],
+      "text": [
+        9.508676867192355,
+        0.008574420321257461
+      ],
+      "block_null_mean": 11.339974875796571,
+      "block_null_std": 0.027976861370777532,
+      "row_null_mean": 11.26833094062959,
+      "row_null_std": 0.030546404199497112,
+      "content_pct_block": -16.149,
+      "content_pct_row": -15.616,
+      "perm_p_block": 0.09090909090909091,
+      "perm_p_row": 0.09090909090909091,
+      "n_te": 129567,
+      "null_permutation": {
+        "strata_columns": [
+          "region",
+          "aist_litho_macro_code"
+        ],
+        "all_draws_bijective": true,
+        "n_draws_checked": 10,
+        "frac_block_matched_mean": 0.97756,
+        "frac_rank_fallback_mean": 0.02202,
+        "frac_self_retained_mean": 0.00042
+      }
+    }
+  },
+  "summary": {
+    "content_pct_block_mean": -12.677,
+    "content_pct_row_mean": -12.376,
+    "delta_block_minus_row_pp": -0.301,
+    "regions_negative_block": "8/8",
+    "regions_negative_row": "8/8",
+    "bonferroni_min_p_block": 0.7272727272727273,
+    "bonferroni_min_p_row": 0.7272727272727273,
+    "cauchy_p_block": 0.09090909090909094,
+    "cauchy_p_row": 0.09090909090909094,
+    "stouffer_p_block": 7.953880407080345e-05,
+    "stouffer_p_row": 7.953880407080345e-05,
+    "fold_p_block": [
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909
+    ],
+    "fold_p_row": [
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909,
+      0.090909
+    ],
+    "region_spread_block": {
+      "per_region_min": -16.149,
+      "per_region_max": -7.95,
+      "resample_2p5_97p5": [
+        -14.45,
+        -10.856
+      ],
+      "note": "descriptive spread over 8 regions, NOT a 95% CI: a percentile bootstrap on 8 units under-covers. Use borehole_block_bootstrap for inference."
+    },
+    "borehole_block_bootstrap": {
+      "theta_hat_pct": -11.347,
+      "bca_95": [
+        -11.489,
+        -11.212
+      ],
+      "percentile_95": [
+        -11.485,
+        -11.21
+      ],
+      "n_boreholes": 97903,
+      "jackknife": "full leave-one-out (closed form), not thinned"
+    }
+  },
+  "config": {
+    "domain": "japan",
+    "strip_mode": "lithology_only",
+    "strip_stats": {
+      "mode": "lithology_only",
+      "version": "v2",
+      "cache_tag": "lithonly_v2",
+      "frac_chars_removed": 0.1024,
+      "chars_removed": 10588078,
+      "n_texts_changed": 1161105,
+      "n_emptied": 0
+    },
+    "embedding_cache": "grouped_japan_lithonly_v2_22c29123b9f2a14e_e5.npy",
+    "per_region_files": 0,
+    "sample_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_perm_block": 10,
+    "n_perm_row": 10,
+    "use_knn": true,
+    "combined_from_shards": [
+      "japan_full_chubu.json",
+      "japan_full_chugoku.json",
+      "japan_full_hokkaido.json",
+      "japan_full_kansai.json",
+      "japan_full_kanto.json",
+      "japan_full_kyushu_okinawa.json",
+      "japan_full_shikoku.json",
+      "japan_full_tohoku.json"
+    ]
+  },
+  "_provenance": {
+    "purpose": "Pre-registered grouped-null primary analysis (P-T1/T2/T3), combined from per-region shards",
+    "null": {
+      "unit": "borehole block (length-matched derangement; rank-wise for boreholes with an unshared length)",
+      "strata_columns_used": [
+        "aist_litho_macro_code",
+        "region"
+      ],
+      "every_draw_was_a_permutation": true,
+      "draws_checked_per_region": [
+        10
+      ],
+      "pairing": "real and null share the HGB seed set (seed-paired)",
+      "p_value": "(1+r)/(1+n) corrected per fold",
+      "fold_combination": "Bonferroni-corrected minimum and Cauchy combination are primary (valid under arbitrary dependence, which leave-one-region-out folds have because they share most of their training rows); Stouffer reported as a secondary figure only",
+      "interval": "borehole-block BCa over paired per-borehole losses, full leave-one-out jackknife; the 8-region resample is a descriptive spread, not a CI"
+    },
+    "sharding": "statistically inert: each permutation seeds its own generator from 100_000 * seed + permutation index, which depends on neither region nor loop order",
+    "script": "backend/scripts/nc_grouped_null.py"
+  }
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "expert-text-transfer: companion code for 'Fine-grained geological descriptions enable cross-region prediction of penetration resistance across national borehole archives'"
+authors:
+  - family-names: Okauchi
+    given-names: Ryota
+    affiliation: "Graduate School of Engineering, The University of Tokyo"
+  - family-names: Chun
+    given-names: Pang-jo
+    affiliation: "Graduate School of Engineering, The University of Tokyo"
+license: MIT
+repository-code: "https://github.com/UT-Team-Chun/expert-text-transfer"
+preferred-citation:
+  type: article
+  title: "Fine-grained geological descriptions enable cross-region prediction of penetration resistance across national borehole archives"
+  authors:
+    - family-names: Okauchi
+      given-names: Ryota
+    - family-names: Chun
+      given-names: Pang-jo
+  journal: "Nature Communications (submitted)"
+  year: 2026

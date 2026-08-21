@@ -1,0 +1,70 @@
+{
+  "families": {
+    "project": {
+      "fold_col": "project_key",
+      "per_fold": {
+        "札幌河川事務所管内地質調査業務": {
+          "no_text": [
+            8.55125639739672,
+            0.019101520635870048
+          ],
+          "text": [
+            7.126788138310321,
+            0.03621338150783622
+          ],
+          "block_null_mean": 8.528550221652878,
+          "block_null_std": 0.03486869495626071,
+          "row_null_mean": 8.556074966329856,
+          "row_null_std": 0.022465591411522736,
+          "content_pct_block": -16.436,
+          "content_pct_row": -16.705,
+          "perm_p_block": 0.09090909090909091,
+          "perm_p_row": 0.09090909090909091,
+          "n_te": 1580,
+          "null_permutation": {
+            "strata_columns": [
+              "geo_region"
+            ],
+            "all_draws_bijective": true,
+            "n_draws_checked": 10,
+            "frac_block_matched_mean": 0.9955,
+            "frac_rank_fallback_mean": 0.00445,
+            "frac_self_retained_mean": 4e-05
+          }
+        }
+      },
+      "fold_p_block": [
+        0.09090909090909091
+      ],
+      "fold_p_row": [
+        0.09090909090909091
+      ]
+    }
+  },
+  "config": {
+    "per_region_files": 0,
+    "sample_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_perm_block": 10,
+    "n_perm_row": 10,
+    "top_n": 8,
+    "min_fold_rows": 300,
+    "families_filter": [
+      "project"
+    ],
+    "fold_labels_filter": [
+      "札幌河川事務所管内地質調査業務"
+    ],
+    "strip": "lithology_only v2",
+    "prereg": "docs/research/2026-08-11_nc_text_preregistration.md P-T4"
+  },
+  "_provenance": {
+    "purpose": "P-T4 provenance-transfer folds (leave-contractor/client/year/DTD/project-out)",
+    "metadata": "data/features/derived/kunijiban_metadata.parquet (national header pass)",
+    "script": "backend/scripts/nc_provenance_folds.py"
+  }
+}

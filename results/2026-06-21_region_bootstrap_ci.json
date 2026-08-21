@@ -1,0 +1,42 @@
+{
+ "japan": {
+  "lm_full": {
+   "n_regions": 8,
+   "mean": -21.1,
+   "ci95": [
+    -24.0,
+    -18.5
+   ],
+   "all_neg": true
+  },
+  "lm_lithology_only": {
+   "n_regions": 8,
+   "mean": -21.0,
+   "ci95": [
+    -23.7,
+    -18.3
+   ],
+   "all_neg": true
+  }
+ },
+ "uk": {
+  "lm_full": {
+   "n_regions": 5,
+   "mean": -18.5,
+   "ci95": [
+    -24.8,
+    -13.5
+   ],
+   "all_neg": true
+  },
+  "lm_lithology_only": {
+   "n_regions": 5,
+   "mean": -10.4,
+   "ci95": [
+    -14.7,
+    -6.6
+   ],
+   "all_neg": true
+  }
+ }
+}
